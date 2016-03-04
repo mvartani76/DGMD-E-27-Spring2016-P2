@@ -1,6 +1,6 @@
-#DGMD-E-27-Spring2016-P1
+#DGMD-E-27-Spring2016-P2
 
-This is the first assignment for DGMD E-27.
+This is the second assignment for DGMD E-27.
 
 #Source Code
 
