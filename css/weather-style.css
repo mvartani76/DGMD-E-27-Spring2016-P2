@@ -1,87 +1,65 @@
 /* This css file contains the stylings specific to the
    weather widget that shows up on the sidebar for most of
    the pages on this site*/
-
 .outside-w-wrapper {
-	background-color: #EEDFAF;
-	text-align: center
-}
+  background-color: #EEDFAF;
+  text-align: center; }
 
 .weather-wrapper {
-	width: 90%;
-	padding-left: 2%;
-	padding-right: 1%;
-	padding-top: 1%;
-	margin: 0 auto;
-	color: white;
-	background-color: #AD7623;
-	text-align: center
-}
+  width: 90%;
+  padding-left: 2%;
+  padding-right: 1%;
+  padding-top: 1%;
+  margin: 0 auto;
+  color: white;
+  background-color: #AD7623;
+  text-align: center; }
 
 .outside-w-wrapper h3 {
-	font-family: 'Francois One', sans-serif;
-	color: #61381D;
-}
+  font-family: 'Francois One', sans-serif;
+  color: #61381D; }
 
 .outside-w-wrapper p {
-	font-family: 'Lato', sans-serif;
-	color: #BB6F39;
-}
+  font-family: 'Lato', sans-serif;
+  color: #BB6F39; }
 
 .weather-wrapper p {
-	font-family: 'Lato', sans-serif;
-	color: #fff;
-}
-
+  font-family: 'Lato', sans-serif;
+  color: #fff; }
 
 strong {
-	color: #ED8F00;
-}
+  color: #ED8F00; }
 
 .capitalize {
-	text-transform: capitalize;
-}
+  text-transform: capitalize; }
 
 /* media queries */
-
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1000px; */
 @media only screen and (min-width: 1050px) {
-	.outside-w-wrapper h3 {
-		font-size: 1.5em;
-	}
-	.outside-w-wrapper p {
-		font-size: 1em;
-	}
-}
+  .outside-w-wrapper h3 {
+    font-size: 1.5em; }
 
+  .outside-w-wrapper p {
+    font-size: 1em; } }
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: 768px) and (max-width: 1049px) {
-	.outside-w-wrapper h3 {
-		font-size: 1.25em;
-	}
-	.outside-w-wrapper p {
-		font-size: 0.85em;
-	}
-}
+  .outside-w-wrapper h3 {
+    font-size: 1.25em; }
 
+  .outside-w-wrapper p {
+    font-size: 0.85em; } }
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
-@media only screen and 
-	(min-width: 480px) and (max-width: 767px)  {
-	.outside-w-wrapper h3 {
-		font-size: 1em;
-	}
-	.outside-w-wrapper p {
-		font-size: 0.667em;
-	}	
-}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .outside-w-wrapper h3 {
+    font-size: 1em; }
 
+  .outside-w-wrapper p {
+    font-size: 0.667em; } }
 /* Mobile Portrait Screen Sizes */
-/* pixel range: <480px */	
-@media only screen and (max-width: 479px)  {
-	.outside-w-wrapper {
-		display: none;
-	}
-}
+/* pixel range: <480px */
+@media only screen and (max-width: 479px) {
+  .outside-w-wrapper {
+    display: none; } }

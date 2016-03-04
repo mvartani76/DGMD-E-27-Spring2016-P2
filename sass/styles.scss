@@ -1,0 +1,417 @@
+@import "variables";
+
+/* Border box declaration */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-size: 100%;
+	font-family: 'Lato', sans-serif;
+	background-color: #70482D;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Francois One', sans-serif;
+}
+a {
+	color: #2772B0;
+}
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;	
+}
+
+.menu {
+	background-color: #ED8F00;
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: auto;
+}
+.menu ul li {
+	font-family: 'Lato', sans-serif;
+}
+.menu ul a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	float: left;
+}
+.menu ul a:hover, .menu ul li.active a {
+	color: #a16100;
+}
+
+/*----- Toggle Button -----*/
+.toggle-nav {
+    display:none;
+   	background-color: #ED8F00; 
+	width: 100%;
+}
+
+main {
+	overflow: auto;
+	background-color: $primary-background-color;
+}
+main h2, div.photogallery h2 {
+	padding-top: 0em;
+	background-color: $primary-background-color;
+	color: #61381D;
+	text-align: center;
+	font-family: 'Francois One', sans-serif;
+}
+main h3, main h4 {
+	background-color: $primary-background-color;
+	font-family: 'Francois One', sans-serif;
+}
+
+main p, div.photogallery p {
+	font-family: 'Lato', sans-serif;
+	background-color: $primary-background-color;
+	color: $primary-light-text-color;
+}
+
+.second_main_pic {
+	float: right;
+}
+
+div.photogallery p {
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+div.col-1-2-4 img {
+	max-width: 350px;
+	width: 95%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+div.col-1-2-4 p {
+	width: 95%;
+	padding-left: 5%;
+	padding-right: 2%;
+	font-family: 'Lato', sans-serif;
+	color: $primary-light-text-color;
+}
+
+.col-1-2-4 h3 {
+	color: #61381D;
+}
+
+main img {
+	float: left;
+}
+footer {
+	clear: both;
+	padding: 0.5em 0;
+	margin: 0.75em 0;
+	color: #999;
+	text-align: center;
+}
+
+/* grid system */
+
+.row::after {
+    content:"";
+    display: table;
+    clear:both;
+} 
+
+[class*='col-'] {
+	float: left;
+	min-height: 1px;
+}
+.col-1 {
+	width: 25%;
+}
+.col-1-2-4 {
+	width: 25%;
+}
+.col-2 {
+	width: 50%;
+}
+.col-3 {
+	width: 75%;
+}
+.col-4 {
+	width: 100%;
+}
+
+/* media queries */
+
+/* Desktop Screen Sizes */
+/* Pixel Range: >= 1050px; */
+@media only screen and (min-width: 1050px) {
+	/* Use the 1200px width background image in the header*/
+	header {
+		background: url(../images/sog-entrance-1200.jpg) no-repeat;
+		width: 1200px;
+		height: 300px;
+		font-family: 'Lato', sans-serif; 
+		color: #fff;
+	}
+
+	.menu ul a {
+		font-size:1.25em;
+		padding: 1%;
+	}
+
+	main h2, div.photogallery h2 {
+		font-size: 2.5em;
+		line-height: 1.25em;		
+		padding-left: 0.25em;
+		padding-right: 0.25em;
+	}
+	main p, div.photogallery p {
+		font-size: 1.5em;
+		line-height: 1.1em;
+		margin-left: 0.25em;
+		margin-right: 0.25em;
+	}
+
+	main img {
+		padding-top: 0%;
+		padding-left: 1%;
+		padding-bottom: 1%;
+		margin-right: 1.4em;
+		float: left;
+	}
+
+	.col-1-2-4 h3 {
+		font-size: 1.25em;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+/* Tablet Screen Sizes */
+/* Pixel Range: >= 768px; */
+@media only screen and (min-width: 768px) and (max-width: 1049px) {
+	/* Use the 1000px width background image in the header*/
+	header {
+		background: url(../images/sog-entrance-1000.jpg) no-repeat;
+		width: 1000px;
+		height: 300px;
+		font-family: 'Lato', sans-serif; 
+		color: #fff;
+	}
+	
+	.menu ul a {
+		font-size:1em;
+		padding: 0.8em;
+	}
+
+	main h2, div.photogallery h2 {
+		font-size: 2.25em;
+		line-height: 1.2em;
+		padding-left: 0.2em;
+		padding-right: 0.2em;
+	}
+	main p, div.photogallery p {
+		font-size: 1.25em;
+		line-height: 1.15em;
+		margin-left: 0.2em;
+		margin-right: 0.2em;
+	}	
+	main img {
+		padding-top: 1%;
+		padding-left: 1%;
+		margin-right: 1.3em;
+		float: left;
+	}
+	.col-1-2-4 h3 {
+		font-size: 1.1em;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+
+/* Mobile Landscape Screen Sizes */
+/* pixel range: 480-767px */
+@media only screen and 
+	(min-width: 480px) and (max-width: 767px)  {
+	/* Use the 800px width background image in the header*/
+	header {
+		background: url(../images/sog-entrance-800.jpg) no-repeat;
+		width: 800px;
+		height: 300px;
+		font-family: 'Lato', sans-serif; 
+		color: #fff;
+	}
+
+	.menu ul a {
+		font-size:0.75em;
+		padding: 0.5em;
+	}
+
+	main h2, div.photogallery h2 {
+		font-size: 1.75em;
+		line-height: 1.15em;		
+		padding-left: 0.15em;
+		padding-right: 0.15em;
+	}
+	main p, div.photogallery p {
+		font-size: 1.1em;
+		line-height: 1.1em;
+		margin-left: 0.15em;
+		margin-right: 0.15em;	
+	}
+	main img {
+		padding-top: 1%;
+		padding-left: 1%;
+		margin-right: 1em;
+		float: left;
+	}
+	.col-1-2-4 {
+		width: 50%;
+	}
+
+	.col-1-2-4 h3 {
+		font-size: 1.25em;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+/* Mobile portrait Screen Sizes */
+/* pixel range: <=479px */
+@media only screen and (max-width: 479px)  {
+	/* Use the 500px width background image in the header*/
+	header {
+		background: url(../images/sog-entrance-500.jpg) no-repeat;
+		width: 500px;
+		height: 255px;
+		font-family: 'Lato', sans-serif; 
+		color: #fff;
+	}
+	
+	header h1 {
+		padding: 0.5em;
+		margin: 0;
+	}
+	header h1 a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+ 	.menu {
+        position:relative;
+        display:block;
+    }
+
+    .menu ul.active-toggle {
+        display:none;
+        background-color: $secondary-background-color;
+    }
+
+    .menu ul {
+        width: 100%;
+        position:absolute;
+        top: 120%;
+        left-margin: 0px;
+        left-padding: 1%;
+        background: $secondary-background-color;
+    }
+ 
+    .menu ul:after {
+        width: 0px;
+        height: 0px;
+        position:absolute;
+        top: 0%;
+        left: 5%;
+        content:'';
+        transform:translate(0%, -100%);
+    }
+ 
+    .menu li {
+        padding-left: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        float:left;
+        display:block;
+    }
+
+    ul > li {  float: none; width: 100%; }
+ 
+    .menu a {
+        display:block;
+    }    
+
+	.toggle-nav {
+        padding:1em;
+        float:left;
+        display:block;
+        background-color: $secondary-background-color;
+        color:#fff;
+        font-size:20px;
+        transition:color linear 0.15s;
+		text-decoration: none;
+		font-weight: bold;
+    }
+ 
+    .toggle-nav:hover, .toggle-nav.active {
+        text-decoration:none;
+		color: #a16100;
+    }
+
+	main h2, div.photogallery h2 {
+		font-size: 1.5em;
+		line-height: 1.2em;		
+		padding-left: 0.1em;
+		padding-right: 0.1em;
+	}
+	main p, div.photogallery p {
+		font-size: 1em;
+		line-height: 1.15em;
+		text-align: center;
+	}
+	main img {
+		width: 100%;
+		padding-top: 1%;
+		padding-left: 1%;
+		padding-right: 1%;
+		margin: 0 auto;
+		float: none;
+	}
+	.first_main_pic, .second_main_pic {
+		float: none;
+	}
+	.col-1-2-4 h3 {
+		font-size: 1.25em;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.col-1-2-4 p {
+		margin-left:2%;
+		margin-right:2%;
+	}	
+
+	[class*='col-'] {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+}
