@@ -28,14 +28,14 @@
 }
 
 #contact_id, #login_id, #register_id {
-	background-color: #F6F5E3;
+	background-color: $form-background-color;
 	padding:1%;
 	margin:2% 0;
 }
 
 #contact_id h3, #login_id h3, #register_id h3 {
 	color: #70482D;
-	background-color: #F6F5E3;
+	background-color: $form-background-color;
 	display: block;
 	margin-left: 2%;
 	font-weight: 400;
@@ -43,7 +43,7 @@
 
 #contact_id h4, #login_id h4, #register_id h4 {
 	color: #70482D;
-	background-color: #F6F5E3;
+	background-color: $form-background-color;
 	margin-left: 2%;
 	display:block;
 }
