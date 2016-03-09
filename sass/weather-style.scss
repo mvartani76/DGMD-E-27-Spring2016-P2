@@ -48,7 +48,7 @@ strong {
 
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1000px; */
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: $min-desktop-width) {
 	.outside-w-wrapper h3 {
 		font-size: 1.5em;
 	}
@@ -59,7 +59,7 @@ strong {
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
-@media only screen and (min-width: 768px) and (max-width: 1049px) {
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width-m1) {
 	.outside-w-wrapper h3 {
 		font-size: 1.25em;
 	}
@@ -71,7 +71,7 @@ strong {
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and 
-	(min-width: 480px) and (max-width: 767px)  {
+	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width-m1)  {
 	.outside-w-wrapper h3 {
 		font-size: 1em;
 	}
@@ -82,7 +82,7 @@ strong {
 
 /* Mobile Portrait Screen Sizes */
 /* pixel range: <480px */	
-@media only screen and (max-width: 479px)  {
+@media only screen and (max-width: $min-phone-landscape-width-m1)  {
 	.outside-w-wrapper {
 		display: none;
 	}

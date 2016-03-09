@@ -164,7 +164,7 @@ fieldset {
 
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1000px; */
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: $min-desktop-width) {
 	#contact_id h3, #login_id h3, #register_id h3 {
 		font-size: 2.5em;
 		line-height: 1.25em;
@@ -190,7 +190,7 @@ fieldset {
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
-@media only screen and (min-width: 768px) and (max-width: 1049px) {
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width-m1) {
 	#contact_id h3, #login_id h3, #register_id h3 {
 		font-size: 2.3em;
 		line-height: 1.22em;	
@@ -217,7 +217,7 @@ fieldset {
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and 
-	(min-width: 480px) and (max-width: 767px)  {
+	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width-m1)  {
 	#contact_id h3, #login_id h3, #register_id h3 {
 		font-size: 2.2em;
 		line-height: 1.15em;		
@@ -243,7 +243,7 @@ fieldset {
 
 /* Mobile portrait Screen Sizes */
 /* pixel range: <=479px */
-@media only screen and (max-width: 479px)  {
+@media only screen and (max-width: $min-phone-landscape-width-m1)  {
 	#register_id .form50, #contact_id .form50 {
 		width: 96%;
 	    display: inline;

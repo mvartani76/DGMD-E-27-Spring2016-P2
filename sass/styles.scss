@@ -39,29 +39,31 @@ a {
 	float: none;
 	background-color: $primary-background-color;	
 }
-
+/* Nesting the .menu class as well as nesting the ul tag
+   inside the .menu class */
 .menu {
 	background-color: #ED8F00;
-}
-.menu ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	overflow: auto;
-}
-.menu ul li {
-	font-family: 'Lato', sans-serif;
-}
-.menu ul a {
-	color: #fff;
-	text-decoration: none;
-	font-weight: bold;
-	float: left;
-}
-.menu ul a:hover, .menu ul li.active a {
-	color: #a16100;
-}
 
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		overflow: auto;
+	
+		li {
+			font-family: 'Lato', sans-serif;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+			float: left;
+		}
+		a:hover, .menu ul li.active a {
+			color: #a16100;
+		}
+	}
+}
 /*----- Toggle Button -----*/
 .toggle-nav {
     display:none;
@@ -69,60 +71,81 @@ a {
 	width: 100%;
 }
 
+/* Nesting the main tag */
+/* Moved the main img from below up into this nested section */
 main {
 	overflow: auto;
 	background-color: $primary-background-color;
-}
-main h2, div.photogallery h2 {
-	padding-top: 0em;
-	background-color: $primary-background-color;
-	color: #61381D;
-	text-align: center;
-	font-family: 'Francois One', sans-serif;
-}
-main h3, main h4 {
-	background-color: $primary-background-color;
-	font-family: 'Francois One', sans-serif;
+
+	h2 {
+		padding-top: 0em;
+		background-color: $primary-background-color;
+		color: #61381D;
+		text-align: center;
+		font-family: 'Francois One', sans-serif;
+	}
+	h3, h4 {
+		background-color: $primary-background-color;
+		font-family: 'Francois One', sans-serif;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		background-color: $primary-background-color;
+		color: $primary-light-text-color;
+	}
+
+	img {
+		float: left;
+	}
 }
 
-main p, div.photogallery p {
-	font-family: 'Lato', sans-serif;
-	background-color: $primary-background-color;
-	color: $primary-light-text-color;
+/* Nested the div.photography class */
+/* Needed to separate this from the main nesting */
+div.photogallery {
+	h2 {
+		padding-top: 0em;
+		background-color: $primary-background-color;
+		color: #61381D;
+		text-align: center;
+		font-family: 'Francois One', sans-serif;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		background-color: $primary-background-color;
+		color: $primary-light-text-color;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
 }
 
 .second_main_pic {
 	float: right;
 }
 
-div.photogallery p {
-	padding-left: 1%;
-	padding-right: 1%;
-}
+div.col-1-2-4 {
+	img {
+		max-width: 350px;
+		width: 95%;
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto
+	}
 
-div.col-1-2-4 img {
-	max-width: 350px;
-	width: 95%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-div.col-1-2-4 p {
-	width: 95%;
-	padding-left: 5%;
-	padding-right: 2%;
-	font-family: 'Lato', sans-serif;
-	color: $primary-light-text-color;
+	p {
+		width: 95%;
+		padding-left: 5%;
+		padding-right: 2%;
+		font-family: 'Lato', sans-serif;
+		color: $primary-light-text-color;
+	}
 }
 
 .col-1-2-4 h3 {
 	color: #61381D;
 }
 
-main img {
-	float: left;
-}
 footer {
 	clear: both;
 	padding: 0.5em 0;
@@ -163,7 +186,7 @@ footer {
 
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1050px; */
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: $min-desktop-width) {
 	/* Use the 1200px width background image in the header*/
 	header {
 		background: url(../images/sog-entrance-1200.jpg) no-repeat;
@@ -178,25 +201,27 @@ footer {
 		padding: 1%;
 	}
 
-	main h2, div.photogallery h2 {
-		font-size: 2.5em;
-		line-height: 1.25em;		
-		padding-left: 0.25em;
-		padding-right: 0.25em;
-	}
-	main p, div.photogallery p {
-		font-size: 1.5em;
-		line-height: 1.1em;
-		margin-left: 0.25em;
-		margin-right: 0.25em;
-	}
-
-	main img {
-		padding-top: 0%;
-		padding-left: 1%;
-		padding-bottom: 1%;
-		margin-right: 1.4em;
-		float: left;
+	/* Nesting the main tag */
+	main {
+		h2 {
+			font-size: 2.5em;
+			line-height: 1.25em;		
+			padding-left: 0.25em;
+			padding-right: 0.25em;
+		}
+		p {
+			font-size: 1.5em;
+			line-height: 1.1em;
+			margin-left: 0.25em;
+			margin-right: 0.25em;
+		}
+		img {
+			padding-top: 0%;
+			padding-left: 1%;
+			padding-bottom: 1%;
+			margin-right: 1.4em;
+			float: left;
+		}
 	}
 
 	.col-1-2-4 h3 {
@@ -204,11 +229,28 @@ footer {
 		margin: 0 auto;
 		text-align: center;
 	}
+
+	/* Nesting the div.photogallery class */
+	div.photogallery {
+		h2 {
+			font-size: 2.5em;
+			line-height: 1.25em;		
+			padding-left: 0.25em;
+			padding-right: 0.25em;
+		}
+
+		p {
+			font-size: 1.5em;
+			line-height: 1.1em;
+			margin-left: 0.25em;
+			margin-right: 0.25em;
+		}
+	}
 }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
-@media only screen and (min-width: 768px) and (max-width: 1049px) {
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width-m1) {
 	/* Use the 1000px width background image in the header*/
 	header {
 		background: url(../images/sog-entrance-1000.jpg) no-repeat;
@@ -223,24 +265,44 @@ footer {
 		padding: 0.8em;
 	}
 
-	main h2, div.photogallery h2 {
-		font-size: 2.25em;
-		line-height: 1.2em;
-		padding-left: 0.2em;
-		padding-right: 0.2em;
+	/* Nesting the main tag */
+	main {
+		h2 {
+			font-size: 2.25em;
+			line-height: 1.2em;
+			padding-left: 0.2em;
+			padding-right: 0.2em;
+		}
+		p {
+			font-size: 1.25em;
+			line-height: 1.15em;
+			margin-left: 0.2em;
+			margin-right: 0.2em;
+		}	
+		img {
+			padding-top: 1%;
+			padding-left: 1%;
+			margin-right: 1.3em;
+			float: left;
+		}
 	}
-	main p, div.photogallery p {
-		font-size: 1.25em;
-		line-height: 1.15em;
-		margin-left: 0.2em;
-		margin-right: 0.2em;
-	}	
-	main img {
-		padding-top: 1%;
-		padding-left: 1%;
-		margin-right: 1.3em;
-		float: left;
-	}
+
+	/* Nesting the div.photogallery class */
+	div.photogallery {
+		h2 {
+			font-size: 2.25em;
+			line-height: 1.2em;
+			padding-left: 0.2em;
+			padding-right: 0.2em;
+		}
+		p {
+			font-size: 1.25em;
+			line-height: 1.15em;
+			margin-left: 0.2em;
+			margin-right: 0.2em;
+		}	
+}
+
 	.col-1-2-4 h3 {
 		font-size: 1.1em;
 		margin: 0 auto;
@@ -252,7 +314,7 @@ footer {
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and 
-	(min-width: 480px) and (max-width: 767px)  {
+	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width-m1)  {
 	/* Use the 800px width background image in the header*/
 	header {
 		background: url(../images/sog-entrance-800.jpg) no-repeat;
@@ -267,98 +329,122 @@ footer {
 		padding: 0.5em;
 	}
 
-	main h2, div.photogallery h2 {
-		font-size: 1.75em;
-		line-height: 1.15em;		
-		padding-left: 0.15em;
-		padding-right: 0.15em;
-	}
-	main p, div.photogallery p {
-		font-size: 1.1em;
-		line-height: 1.1em;
-		margin-left: 0.15em;
-		margin-right: 0.15em;	
-	}
-	main img {
-		padding-top: 1%;
-		padding-left: 1%;
-		margin-right: 1em;
-		float: left;
-	}
-	.col-1-2-4 {
-		width: 50%;
+	/* Nesting the main tag */
+	main {
+		h2 {
+			font-size: 1.75em;
+			line-height: 1.15em;		
+			padding-left: 0.15em;
+			padding-right: 0.15em;
+		}
+		p {
+			font-size: 1.1em;
+			line-height: 1.1em;
+			margin-left: 0.15em;
+			margin-right: 0.15em;	
+		}
+		img {
+			padding-top: 1%;
+			padding-left: 1%;
+			margin-right: 1em;
+			float: left;
+		}
 	}
 
-	.col-1-2-4 h3 {
-		font-size: 1.25em;
-		margin: 0 auto;
-		text-align: center;
+	/* Nesting the div.photogallery class */
+	div.photogallery {
+		h2 {
+			font-size: 1.75em;
+			line-height: 1.15em;		
+			padding-left: 0.15em;
+			padding-right: 0.15em;
+		}
+
+		p {
+			font-size: 1.1em;
+			line-height: 1.1em;
+			margin-left: 0.15em;
+			margin-right: 0.15em;	
+		}
+	}
+
+	/* Nesting the .col-1-2-4 class */	
+	.col-1-2-4 {
+		width: 50%;
+
+		h3 {
+			font-size: 1.25em;
+			margin: 0 auto;
+			text-align: center;
+		}
 	}
 }
 
 /* Mobile portrait Screen Sizes */
 /* pixel range: <=479px */
-@media only screen and (max-width: 479px)  {
+@media only screen and (max-width: $min-phone-landscape-width-m1)  {
 	/* Use the 500px width background image in the header*/
+	/* Nesting the header tag */
 	header {
 		background: url(../images/sog-entrance-500.jpg) no-repeat;
 		width: 500px;
 		height: 255px;
 		font-family: 'Lato', sans-serif; 
 		color: #fff;
-	}
 	
-	header h1 {
-		padding: 0.5em;
-		margin: 0;
-	}
-	header h1 a {
-		color: #fff;
-		text-decoration: none;
+		h1 {
+			padding: 0.5em;
+			margin: 0;
+		}
+		h1 a {
+			color: #fff;
+			text-decoration: none;
+		}
 	}
 
+	/* Nesting the menu class */
  	.menu {
         position:relative;
         display:block;
-    }
 
-    .menu ul.active-toggle {
-        display:none;
-        background-color: $secondary-background-color;
-    }
+	    ul.active-toggle {
+	        display:none;
+	        background-color: $secondary-background-color;
+	    }
 
-    .menu ul {
-        width: 100%;
-        position:absolute;
-        top: 120%;
-        left-margin: 0px;
-        left-padding: 1%;
-        background: $secondary-background-color;
-    }
+	    ul {
+	        width: 100%;
+	        position:absolute;
+	        top: 120%;
+	        left-margin: 0px;
+	        left-padding: 1%;
+	        background: $secondary-background-color;
+	    }
+	 
+	    ul:after {
+	        width: 0px;
+	        height: 0px;
+	        position:absolute;
+	        top: 0%;
+	        left: 5%;
+	        content:'';
+	        transform:translate(0%, -100%);
+	    }
+	 
+	    li {
+	        padding-left: 2%;
+	        padding-top: 1%;
+	        padding-bottom: 1%;
+	        float:left;
+	        display:block;
+	    }
  
-    .menu ul:after {
-        width: 0px;
-        height: 0px;
-        position:absolute;
-        top: 0%;
-        left: 5%;
-        content:'';
-        transform:translate(0%, -100%);
+	    a {
+	        display:block;
+	    }    
     }
- 
-    .menu li {
-        padding-left: 2%;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        float:left;
-        display:block;
-    }
-
+    
     ul > li {  float: none; width: 100%; }
- 
-    .menu a {
-        display:block;
-    }    
 
 	.toggle-nav {
         padding:1em;
@@ -377,37 +463,59 @@ footer {
 		color: #a16100;
     }
 
-	main h2, div.photogallery h2 {
-		font-size: 1.5em;
-		line-height: 1.2em;		
-		padding-left: 0.1em;
-		padding-right: 0.1em;
+	/* Nesting the main tag */
+	main {
+		h2 {
+			font-size: 1.5em;
+			line-height: 1.2em;		
+			padding-left: 0.1em;
+			padding-right: 0.1em;
+		}
+		p {
+			font-size: 1em;
+			line-height: 1.15em;
+			text-align: center;
+		}
+		img {
+			width: 100%;
+			padding-top: 1%;
+			padding-left: 1%;
+			padding-right: 1%;
+			margin: 0 auto;
+			float: none;
+		}
 	}
-	main p, div.photogallery p {
-		font-size: 1em;
-		line-height: 1.15em;
-		text-align: center;
+
+	div.photogallery {
+		h2 {
+			font-size: 1.5em;
+			line-height: 1.2em;		
+			padding-left: 0.1em;
+			padding-right: 0.1em;
+		}
+		p {
+			font-size: 1em;
+			line-height: 1.15em;
+			text-align: center;
+		}
 	}
-	main img {
-		width: 100%;
-		padding-top: 1%;
-		padding-left: 1%;
-		padding-right: 1%;
-		margin: 0 auto;
-		float: none;
-	}
+
 	.first_main_pic, .second_main_pic {
 		float: none;
 	}
-	.col-1-2-4 h3 {
-		font-size: 1.25em;
-		margin: 0 auto;
-		text-align: center;
+
+	/* Nesting the .col-1-2-4 class */
+	.col-1-2-4 {
+		h3 {
+			font-size: 1.25em;
+			margin: 0 auto;
+			text-align: center;
+		}
+		p {
+			margin-left:2%;
+			margin-right:2%;
+		}
 	}
-	.col-1-2-4 p {
-		margin-left:2%;
-		margin-right:2%;
-	}	
 
 	[class*='col-'] {
 		width: 100%;

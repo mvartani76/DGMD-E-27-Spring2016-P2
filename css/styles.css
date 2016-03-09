@@ -1,20 +1,24 @@
 /* Border box declaration */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* inherit border-box on all elements in the universe and before and after */
 *,
 *:before,
 *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 body {
   font-size: 100%;
   font-family: 'Lato', sans-serif;
-  background-color: #70482D; }
+  background-color: #70482D;
+}
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
-  font-size-adjust: 0.5; }
+  font-size-adjust: 0.5;
+}
 
 h1,
 h2,
@@ -22,123 +26,157 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Francois One', sans-serif; }
+  font-family: 'Francois One', sans-serif;
+}
 
 a {
-  color: #2772B0; }
+  color: #2772B0;
+}
 
 .wrapper {
   width: 97%;
   max-width: 1200px;
   margin: 0 auto;
   float: none;
-  background-color: #EFECCA; }
+  background-color: #EFECCA;
+}
 
+/* Nesting the .menu class as well as nesting the ul tag
+   inside the .menu class */
 .menu {
-  background-color: #ED8F00; }
-
+  background-color: #ED8F00;
+}
 .menu ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  overflow: auto; }
-
+  overflow: auto;
+}
 .menu ul li {
-  font-family: 'Lato', sans-serif; }
-
+  font-family: 'Lato', sans-serif;
+}
 .menu ul a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  float: left; }
-
-.menu ul a:hover, .menu ul li.active a {
-  color: #a16100; }
+  float: left;
+}
+.menu ul a:hover, .menu ul .menu ul li.active a {
+  color: #a16100;
+}
 
 /*----- Toggle Button -----*/
 .toggle-nav {
   display: none;
   background-color: #ED8F00;
-  width: 100%; }
+  width: 100%;
+}
 
+/* Nesting the main tag */
+/* Moved the main img from below up into this nested section */
 main {
   overflow: auto;
-  background-color: #EFECCA; }
-
-main h2, div.photogallery h2 {
+  background-color: #EFECCA;
+}
+main h2 {
   padding-top: 0em;
   background-color: #EFECCA;
   color: #61381D;
   text-align: center;
-  font-family: 'Francois One', sans-serif; }
-
+  font-family: 'Francois One', sans-serif;
+}
 main h3, main h4 {
   background-color: #EFECCA;
-  font-family: 'Francois One', sans-serif; }
-
-main p, div.photogallery p {
+  font-family: 'Francois One', sans-serif;
+}
+main p {
   font-family: 'Lato', sans-serif;
   background-color: #EFECCA;
-  color: #BB6F39; }
+  color: #BB6F39;
+}
+main img {
+  float: left;
+}
+
+/* Nested the div.photography class */
+/* Needed to separate this from the main nesting */
+div.photogallery h2 {
+  padding-top: 0em;
+  background-color: #EFECCA;
+  color: #61381D;
+  text-align: center;
+  font-family: 'Francois One', sans-serif;
+}
+div.photogallery p {
+  font-family: 'Lato', sans-serif;
+  background-color: #EFECCA;
+  color: #BB6F39;
+  padding-left: 1%;
+  padding-right: 1%;
+}
 
 .second_main_pic {
-  float: right; }
-
-div.photogallery p {
-  padding-left: 1%;
-  padding-right: 1%; }
+  float: right;
+}
 
 div.col-1-2-4 img {
   max-width: 350px;
   width: 95%;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
-
+  margin-right: auto;
+}
 div.col-1-2-4 p {
   width: 95%;
   padding-left: 5%;
   padding-right: 2%;
   font-family: 'Lato', sans-serif;
-  color: #BB6F39; }
+  color: #BB6F39;
+}
 
 .col-1-2-4 h3 {
-  color: #61381D; }
-
-main img {
-  float: left; }
+  color: #61381D;
+}
 
 footer {
   clear: both;
   padding: 0.5em 0;
   margin: 0.75em 0;
   color: #999;
-  text-align: center; }
+  text-align: center;
+}
 
 /* grid system */
 .row::after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
 [class*='col-'] {
   float: left;
-  min-height: 1px; }
+  min-height: 1px;
+}
 
 .col-1 {
-  width: 25%; }
+  width: 25%;
+}
 
 .col-1-2-4 {
-  width: 25%; }
+  width: 25%;
+}
 
 .col-2 {
-  width: 50%; }
+  width: 50%;
+}
 
 .col-3 {
-  width: 75%; }
+  width: 75%;
+}
 
 .col-4 {
-  width: 100%; }
+  width: 100%;
+}
 
 /* media queries */
 /* Desktop Screen Sizes */
@@ -150,35 +188,55 @@ footer {
     width: 1200px;
     height: 300px;
     font-family: 'Lato', sans-serif;
-    color: #fff; }
+    color: #fff;
+  }
 
   .menu ul a {
     font-size: 1.25em;
-    padding: 1%; }
+    padding: 1%;
+  }
 
-  main h2, div.photogallery h2 {
+  /* Nesting the main tag */
+  main h2 {
     font-size: 2.5em;
     line-height: 1.25em;
     padding-left: 0.25em;
-    padding-right: 0.25em; }
-
-  main p, div.photogallery p {
+    padding-right: 0.25em;
+  }
+  main p {
     font-size: 1.5em;
     line-height: 1.1em;
     margin-left: 0.25em;
-    margin-right: 0.25em; }
-
+    margin-right: 0.25em;
+  }
   main img {
     padding-top: 0%;
     padding-left: 1%;
     padding-bottom: 1%;
     margin-right: 1.4em;
-    float: left; }
+    float: left;
+  }
 
   .col-1-2-4 h3 {
     font-size: 1.25em;
     margin: 0 auto;
-    text-align: center; } }
+    text-align: center;
+  }
+
+  /* Nesting the div.photogallery class */
+  div.photogallery h2 {
+    font-size: 2.5em;
+    line-height: 1.25em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+  div.photogallery p {
+    font-size: 1.5em;
+    line-height: 1.1em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+}
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: 768px) and (max-width: 1049px) {
@@ -188,34 +246,54 @@ footer {
     width: 1000px;
     height: 300px;
     font-family: 'Lato', sans-serif;
-    color: #fff; }
+    color: #fff;
+  }
 
   .menu ul a {
     font-size: 1em;
-    padding: 0.8em; }
+    padding: 0.8em;
+  }
 
-  main h2, div.photogallery h2 {
+  /* Nesting the main tag */
+  main h2 {
     font-size: 2.25em;
     line-height: 1.2em;
     padding-left: 0.2em;
-    padding-right: 0.2em; }
-
-  main p, div.photogallery p {
+    padding-right: 0.2em;
+  }
+  main p {
     font-size: 1.25em;
     line-height: 1.15em;
     margin-left: 0.2em;
-    margin-right: 0.2em; }
-
+    margin-right: 0.2em;
+  }
   main img {
     padding-top: 1%;
     padding-left: 1%;
     margin-right: 1.3em;
-    float: left; }
+    float: left;
+  }
+
+  /* Nesting the div.photogallery class */
+  div.photogallery h2 {
+    font-size: 2.25em;
+    line-height: 1.2em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+  div.photogallery p {
+    font-size: 1.25em;
+    line-height: 1.15em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+  }
 
   .col-1-2-4 h3 {
     font-size: 1.1em;
     margin: 0 auto;
-    text-align: center; } }
+    text-align: center;
+  }
+}
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -225,72 +303,96 @@ footer {
     width: 800px;
     height: 300px;
     font-family: 'Lato', sans-serif;
-    color: #fff; }
+    color: #fff;
+  }
 
   .menu ul a {
     font-size: 0.75em;
-    padding: 0.5em; }
+    padding: 0.5em;
+  }
 
-  main h2, div.photogallery h2 {
+  /* Nesting the main tag */
+  main h2 {
     font-size: 1.75em;
     line-height: 1.15em;
     padding-left: 0.15em;
-    padding-right: 0.15em; }
-
-  main p, div.photogallery p {
+    padding-right: 0.15em;
+  }
+  main p {
     font-size: 1.1em;
     line-height: 1.1em;
     margin-left: 0.15em;
-    margin-right: 0.15em; }
-
+    margin-right: 0.15em;
+  }
   main img {
     padding-top: 1%;
     padding-left: 1%;
     margin-right: 1em;
-    float: left; }
+    float: left;
+  }
 
+  /* Nesting the div.photogallery class */
+  div.photogallery h2 {
+    font-size: 1.75em;
+    line-height: 1.15em;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+  }
+  div.photogallery p {
+    font-size: 1.1em;
+    line-height: 1.1em;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+  }
+
+  /* Nesting the .col-1-2-4 class */
   .col-1-2-4 {
-    width: 50%; }
-
+    width: 50%;
+  }
   .col-1-2-4 h3 {
     font-size: 1.25em;
     margin: 0 auto;
-    text-align: center; } }
+    text-align: center;
+  }
+}
 /* Mobile portrait Screen Sizes */
 /* pixel range: <=479px */
 @media only screen and (max-width: 479px) {
   /* Use the 500px width background image in the header*/
+  /* Nesting the header tag */
   header {
     background: url(../images/sog-entrance-500.jpg) no-repeat;
     width: 500px;
     height: 255px;
     font-family: 'Lato', sans-serif;
-    color: #fff; }
-
+    color: #fff;
+  }
   header h1 {
     padding: 0.5em;
-    margin: 0; }
-
+    margin: 0;
+  }
   header h1 a {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+  }
 
+  /* Nesting the menu class */
   .menu {
     position: relative;
-    display: block; }
-
+    display: block;
+  }
   .menu ul.active-toggle {
     display: none;
-    background-color: #ED8F00; }
-
+    background-color: #ED8F00;
+  }
   .menu ul {
     width: 100%;
     position: absolute;
     top: 120%;
     left-margin: 0px;
     left-padding: 1%;
-    background: #ED8F00; }
-
+    background: #ED8F00;
+  }
   .menu ul:after {
     width: 0px;
     height: 0px;
@@ -298,21 +400,23 @@ footer {
     top: 0%;
     left: 5%;
     content: '';
-    transform: translate(0%, -100%); }
-
+    transform: translate(0%, -100%);
+  }
   .menu li {
     padding-left: 2%;
     padding-top: 1%;
     padding-bottom: 1%;
     float: left;
-    display: block; }
+    display: block;
+  }
+  .menu a {
+    display: block;
+  }
 
   ul > li {
     float: none;
-    width: 100%; }
-
-  .menu a {
-    display: block; }
+    width: 100%;
+  }
 
   .toggle-nav {
     padding: 1em;
@@ -323,44 +427,65 @@ footer {
     font-size: 20px;
     transition: color linear 0.15s;
     text-decoration: none;
-    font-weight: bold; }
+    font-weight: bold;
+  }
 
   .toggle-nav:hover, .toggle-nav.active {
     text-decoration: none;
-    color: #a16100; }
+    color: #a16100;
+  }
 
-  main h2, div.photogallery h2 {
+  /* Nesting the main tag */
+  main h2 {
     font-size: 1.5em;
     line-height: 1.2em;
     padding-left: 0.1em;
-    padding-right: 0.1em; }
-
-  main p, div.photogallery p {
+    padding-right: 0.1em;
+  }
+  main p {
     font-size: 1em;
     line-height: 1.15em;
-    text-align: center; }
-
+    text-align: center;
+  }
   main img {
     width: 100%;
     padding-top: 1%;
     padding-left: 1%;
     padding-right: 1%;
     margin: 0 auto;
-    float: none; }
+    float: none;
+  }
+
+  div.photogallery h2 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+  }
+  div.photogallery p {
+    font-size: 1em;
+    line-height: 1.15em;
+    text-align: center;
+  }
 
   .first_main_pic, .second_main_pic {
-    float: none; }
+    float: none;
+  }
 
+  /* Nesting the .col-1-2-4 class */
   .col-1-2-4 h3 {
     font-size: 1.25em;
     margin: 0 auto;
-    text-align: center; }
-
+    text-align: center;
+  }
   .col-1-2-4 p {
     margin-left: 2%;
-    margin-right: 2%; }
+    margin-right: 2%;
+  }
 
   [class*='col-'] {
     width: 100%;
     float: none;
-    margin-left: 0; } }
+    margin-left: 0;
+  }
+}

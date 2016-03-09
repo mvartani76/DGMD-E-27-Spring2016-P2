@@ -17,31 +17,37 @@
 #register_id input[type="url"],
 #register_id textarea {
   font: 400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
-  color: #61381D; }
+  color: #61381D;
+}
 
 #contact_id input[type="radio"] {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 #contact_id, #login_id, #register_id {
   background-color: #F6F5E3;
   padding: 1%;
-  margin: 2% 0; }
+  margin: 2% 0;
+}
 
 #contact_id h3, #login_id h3, #register_id h3 {
   color: #70482D;
   background-color: #F6F5E3;
   display: block;
   margin-left: 2%;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 #contact_id h4, #login_id h4, #register_id h4 {
   color: #70482D;
   background-color: #F6F5E3;
   margin-left: 2%;
-  display: block; }
+  display: block;
+}
 
 #contact_id .centerh4, #contact_id input[type="time"] {
-  text-align: center; }
+  text-align: center;
+}
 
 fieldset {
   border: medium none !important;
@@ -51,7 +57,8 @@ fieldset {
   width: 100%;
   font: 400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
   color: #61381D;
-  text-align: center; }
+  text-align: center;
+}
 
 #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 #contact_id input[type="time"], #contact_id textarea {
@@ -59,46 +66,53 @@ fieldset {
   border: 1px solid #CCC;
   background: #FFF;
   margin: 0 0 5px;
-  padding: 10px; }
+  padding: 10px;
+}
 
 #login_id input[type="text"], #login_id input[type="password"], #login_id textarea {
   width: 100%;
   border: 1px solid #CCC;
   background: #FFF;
   margin: 0 0 5px;
-  padding: 10px; }
+  padding: 10px;
+}
 
 #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
   width: 100%;
   border: 1px solid #CCC;
   background: #FFF;
   margin: 0 0 5px;
-  padding: 10px; }
+  padding: 10px;
+}
 
 #contact_id input[type="text"]:hover, #contact_id input[type="email"]:hover, #contact_id input[type="tel"]:hover, #contact_id input[type="url"]:hover,
 #contact_id input[type="time"]:hover, #contact_id textarea:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA; }
+  border: 1px solid #AAA;
+}
 
 #login_id input[type="text"]:hover, #login_id input[type="password"]:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA; }
+  border: 1px solid #AAA;
+}
 
 #register_id input[type="text"]:hover, #register_id input[type="email"]:hover, #register_id input[type="tel"]:hover, #register_id input[type="url"]:hover,
 #register_id input[type="password"]:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA; }
+  border: 1px solid #AAA;
+}
 
 #contact_id textarea, #login_id textarea {
   height: 100px;
   max-width: 100%;
-  resize: none; }
+  resize: none;
+}
 
 #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
   cursor: pointer;
@@ -107,36 +121,44 @@ fieldset {
   background: #ED8F00;
   color: #FFF;
   margin: 0 0 5px;
-  padding: 10px; }
+  padding: 10px;
+}
 
 #contact_id button[type="submit"]:hover, #login_id button[type="submit"]:hover, #register_id button[type="submit"]:hover {
   background: #B37518;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out; }
+  transition: background-color 0.3s ease-in-out;
+}
 
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
 #register_id button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
 
 #register_id .form50, #contact_id .form50 {
   width: 46%;
   display: inline;
   float: left;
   margin-left: 2%;
-  margin-right: 2%; }
+  margin-right: 2%;
+}
 
 ::-webkit-input-placeholder {
-  color: #BB6F39; }
+  color: #BB6F39;
+}
 
 :-moz-placeholder {
-  color: #BB6F39; }
+  color: #BB6F39;
+}
 
 ::-moz-placeholder {
-  color: #BB6F39; }
+  color: #BB6F39;
+}
 
 :-ms-input-placeholder {
-  color: #BB6F39; }
+  color: #BB6F39;
+}
 
 /* media queries */
 /* Desktop Screen Sizes */
@@ -144,70 +166,88 @@ fieldset {
 @media only screen and (min-width: 1050px) {
   #contact_id h3, #login_id h3, #register_id h3 {
     font-size: 2.5em;
-    line-height: 1.25em; }
+    line-height: 1.25em;
+  }
 
   #contact_id h4, #login_id h4, #register_id h4 {
     font-size: 1.5em;
-    line-height: 1.22em; }
+    line-height: 1.22em;
+  }
 
   #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-    font-size: 1.1em; }
+    font-size: 1.1em;
+  }
 
   #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
   #contact_id input[type="time"], #contact_id textarea {
     font-size: 1.1em;
     width: 95%;
     margin: 0 0 5px;
-    padding: 10px; }
+    padding: 10px;
+  }
 
   #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
-    font-size: 1.6em; } }
+    font-size: 1.6em;
+  }
+}
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: 768px) and (max-width: 1049px) {
   #contact_id h3, #login_id h3, #register_id h3 {
     font-size: 2.3em;
-    line-height: 1.22em; }
+    line-height: 1.22em;
+  }
 
   #contact_id h4, #login_id h4, #register_id h4 {
     font-size: 1.3em;
-    line-height: 1.21em; }
+    line-height: 1.21em;
+  }
 
   #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-    font-size: 1em; }
+    font-size: 1em;
+  }
 
   #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
   #contact_id input[type="time"], #contact_id textarea {
     font-size: 1em;
     width: 95%;
     margin: 0 0 5px;
-    padding: 10px; }
+    padding: 10px;
+  }
 
   #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
-    font-size: 1.5em; } }
+    font-size: 1.5em;
+  }
+}
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   #contact_id h3, #login_id h3, #register_id h3 {
     font-size: 2.2em;
-    line-height: 1.15em; }
+    line-height: 1.15em;
+  }
 
   #contact_id h4, #login_id h4, #register_id h4 {
     font-size: 1.1em;
-    line-height: 1.1em; }
+    line-height: 1.1em;
+  }
 
   #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-    font-size: 0.95em; }
+    font-size: 0.95em;
+  }
 
   #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
   #contact_id input[type="time"], #contact_id textarea {
     font-size: 0.95em;
     width: 95%;
     margin: 0 0 5px;
-    padding: 10px; }
+    padding: 10px;
+  }
 
   #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
-    font-size: 1.4em; } }
+    font-size: 1.4em;
+  }
+}
 /* Mobile portrait Screen Sizes */
 /* pixel range: <=479px */
 @media only screen and (max-width: 479px) {
@@ -216,28 +256,35 @@ fieldset {
     display: inline;
     float: left;
     margin-left: 2%;
-    margin-right: 2%; }
+    margin-right: 2%;
+  }
 
   #contact_id h3, #login_id h3, #register_id h3 {
     font-size: 2em;
-    line-height: 1.1em; }
+    line-height: 1.1em;
+  }
 
   #contact_id h4, #login_id h4, #register_id h4 {
     font-size: 1em;
-    line-height: 1.05em; }
+    line-height: 1.05em;
+  }
 
   #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
     font-size: 0.85em;
     width: 95%;
     margin: 0 0 5px;
-    padding: 10px; }
+    padding: 10px;
+  }
 
   #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
   #contact_id input[type="time"], #contact_id textarea {
     font-size: 0.85em;
     width: 95%;
     margin: 0 0 5px;
-    padding: 10px; }
+    padding: 10px;
+  }
 
   #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
-    font-size: 1.3em; } }
+    font-size: 1.3em;
+  }
+}
