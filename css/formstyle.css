@@ -64,7 +64,7 @@ fieldset {
 #contact_id input[type="time"], #contact_id textarea {
   width: 100%;
   border: 1px solid #CCC;
-  background: #FFF;
+  background-color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
 }
@@ -72,7 +72,7 @@ fieldset {
 #login_id input[type="text"], #login_id input[type="password"], #login_id textarea {
   width: 100%;
   border: 1px solid #CCC;
-  background: #FFF;
+  background-color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
 }
@@ -80,7 +80,7 @@ fieldset {
 #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
   width: 100%;
   border: 1px solid #CCC;
-  background: #FFF;
+  background-color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
 }
@@ -90,14 +90,14 @@ fieldset {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA;
+  border-color: #AAA;
 }
 
 #login_id input[type="text"]:hover, #login_id input[type="password"]:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA;
+  border-color: #AAA;
 }
 
 #register_id input[type="text"]:hover, #register_id input[type="email"]:hover, #register_id input[type="tel"]:hover, #register_id input[type="url"]:hover,
@@ -105,7 +105,7 @@ fieldset {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA;
+  border-color: #AAA;
 }
 
 #contact_id textarea, #login_id textarea {
@@ -118,7 +118,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #ED8F00;
+  background-color: #ED8F00;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
