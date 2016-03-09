@@ -313,8 +313,7 @@ footer {
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
-@media only screen and 
-	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
+@media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	/* Use the 800px width background image in the header*/
 	header {
 		background: url(../images/sog-entrance-800.jpg) no-repeat;

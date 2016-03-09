@@ -213,8 +213,7 @@ fieldset {
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
-@media only screen and 
-	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
+@media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	#contact_id h3, #login_id h3, #register_id h3 {
 		font-size: 2.2em;
 		line-height: 1.15em;		
