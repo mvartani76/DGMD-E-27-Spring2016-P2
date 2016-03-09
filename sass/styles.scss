@@ -39,10 +39,10 @@ a {
 	float: none;
 	background-color: $primary-background-color;	
 }
-/* Nesting the .menu class as well as nesting the ul tag
-   inside the .menu class */
+// Nesting the .menu class as well as nesting the ul tag
+// inside the .menu class
 .menu {
-	background-color: #ED8F00;
+	background-color: $secondary-background-color;
 
 	ul {
 		margin: 0;
@@ -67,12 +67,12 @@ a {
 /*----- Toggle Button -----*/
 .toggle-nav {
     display:none;
-   	background-color: #ED8F00; 
+   	background-color: $secondary-background-color; 
 	width: 100%;
 }
 
-/* Nesting the main tag */
-/* Moved the main img from below up into this nested section */
+// Nesting the main tag
+// Moved the main img from below up into this nested section
 main {
 	overflow: auto;
 	background-color: $primary-background-color;
@@ -100,8 +100,8 @@ main {
 	}
 }
 
-/* Nested the div.photography class */
-/* Needed to separate this from the main nesting */
+// Nested the div.photography class
+// Needed to separate this from the main nesting
 div.photogallery {
 	h2 {
 		padding-top: 0em;
@@ -201,7 +201,7 @@ footer {
 		padding: 1%;
 	}
 
-	/* Nesting the main tag */
+	// Nesting the main tag
 	main {
 		h2 {
 			font-size: 2.5em;
@@ -230,7 +230,7 @@ footer {
 		text-align: center;
 	}
 
-	/* Nesting the div.photogallery class */
+	// Nesting the div.photogallery class
 	div.photogallery {
 		h2 {
 			font-size: 2.5em;
@@ -265,7 +265,7 @@ footer {
 		padding: 0.8em;
 	}
 
-	/* Nesting the main tag */
+	// Nesting the main tag
 	main {
 		h2 {
 			font-size: 2.25em;
@@ -287,7 +287,7 @@ footer {
 		}
 	}
 
-	/* Nesting the div.photogallery class */
+	// Nesting the div.photogallery class
 	div.photogallery {
 		h2 {
 			font-size: 2.25em;
@@ -328,7 +328,7 @@ footer {
 		padding: 0.5em;
 	}
 
-	/* Nesting the main tag */
+	// Nesting the main tag
 	main {
 		h2 {
 			font-size: 1.75em;
@@ -350,7 +350,7 @@ footer {
 		}
 	}
 
-	/* Nesting the div.photogallery class */
+	// Nesting the div.photogallery class
 	div.photogallery {
 		h2 {
 			font-size: 1.75em;
@@ -367,7 +367,7 @@ footer {
 		}
 	}
 
-	/* Nesting the .col-1-2-4 class */	
+	// Nesting the .col-1-2-4 class
 	.col-1-2-4 {
 		width: 50%;
 
@@ -383,7 +383,7 @@ footer {
 /* pixel range: <=479px */
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
 	/* Use the 500px width background image in the header*/
-	/* Nesting the header tag */
+	// Nesting the header tag
 	header {
 		background: url(../images/sog-entrance-500.jpg) no-repeat;
 		width: 500px;
@@ -462,7 +462,7 @@ footer {
 		color: #a16100;
     }
 
-	/* Nesting the main tag */
+	// Nesting the main tag
 	main {
 		h2 {
 			font-size: 1.5em;
@@ -503,7 +503,7 @@ footer {
 		float: none;
 	}
 
-	/* Nesting the .col-1-2-4 class */
+	// Nesting the .col-1-2-4 class
 	.col-1-2-4 {
 		h3 {
 			font-size: 1.25em;
