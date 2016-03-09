@@ -126,9 +126,9 @@ fieldset {
 }
 
 #contact_id button[type="submit"]:hover, #login_id button[type="submit"]:hover, #register_id button[type="submit"]:hover {
-	background:#B37518;
+	background-color:#B37518;
 	// Using transition mixin to set the background color transition for different browser types
-	@include transition(background, 0.3s, ease-in-out);
+	@include transition(background-color, 0.3s, ease-in-out);
 }
 
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,

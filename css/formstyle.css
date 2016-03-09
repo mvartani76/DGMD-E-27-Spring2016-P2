@@ -125,9 +125,9 @@ fieldset {
 }
 
 #contact_id button[type="submit"]:hover, #login_id button[type="submit"]:hover, #register_id button[type="submit"]:hover {
-  background: #B37518;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
+  background-color: #B37518;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
