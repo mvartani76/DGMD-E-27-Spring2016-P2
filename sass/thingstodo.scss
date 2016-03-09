@@ -63,7 +63,7 @@ aside p {
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
-@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width-m1) {
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 	aside h3 {
 		font-size: 1.25em;
 	}
@@ -76,7 +76,7 @@ aside p {
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and 
-	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width-m1)  {	
+	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {	
 	aside h3 {
 		font-size: 1em;
 	}
@@ -88,7 +88,7 @@ aside p {
 
 /* Mobile Portrait Screen Sizes */
 /* pixel range: <480px */	
-@media only screen and (max-width: $min-phone-landscape-width-m1)  {
+@media only screen and (max-width: $min-phone-landscape-width - 1)  {
 	aside h3 {
 		font-size: 1.5em;
 	}
@@ -127,7 +127,7 @@ aside p {
 		max-width: 250px;
 	}
 }
-@media only screen and (min-width: $min-desktop-width) and (max-width: $min-desktop-width-breakpoint1-m1) {
+@media only screen and (min-width: $min-desktop-width) and (max-width: $min-desktop-width-breakpoint1 - 1) {
 	.thingstodo_main_left_pic > img {
 		margin-left: 20%;
 		margin-right: 2%;
@@ -141,7 +141,7 @@ aside p {
 		max-width: 215px;
 	}	
 }
-@media only screen and (min-width: $min-tablet-width-breakpoint1) and (max-width: $min-desktop-width-m1) {
+@media only screen and (min-width: $min-tablet-width-breakpoint1) and (max-width: $min-desktop-width - 1) {
 	.thingstodo_main_left_pic > img {
 		width: 90%;
 		max-width: 180px;
@@ -155,7 +155,7 @@ aside p {
 		margin-right: 5%;
 	}
 }
-@media only screen and (min-width: $min-tablet-width) and (max-width: $min-tablet-width-breakpoint1-m1) {
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-tablet-width-breakpoint1 - 1) {
 	.thingstodo_main_left_pic > img {
 		width: 90%;
 		max-width: 170px;
@@ -170,7 +170,7 @@ aside p {
 	}
 }
 @media only screen and 
-	(min-width: $min-phone-width-breakpoint1) and (max-width: $min-tablet-width-m1)  {	
+	(min-width: $min-phone-width-breakpoint1) and (max-width: $min-tablet-width - 1)  {	
 		.thingstodo_main_left_pic > img {
 		width: 90%;
 		max-width: 130px;
@@ -185,7 +185,7 @@ aside p {
 	}
 }
 @media only screen and 
-	(min-width: $min-phone-width-breakpoint2) and (max-width: $min-phone-width-breakpoint1-m1)  {	
+	(min-width: $min-phone-width-breakpoint2) and (max-width: $min-phone-width-breakpoint1 - 1)  {	
 		.thingstodo_main_left_pic > img {
 		width: 90%;
 		max-width: 120px;
@@ -200,7 +200,7 @@ aside p {
 	}
 }
 @media only screen and 
-	(min-width: $min-phone-landscape-width) and (max-width: $min-phone-width-breakpoint2-m1)  {	
+	(min-width: $min-phone-landscape-width) and (max-width: $min-phone-width-breakpoint2 - 1)  {	
 		.thingstodo_main_left_pic > img {
 		width: 90%;
 		max-width: 110px;

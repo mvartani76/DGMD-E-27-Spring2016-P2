@@ -250,7 +250,7 @@ footer {
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
-@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width-m1) {
+@media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 	/* Use the 1000px width background image in the header*/
 	header {
 		background: url(../images/sog-entrance-1000.jpg) no-repeat;
@@ -314,7 +314,7 @@ footer {
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and 
-	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width-m1)  {
+	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	/* Use the 800px width background image in the header*/
 	header {
 		background: url(../images/sog-entrance-800.jpg) no-repeat;
@@ -382,7 +382,7 @@ footer {
 
 /* Mobile portrait Screen Sizes */
 /* pixel range: <=479px */
-@media only screen and (max-width: $min-phone-landscape-width-m1)  {
+@media only screen and (max-width: $min-phone-landscape-width - 1)  {
 	/* Use the 500px width background image in the header*/
 	/* Nesting the header tag */
 	header {
