@@ -53,57 +53,34 @@ aside {
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1000px; */
 @media only screen and (min-width: $min-desktop-width) {
-	aside {
-		h3 {
-			font-size: 1.5em;
-		}
-		li {
-			font-size: 0.9em;
-			line-height: 1.5em;		
-		}
-	}
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside(1.5em, 0.9em, 1.5em);
 }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
-	aside {
-		h3 {
-			font-size: 1.25em;
-		}
-		li {
-			font-size: 0.75em;
-			line-height: 1.4em;			
-		}
-	}
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside(1.25em, 0.75em, 1.4em);
 }
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {	
-	aside {
-		h3 {
-			font-size: 1em;
-		}
-		li {
-			font-size: 0.6em;
-			line-height: 1.3em;			
-		}
-	}
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside(1em, 0.6em, 1.3em);
 }
 
 /* Mobile Portrait Screen Sizes */
 /* pixel range: <480px */	
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
-	aside {
-		h3 {
-			font-size: 1.5em;
-		}
-		li {
-			font-size: 0.9em;
-			line-height: 1.5em;		
-		}
-	}
+
+	// Using thingstodo_aside() mixin to set h3 and li parameters
+	@include thingstodo_aside(1.5em, 0.9em, 1.5em);	
+
 	/* Keep the columns in the original order in the
 	   mobile portrait mode screen size */	
   	.col-push-1,
