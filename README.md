@@ -20,11 +20,11 @@ The code consists of the following files:
 **styles.scss** - The main overall stylesheet for the site. This has media queries in it.<br>
 **weather-style.scss** - Weather widget sidebar specific stylings.<br>
 **formstyle.scss** - Form specific stylesheet.<br>
-**_varaibles.scss** - Partial file for storing sass variables.<br>
+**_variables.scss** - Partial file for storing sass variables.<br>
 **_mixins.scss** - Partial file for storing sass mixins.<br>
 
 ## Generated CSS Files:
-These files are generated from the SASS source files above.<br>
+These files are generated from the SASS source files above.<br><br>
 **normalize.css** - The stylesheet that normalizes everything between browsers.<br>
 **styles.css** - The main overall stylesheet for the site. This has media queries in it.<br>
 **weather-style.css** - Weather widget sidebar specific stylings.<br>
