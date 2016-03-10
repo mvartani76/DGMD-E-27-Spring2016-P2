@@ -2,22 +2,18 @@
 aside {
   background-color: #EEDFAF;
 }
-
 aside h3 {
   font-family: 'Francois One', sans-serif;
   color: #61381D;
   text-align: center;
 }
-
 aside ul {
   padding-left: 15%;
 }
-
 aside li {
   font-family: 'Lato', sans-serif;
   color: #BB6F39;
 }
-
 aside p {
   font-family: 'Lato', sans-serif;
   color: #BB6F39;
@@ -54,7 +50,6 @@ aside p {
   aside h3 {
     font-size: 1.5em;
   }
-
   aside li {
     font-size: 0.9em;
     line-height: 1.5em;
@@ -66,7 +61,6 @@ aside p {
   aside h3 {
     font-size: 1.25em;
   }
-
   aside li {
     font-size: 0.75em;
     line-height: 1.4em;
@@ -78,7 +72,6 @@ aside p {
   aside h3 {
     font-size: 1em;
   }
-
   aside li {
     font-size: 0.6em;
     line-height: 1.3em;
@@ -90,7 +83,6 @@ aside p {
   aside h3 {
     font-size: 1.5em;
   }
-
   aside li {
     font-size: 0.9em;
     line-height: 1.5em;
