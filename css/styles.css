@@ -59,7 +59,7 @@ a {
   font-weight: bold;
   float: left;
 }
-.menu ul a:hover, .menu ul .menu ul li.active a {
+.menu ul a:hover, .menu ul li.active a {
   color: #a16100;
 }
 
