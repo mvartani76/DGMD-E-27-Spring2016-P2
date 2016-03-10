@@ -41,7 +41,7 @@ I primarily used a Google Chrome browser (Version 48.0.2564.116 m) running on a 
 ## Build a Responsive Website
 I am using the responsive website I built from Assignment 1.<br>
 The URL is: http://dgmd-e27-p1.mikevartanian.me/index.php<br>
-The comments and code is located in GitHub here: https://github.com/mvartani76/DGMD-E-27-Spring2016-P1<br>
+The comments and code are located in GitHub here: https://github.com/mvartani76/DGMD-E-27-Spring2016-P1<br>
 
 ## Variables
 The variables are defined in the partial file _variables.scss.<br>
