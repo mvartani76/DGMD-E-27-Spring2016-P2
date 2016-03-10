@@ -15,7 +15,7 @@ The code consists of the following files:
 
 **contact.php/login.php/register.php** - These are all form based php files with the weather widget side bar on the right side.
 
-##SASS Files:
+##SASS Source Files:
 **normalize.scss** - The stylesheet that normalizes everything between browsers.<br>
 **styles.scss** - The main overall stylesheet for the site. This has media queries in it.<br>
 **weather-style.scss** - Weather widget sidebar specific stylings.<br>
@@ -23,7 +23,8 @@ The code consists of the following files:
 **_varaibles.scss** - Partial file for storing sass variables
 **_mixins.scss** - Partial file for storing sass mixins
 
-##CSS Files:
+## Generated CSS Files:
+These files are generated from the SASS source files above.
 **normalize.css** - The stylesheet that normalizes everything between browsers.<br>
 **styles.css** - The main overall stylesheet for the site. This has media queries in it.<br>
 **weather-style.css** - Weather widget sidebar specific stylings.<br>
