@@ -4,11 +4,6 @@
 
 @import "variables";
 
-.outside-w-wrapper {
-	background-color: #EEDFAF;
-	text-align: center
-}
-
 .weather-wrapper {
 	width: 90%;
 	padding-left: 2%;
@@ -16,28 +11,34 @@
 	padding-top: 1%;
 	margin: 0 auto;
 	color: white;
-	background-color: #AD7623;
-	text-align: center
+	background-color: $weather-wrapper-background-color;
+	text-align: center;
+
+	& + p {
+		font-family: 'Lato', sans-serif;
+		color: $weather-wrapper-paragraph-text;
+	}
 }
 
-.outside-w-wrapper h3 {
-	font-family: 'Francois One', sans-serif;
-	color: #61381D;
-}
+// Nesting for outside-w-wrapper
+.outside-w-wrapper {
 
-.outside-w-wrapper p {
-	font-family: 'Lato', sans-serif;
-	color: $primary-light-text-color;
-}
+	background-color: $weather-outside-wrapper-background-color;
+	text-align: center;
 
-.weather-wrapper p {
-	font-family: 'Lato', sans-serif;
-	color: #fff;
-}
+	h3 {
+		font-family: 'Francois One', sans-serif;
+		color: $weather-outside-wrapper-heading-text;
+	}
 
+	& + p {
+		font-family: 'Lato', sans-serif;
+		color: $primary-light-text-color;
+	}
+}
 
 strong {
-	color: #ED8F00;
+	color: $weather-strong-color;
 }
 
 .capitalize {
@@ -49,22 +50,28 @@ strong {
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1000px; */
 @media only screen and (min-width: $min-desktop-width) {
-	.outside-w-wrapper h3 {
-		font-size: 1.5em;
-	}
-	.outside-w-wrapper p {
-		font-size: 1em;
+	// Nesting outside-w-wrapper
+	.outside-w-wrapper {
+		h3 {
+			font-size: 1.5em;
+		}
+		p {
+			font-size: 1em;
+		}
 	}
 }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
-	.outside-w-wrapper h3 {
-		font-size: 1.25em;
-	}
-	.outside-w-wrapper p {
-		font-size: 0.85em;
+	// Nesting outside-w-wrapper
+	.outside-w-wrapper {
+		h3 {
+			font-size: 1.25em;
+		}
+		p {
+			font-size: 0.85em;
+		}
 	}
 }
 
@@ -72,11 +79,14 @@ strong {
 /* pixel range: 480-767px */
 @media only screen and 
 	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
-	.outside-w-wrapper h3 {
-		font-size: 1em;
-	}
-	.outside-w-wrapper p {
-		font-size: 0.667em;
+	// Nesting outside-w-wrapper
+	.outside-w-wrapper {
+		h3 {
+			font-size: 1em;
+		}
+		p {
+			font-size: 0.667em;
+		}
 	}	
 }
 

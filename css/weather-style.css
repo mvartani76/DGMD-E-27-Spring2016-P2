@@ -1,11 +1,6 @@
 /* This css file contains the stylings specific to the
    weather widget that shows up on the sidebar for most of
    the pages on this site*/
-.outside-w-wrapper {
-  background-color: #EEDFAF;
-  text-align: center;
-}
-
 .weather-wrapper {
   width: 90%;
   padding-left: 2%;
@@ -16,20 +11,22 @@
   background-color: #AD7623;
   text-align: center;
 }
+.weather-wrapper + p {
+  font-family: 'Lato', sans-serif;
+  color: #FFF;
+}
 
+.outside-w-wrapper {
+  background-color: #EEDFAF;
+  text-align: center;
+}
 .outside-w-wrapper h3 {
   font-family: 'Francois One', sans-serif;
   color: #61381D;
 }
-
-.outside-w-wrapper p {
+.outside-w-wrapper + p {
   font-family: 'Lato', sans-serif;
   color: #BB6F39;
-}
-
-.weather-wrapper p {
-  font-family: 'Lato', sans-serif;
-  color: #fff;
 }
 
 strong {
@@ -47,7 +44,6 @@ strong {
   .outside-w-wrapper h3 {
     font-size: 1.5em;
   }
-
   .outside-w-wrapper p {
     font-size: 1em;
   }
@@ -58,7 +54,6 @@ strong {
   .outside-w-wrapper h3 {
     font-size: 1.25em;
   }
-
   .outside-w-wrapper p {
     font-size: 0.85em;
   }
@@ -69,7 +64,6 @@ strong {
   .outside-w-wrapper h3 {
     font-size: 1em;
   }
-
   .outside-w-wrapper p {
     font-size: 0.667em;
   }
