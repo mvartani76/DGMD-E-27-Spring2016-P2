@@ -3,3 +3,15 @@
 	-moz-transition:$transition-variable $transition-time $transition-timing-function;
 	transition:$transition-variable $transition-time $transition-timing-function;          
 }
+
+@mixin thingstodo_aside($h3-font-size, $li-font-size, $li-line-height) {
+	aside {
+		h3 {
+			font-size: $h3-font-size;
+		}
+		li {
+			font-size: $li-font-size;
+			line-height: $li-line-height;
+		}
+	}
+}
