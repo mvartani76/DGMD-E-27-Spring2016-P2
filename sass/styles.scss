@@ -60,7 +60,7 @@ a {
 			float: left;
 		}
 		a:hover, li.active a {
-			color: #a16100;
+			color: $menu-active-color;
 		}
 	}
 }
