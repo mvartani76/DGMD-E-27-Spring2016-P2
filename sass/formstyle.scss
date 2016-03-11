@@ -144,18 +144,8 @@ fieldset {
     margin-right: 2%;
 }
 
-::-webkit-input-placeholder {
-	color: $primary-light-text-color;
-}
-:-moz-placeholder {
-	color: $primary-light-text-color;
-}
-::-moz-placeholder {
-	color: $primary-light-text-color;
-}
-:-ms-input-placeholder {
-	color: $primary-light-text-color;
-}
+// Using placeholder_set mixin to set the placeholder text color for different browser types
+@include placeholder_set($primary-light-text-color);
 
 /* media queries */
 

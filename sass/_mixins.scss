@@ -1,9 +1,27 @@
+// This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
 	-moz-transition:$transition-variable $transition-time $transition-timing-function;
 	transition:$transition-variable $transition-time $transition-timing-function;          
 }
 
+// This simple mixin sets the placeholder input text color for the various browser types
+@mixin placeholder_set($text-color) {
+	::-webkit-input-placeholder {
+		color: $text-color;
+	}
+	:-moz-placeholder {
+		color: $text-color;
+	}
+	::-moz-placeholder {
+		color: $text-color;
+	}
+	:-ms-input-placeholder {
+		color: $text-color;
+	}
+}
+
+// This mixin sets a few parameters for the aside tag
 @mixin thingstodo_aside($h3-font-size, $li-font-size, $li-line-height) {
 	aside {
 		h3 {
