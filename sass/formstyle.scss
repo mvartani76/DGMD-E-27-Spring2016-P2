@@ -21,7 +21,7 @@
 #register_id input[type="url"],
 #register_id textarea {
 		font:400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
-		color: #61381D;
+		color: $form-primary-text-color;
 }
 
 #contact_id input[type="radio"] {

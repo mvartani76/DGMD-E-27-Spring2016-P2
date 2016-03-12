@@ -80,7 +80,7 @@ main {
 	h2 {
 		padding-top: 0em;
 		background-color: $primary-background-color;
-		color: #61381D;
+		color: $primary-heading-text-color;
 		text-align: center;
 		font-family: 'Francois One', sans-serif;
 	}
@@ -106,7 +106,7 @@ div.photogallery {
 	h2 {
 		padding-top: 0em;
 		background-color: $primary-background-color;
-		color: #61381D;
+		color: $primary-heading-text-color;
 		text-align: center;
 		font-family: 'Francois One', sans-serif;
 	}
@@ -143,7 +143,7 @@ div.col-1-2-4 {
 }
 
 .col-1-2-4 h3 {
-	color: #61381D;
+	color: $primary-heading-text-color;
 }
 
 footer {
@@ -193,7 +193,7 @@ footer {
 		width: 1200px;
 		height: 300px;
 		font-family: 'Lato', sans-serif; 
-		color: #fff;
+		color: $primary-header-text-color;
 	}
 
 	.menu ul a {
@@ -257,7 +257,7 @@ footer {
 		width: 1000px;
 		height: 300px;
 		font-family: 'Lato', sans-serif; 
-		color: #fff;
+		color: $primary-header-text-color;
 	}
 	
 	.menu ul a {
@@ -320,7 +320,7 @@ footer {
 		width: 800px;
 		height: 300px;
 		font-family: 'Lato', sans-serif; 
-		color: #fff;
+		color: $primary-header-text-color;
 	}
 
 	.menu ul a {
@@ -389,7 +389,7 @@ footer {
 		width: 500px;
 		height: 255px;
 		font-family: 'Lato', sans-serif; 
-		color: #fff;
+		color: $primary-header-text-color;
 	
 		h1 {
 			padding: 0.5em;
