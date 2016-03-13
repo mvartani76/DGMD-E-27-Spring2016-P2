@@ -1,3 +1,58 @@
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function convert-percentage($number) {
+	@return ($number / 100)
+}
+
+@function scale-unit-value($value-to-be-scaled, $scale-value) {
+	@return unquote(strip-unit($value-to-be-scaled) * convert-percentage($scale-value) + unit($value-to-be-scaled))
+}
+
+// This mixin sets selected tag properties that are changed for different media queries
+// This mixin was created as there is a lot of repeated code
+@mixin set-selector-props($tag-prop, $base-header-font-size, $header-font-percentage-adjustment,
+								$base-header-line-height, $header-line-percentage-adjustment,
+								$base-value, $value-precentage-adjustment) {
+
+	@if $tag-prop == "h2" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment);		
+				padding-left: scale-unit-value($base-value, $value-precentage-adjustment);
+				padding-right: scale-unit-value($base-value, $value-precentage-adjustment);
+		}
+	}
+	@else if $tag-prop == "p" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment);		
+				margin-left: scale-unit-value($base-value, $value-precentage-adjustment);
+				margin-right: scale-unit-value($base-value, $value-precentage-adjustment);
+		}		
+	}
+
+}
+
+// This mixin sets img properties for different media queries
+// As the img tag props were different than the h2 and p tags, I created a separate mixin
+@mixin set-selector-img-props($padding-top-var, $padding-left-var, $padding-bottom-var, $margin-right-var) {
+	img {
+			padding-top: $padding-top-var;
+			padding-left: $padding-left-var;
+			padding-bottom: $padding-bottom-var;
+			margin-right: $margin-right-var;
+			float: left;
+		}
+}
+
 // This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
