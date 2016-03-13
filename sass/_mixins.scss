@@ -8,10 +8,15 @@
   @return $number;
 }
 
+// Convert a percentage number to the decimal equivalent
+// For example, 50 would correspond to 0.5
 @function convert-percentage($number) {
 	@return ($number / 100)
 }
 
+// Scale a unit number by $scale-vale
+// This function first removes the unit, scales it by $scale-value, which is the percentage number without
+// the % and then adds the unit back.
 @function scale-unit-value($value-to-be-scaled, $scale-value) {
 	@return unquote(strip-unit($value-to-be-scaled) * convert-percentage($scale-value) + unit($value-to-be-scaled))
 }
