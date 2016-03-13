@@ -4,6 +4,85 @@ $primary-light-text-color: #BB6F39;
 $primary-heading-text-color: #61381D;
 $primary-header-text-color: #FFF;
 
+$main-base-h2-font-size: 2.5em;
+$main-base-h2-line-height: 1.25em;
+$main-base-h2-padding: 0.25em;
+$main-base-p-font-size: 1.5em;
+$main-base-p-line-height: 1.1em;
+$main-base-p-margin: 0.25em;
+
+// Scale factors for the main h2 tags
+$main-desktop-width-h2-font-size-scale-factor: 100;
+$main-tablet-width-h2-font-size-scale-factor: 90;
+$main-phone-landscape-width-h2-font-size-scale-factor: 70;
+$main-phone-portrait-width-h2-font-size-scale-factor: 60;
+
+$main-desktop-width-h2-line-height-scale-factor: 100;
+$main-tablet-width-h2-line-height-scale-factor: 96;
+$main-phone-landscape-width-h2-line-height-scale-factor: 92;
+$main-phone-portrait-width-h2-line-height-scale-factor: 96;
+
+$main-desktop-width-h2-padding-scale-factor: 100;
+$main-tablet-width-h2-padding-scale-factor: 80;
+$main-phone-landscape-width-h2-padding-scale-factor: 60;
+$main-phone-portrait-width-h2-padding-scale-factor: 40;
+
+// Scale factors for the main p tags
+$main-desktop-width-p-font-size-scale-factor: 100;
+$main-tablet-width-p-font-size-scale-factor: 83.333;
+$main-phone-landscape-width-p-font-size-scale-factor: 73.333;
+$main-phone-portrait-width-p-font-size-scale-factor: 60;
+
+$main-desktop-width-p-line-height-scale-factor: 100;
+$main-tablet-width-p-line-height-scale-factor: 104.545;
+$main-phone-landscape-width-p-line-height-scale-factor: 100;
+$main-phone-portrait-width-p-line-height-scale-factor: 96;
+
+$main-desktop-width-p-margin-scale-factor: 100;
+$main-tablet-width-p-margin-scale-factor: 80;
+$main-phone-landscape-width-p-margin-scale-factor: 60;
+$main-phone-portrait-width-p-margin-scale-factor: 40;
+
+$photo-base-h2-font-size: 2.5em;
+$photo-base-h2-line-height: 1.25em;
+$photo-base-h2-padding: 0.25em;
+$photo-base-p-font-size: 1.5em;
+$photo-base-p-line-height: 1.1em;
+$photo-base-p-margin: 0.25em;
+
+// Scale factors for the photo h2 tags
+$photo-desktop-width-h2-font-size-scale-factor: 100;
+$photo-tablet-width-h2-font-size-scale-factor: 90;
+$photo-phone-landscape-width-h2-font-size-scale-factor: 70;
+$photo-phone-portrait-width-h2-font-size-scale-factor: 60;
+
+$photo-desktop-width-h2-line-height-scale-factor: 100;
+$photo-tablet-width-h2-line-height-scale-factor: 96;
+$photo-phone-landscape-width-h2-line-height-scale-factor: 92;
+$photo-phone-portrait-width-h2-line-height-scale-factor: 96;
+
+$photo-desktop-width-h2-padding-scale-factor: 100;
+$photo-tablet-width-h2-padding-scale-factor: 80;
+$photo-phone-landscape-width-h2-padding-scale-factor: 60;
+$photo-phone-portrait-width-h2-padding-scale-factor: 40;
+
+// Scale factors for the photo p tags
+$photo-desktop-width-p-font-size-scale-factor: 100;
+$photo-tablet-width-p-font-size-scale-factor: 83.333;
+$photo-phone-landscape-width-p-font-size-scale-factor: 73.333;
+$photo-phone-portrait-width-p-font-size-scale-factor: 60;
+
+$photo-desktop-width-p-line-height-scale-factor: 100;
+$photo-tablet-width-p-line-height-scale-factor: 104.545;
+$photo-phone-landscape-width-p-line-height-scale-factor: 100;
+$photo-phone-portrait-width-p-line-height-scale-factor: 96;
+
+$photo-desktop-width-p-margin-scale-factor: 100;
+$photo-tablet-width-p-margin-scale-factor: 80;
+$photo-phone-landscape-width-p-margin-scale-factor: 60;
+$photo-phone-portrait-width-p-margin-scale-factor: 40;
+
+
 // Navigation Bar Variables
 $menu-active-color: #a16100;
 
