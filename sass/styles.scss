@@ -186,7 +186,7 @@ footer {
 /* media queries */
 
 /* Desktop Screen Sizes */
-/* Pixel Range: >= 1050px; */
+/* Pixel Range: >= $min-desktop-width */
 @media only screen and (min-width: $min-desktop-width) {
 	/* Use the 1200px width background image in the header*/
 	header {
@@ -204,28 +204,15 @@ footer {
 
 	// Nesting the main tag
 	main {
+	
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-desktop-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-desktop-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-desktop-width-h2-padding-scale-factor);
 
-	//	h2 {
-	//		font-size: 2.5em;
-	//		line-height: 1.25em;		
-	//		padding-left: 0.25em;
-	//		padding-right: 0.25em;
-	//	}	
-		@include set-selector-props(h2, $main-base-h2-font-size, $main-desktop-width-h2-font-size-scale-factor, $main-base-h2-line-height, $main-desktop-width-h2-line-height-scale-factor, $main-base-h2-padding, $main-desktop-width-h2-padding-scale-factor);
-	//	p {
-	//		font-size: 1.5em;
-	//		line-height: 1.1em;
-	//		margin-left: 0.25em;
-	//		margin-right: 0.25em;
-	//	}
-		@include set-selector-props(p, $main-base-p-font-size, $main-desktop-width-p-font-size-scale-factor, $main-base-p-line-height, $main-desktop-width-p-line-height-scale-factor, $main-base-p-margin, $main-desktop-width-p-margin-scale-factor);	
-	//	img {
-	//		padding-top: 0%;
-	//		padding-left: 1%;
-	//		padding-bottom: 1%;
-	//		margin-right: 1.4em;
-	//		float: left;
-	//	}
+		@include set-selector-props(p, $main-base-p-font-size, $main-desktop-width-p-font-size-scale-factor,
+										$main-base-p-line-height, $main-desktop-width-p-line-height-scale-factor,
+										$main-base-p-margin, $main-desktop-width-p-margin-scale-factor);	
+
 		@include set-selector-img-props(0%, 1%, 1%, 1.4em);
 	}
 
@@ -237,25 +224,19 @@ footer {
 
 	// Nesting the div.photogallery class
 	div.photogallery {
-		//h2 {
-		//	font-size: 2.5em;
-		//	line-height: 1.25em;		
-		//	padding-left: 0.25em;
-		//	padding-right: 0.25em;
-		//}
-		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-desktop-width-h2-font-size-scale-factor, $photo-base-h2-line-height, $photo-desktop-width-h2-line-height-scale-factor, $photo-base-h2-padding, $photo-desktop-width-h2-padding-scale-factor);
-		//p {
-		//	font-size: 1.5em;
-		//	line-height: 1.1em;
-		//	margin-left: 0.25em;
-		//	margin-right: 0.25em;
-		//}
-		@include set-selector-props(p, $photo-base-p-font-size, $photo-desktop-width-p-font-size-scale-factor, $photo-base-p-line-height, $photo-desktop-width-p-line-height-scale-factor, $photo-base-p-margin, $photo-desktop-width-p-margin-scale-factor);
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-desktop-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-desktop-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-desktop-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $photo-base-p-font-size, $photo-desktop-width-p-font-size-scale-factor,
+										$photo-base-p-line-height, $photo-desktop-width-p-line-height-scale-factor,
+										$photo-base-p-margin, $photo-desktop-width-p-margin-scale-factor);
 	}
 }
 
 /* Tablet Screen Sizes */
-/* Pixel Range: >= 768px; */
+/* pixel range: $min-tablet-width - ($min-desktop-width - 1) */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 	/* Use the 1000px width background image in the header*/
 	header {
@@ -273,20 +254,14 @@ footer {
 
 	// Nesting the main tag
 	main {
-		//h2 {
-		//	font-size: 2.25em;
-		//	line-height: 1.2em;
-		//	padding-left: 0.2em;
-		//	padding-right: 0.2em;
-		//}
-		@include set-selector-props(h2, $main-base-h2-font-size, $main-tablet-width-h2-font-size-scale-factor, $main-base-h2-line-height, $main-tablet-width-h2-line-height-scale-factor, $main-base-h2-padding, $main-tablet-width-h2-padding-scale-factor);
-		//p {
-		//	font-size: 1.25em;
-		//	line-height: 1.15em;
-		//	margin-left: 0.2em;
-		//	margin-right: 0.2em;
-		//}
-		@include set-selector-props(p, $main-base-p-font-size, $main-tablet-width-p-font-size-scale-factor, $main-base-p-line-height, $main-tablet-width-p-line-height-scale-factor, $main-base-p-margin, $main-tablet-width-p-margin-scale-factor);	
+
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-tablet-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-tablet-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-tablet-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $main-base-p-font-size, $main-tablet-width-p-font-size-scale-factor,
+										$main-base-p-line-height, $main-tablet-width-p-line-height-scale-factor,
+										$main-base-p-margin, $main-tablet-width-p-margin-scale-factor);	
 		img {
 			padding-top: 1%;
 			padding-left: 1%;
@@ -297,20 +272,14 @@ footer {
 
 	// Nesting the div.photogallery class
 	div.photogallery {
-		//h2 {
-		//	font-size: 2.25em;
-		//	line-height: 1.2em;
-		//	padding-left: 0.2em;
-		//	padding-right: 0.2em;
-		//}
-		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-tablet-width-h2-font-size-scale-factor, $photo-base-h2-line-height, $photo-tablet-width-h2-line-height-scale-factor, $photo-base-h2-padding, $photo-tablet-width-h2-padding-scale-factor);
-		//p {
-		//	font-size: 1.25em;
-		//	line-height: 1.15em;
-		//	margin-left: 0.2em;
-		//	margin-right: 0.2em;
-		//}
-		@include set-selector-props(p, $photo-base-p-font-size, $photo-tablet-width-p-font-size-scale-factor, $photo-base-p-line-height, $photo-tablet-width-p-line-height-scale-factor, $photo-base-p-margin, $photo-tablet-width-p-margin-scale-factor);
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-tablet-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-tablet-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-tablet-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $photo-base-p-font-size, $photo-tablet-width-p-font-size-scale-factor,
+										$photo-base-p-line-height, $photo-tablet-width-p-line-height-scale-factor,
+										$photo-base-p-margin,$photo-tablet-width-p-margin-scale-factor);
 }
 
 	.col-1-2-4 h3 {
@@ -322,7 +291,7 @@ footer {
 
 
 /* Mobile Landscape Screen Sizes */
-/* pixel range: 480-767px */
+/* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	/* Use the 800px width background image in the header*/
 	header {
@@ -340,20 +309,14 @@ footer {
 
 	// Nesting the main tag
 	main {
-		//h2 {
-		//	font-size: 1.75em;
-		//	line-height: 1.15em;		
-		//	padding-left: 0.15em;
-		//	padding-right: 0.15em;
-		//}
-		@include set-selector-props(h2, $main-base-h2-font-size, $main-phone-landscape-width-h2-font-size-scale-factor, $main-base-h2-line-height, $main-phone-landscape-width-h2-line-height-scale-factor, $main-base-h2-padding, $main-phone-landscape-width-h2-padding-scale-factor);
-		//p {
-		//	font-size: 1.1em;
-		//	line-height: 1.1em;
-		//	margin-left: 0.15em;
-		//	margin-right: 0.15em;	
-		//}
-		@include set-selector-props(p, $main-base-p-font-size, $main-phone-landscape-width-p-font-size-scale-factor, $main-base-p-line-height, $main-phone-landscape-width-p-line-height-scale-factor, $main-base-p-margin, $main-phone-landscape-width-p-margin-scale-factor);
+
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-phone-landscape-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-phone-landscape-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-phone-landscape-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $main-base-p-font-size, $main-phone-landscape-width-p-font-size-scale-factor,
+										$main-base-p-line-height, $main-phone-landscape-width-p-line-height-scale-factor,
+										$main-base-p-margin, $main-phone-landscape-width-p-margin-scale-factor);
 		img {
 			padding-top: 1%;
 			padding-left: 1%;
@@ -364,20 +327,14 @@ footer {
 
 	// Nesting the div.photogallery class
 	div.photogallery {
-		//h2 {
-		//	font-size: 1.75em;
-		//	line-height: 1.15em;		
-		//	padding-left: 0.15em;
-		//	padding-right: 0.15em;
-		//}
-		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-landscape-width-h2-font-size-scale-factor, $photo-base-h2-line-height, $photo-phone-landscape-width-h2-line-height-scale-factor, $photo-base-h2-padding, $photo-phone-landscape-width-h2-padding-scale-factor);
-		//p {
-		//	font-size: 1.1em;
-		//	line-height: 1.1em;
-		//	margin-left: 0.15em;
-		//	margin-right: 0.15em;	
-		//}
-		@include set-selector-props(p, $photo-base-p-font-size, $photo-phone-landscape-width-p-font-size-scale-factor, $photo-base-p-line-height, $photo-phone-landscape-width-p-line-height-scale-factor, $photo-base-p-margin, $photo-phone-landscape-width-p-margin-scale-factor);
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-landscape-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-phone-landscape-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-phone-landscape-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $photo-base-p-font-size, $photo-phone-landscape-width-p-font-size-scale-factor,
+										$photo-base-p-line-height, $photo-phone-landscape-width-p-line-height-scale-factor,
+										$photo-base-p-margin, $photo-phone-landscape-width-p-margin-scale-factor);
 	}
 
 	// Nesting the .col-1-2-4 class
@@ -393,7 +350,7 @@ footer {
 }
 
 /* Mobile portrait Screen Sizes */
-/* pixel range: <=479px */
+/* pixel range: <= ($min-phone-landscape-width - 1) */
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
 	/* Use the 500px width background image in the header*/
 	// Nesting the header tag
@@ -477,13 +434,10 @@ footer {
 
 	// Nesting the main tag
 	main {
-		//h2 {
-		//	font-size: 1.5em;
-		//	line-height: 1.2em;		
-		//	padding-left: 0.1em;
-		//	padding-right: 0.1em;
-		//}
-		@include set-selector-props(h2, $main-base-h2-font-size, $main-phone-portrait-width-h2-font-size-scale-factor, $main-base-h2-line-height, $main-phone-portrait-width-h2-line-height-scale-factor, $main-base-h2-padding, $main-phone-portrait-width-h2-padding-scale-factor);
+
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-phone-portrait-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-phone-portrait-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-phone-portrait-width-h2-padding-scale-factor);
 		p {
 			font-size: 1em;
 			line-height: 1.15em;
@@ -500,13 +454,10 @@ footer {
 	}
 
 	div.photogallery {
-		//h2 {
-		//	font-size: 1.5em;
-		//	line-height: 1.2em;		
-		//	padding-left: 0.1em;
-		//	padding-right: 0.1em;
-		//}
-		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-portrait-width-h2-font-size-scale-factor, $photo-base-h2-line-height, $photo-phone-portrait-width-h2-line-height-scale-factor, $photo-base-h2-padding, $photo-phone-portrait-width-h2-padding-scale-factor);
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-portrait-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-phone-portrait-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-phone-portrait-width-h2-padding-scale-factor);
 		p {
 			font-size: 1em;
 			line-height: 1.15em;

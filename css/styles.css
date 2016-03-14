@@ -174,7 +174,7 @@ footer {
 
 /* media queries */
 /* Desktop Screen Sizes */
-/* Pixel Range: >= 1050px; */
+/* Pixel Range: >= $min-desktop-width */
 @media only screen and (min-width: 1050px) {
   /* Use the 1200px width background image in the header*/
   header {
@@ -230,7 +230,7 @@ footer {
   }
 }
 /* Tablet Screen Sizes */
-/* Pixel Range: >= 768px; */
+/* pixel range: $min-tablet-width - ($min-desktop-width - 1) */
 @media only screen and (min-width: 768px) and (max-width: 1049px) {
   /* Use the 1000px width background image in the header*/
   header {
@@ -285,7 +285,7 @@ footer {
   }
 }
 /* Mobile Landscape Screen Sizes */
-/* pixel range: 480-767px */
+/* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   /* Use the 800px width background image in the header*/
   header {
@@ -343,7 +343,7 @@ footer {
   }
 }
 /* Mobile portrait Screen Sizes */
-/* pixel range: <=479px */
+/* pixel range: <= ($min-phone-landscape-width - 1) */
 @media only screen and (max-width: 479px) {
   /* Use the 500px width background image in the header*/
   header {
