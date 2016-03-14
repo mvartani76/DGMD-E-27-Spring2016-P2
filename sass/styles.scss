@@ -196,9 +196,8 @@ footer {
 @media only screen and (min-width: $min-desktop-width) {
 	/* Use the 1200px width background image in the header*/
 	header {
-		background: url(../images/sog-entrance-1200.jpg) no-repeat;
-		width: 1200px;
-		height: 300px;
+		// Set the background header image, height, and width using a mixin
+		@include set-header-img-height-width("../images/sog-entrance-1200.jpg", 300px, 1200px);		
 	}
 
 	.menu ul a {
@@ -244,9 +243,8 @@ footer {
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 	/* Use the 1000px width background image in the header*/
 	header {
-		background: url(../images/sog-entrance-1000.jpg) no-repeat;
-		width: 1000px;
-		height: 300px;
+		// Set the background header image, height, and width using a mixin
+		@include set-header-img-height-width("../images/sog-entrance-1000.jpg", 300px, 1000px);		
 	}
 	
 	.menu ul a {
@@ -297,9 +295,8 @@ footer {
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	/* Use the 800px width background image in the header*/
 	header {
-		background: url(../images/sog-entrance-800.jpg) no-repeat;
-		width: 800px;
-		height: 300px;
+		// Set the background header image, height, and width using a mixin
+		@include set-header-img-height-width("../images/sog-entrance-800.jpg", 300px, 800px);		
 	}
 
 	.menu ul a {
@@ -355,9 +352,8 @@ footer {
 	/* Use the 500px width background image in the header*/
 	// Nesting the header tag
 	header {
-		background: url(../images/sog-entrance-500.jpg) no-repeat;
-		width: 500px;
-		height: 255px;
+		// Set the background header image, height, and width using a mixin
+		@include set-header-img-height-width("../images/sog-entrance-500.jpg", 255px, 500px);
 	
 		h1 {
 			padding: 0.5em;

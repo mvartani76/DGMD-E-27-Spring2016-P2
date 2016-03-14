@@ -58,6 +58,14 @@
 		}
 }
 
+// This mixin sets the header background image, height, and width
+@mixin set-header-img-height-width($header-img-file, $header-height, $header-width){
+		background: url(unquote($header-img-file)) no-repeat;
+		width: $header-width;
+		height: $header-height;
+}
+
+
 // This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
