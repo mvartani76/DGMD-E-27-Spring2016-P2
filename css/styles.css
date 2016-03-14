@@ -41,6 +41,11 @@ a {
   background-color: #EFECCA;
 }
 
+header {
+  font-family: 'Lato', sans-serif;
+  color: #FFF;
+}
+
 .menu {
   background-color: #ED8F00;
 }
@@ -181,8 +186,6 @@ footer {
     background: url(../images/sog-entrance-1200.jpg) no-repeat;
     width: 1200px;
     height: 300px;
-    font-family: 'Lato', sans-serif;
-    color: #FFF;
   }
 
   .menu ul a {
@@ -237,8 +240,6 @@ footer {
     background: url(../images/sog-entrance-1000.jpg) no-repeat;
     width: 1000px;
     height: 300px;
-    font-family: 'Lato', sans-serif;
-    color: #FFF;
   }
 
   .menu ul a {
@@ -292,8 +293,6 @@ footer {
     background: url(../images/sog-entrance-800.jpg) no-repeat;
     width: 800px;
     height: 300px;
-    font-family: 'Lato', sans-serif;
-    color: #FFF;
   }
 
   .menu ul a {
@@ -350,8 +349,6 @@ footer {
     background: url(../images/sog-entrance-500.jpg) no-repeat;
     width: 500px;
     height: 255px;
-    font-family: 'Lato', sans-serif;
-    color: #FFF;
   }
   header h1 {
     padding: 0.5em;

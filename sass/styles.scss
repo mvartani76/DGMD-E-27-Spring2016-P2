@@ -40,6 +40,12 @@ a {
 	float: none;
 	background-color: $primary-background-color;	
 }
+
+header {
+		font-family: 'Lato', sans-serif; 
+		color: $primary-header-text-color;
+}
+
 // Nesting the .menu class as well as nesting the ul tag
 // inside the .menu class
 .menu {
@@ -193,8 +199,6 @@ footer {
 		background: url(../images/sog-entrance-1200.jpg) no-repeat;
 		width: 1200px;
 		height: 300px;
-		font-family: 'Lato', sans-serif; 
-		color: $primary-header-text-color;
 	}
 
 	.menu ul a {
@@ -243,8 +247,6 @@ footer {
 		background: url(../images/sog-entrance-1000.jpg) no-repeat;
 		width: 1000px;
 		height: 300px;
-		font-family: 'Lato', sans-serif; 
-		color: $primary-header-text-color;
 	}
 	
 	.menu ul a {
@@ -298,8 +300,6 @@ footer {
 		background: url(../images/sog-entrance-800.jpg) no-repeat;
 		width: 800px;
 		height: 300px;
-		font-family: 'Lato', sans-serif; 
-		color: $primary-header-text-color;
 	}
 
 	.menu ul a {
@@ -358,8 +358,6 @@ footer {
 		background: url(../images/sog-entrance-500.jpg) no-repeat;
 		width: 500px;
 		height: 255px;
-		font-family: 'Lato', sans-serif; 
-		color: $primary-header-text-color;
 	
 		h1 {
 			padding: 0.5em;
