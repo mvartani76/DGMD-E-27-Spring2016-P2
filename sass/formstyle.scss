@@ -60,7 +60,7 @@ fieldset {
 	padding: 0;
 	width: 100%;
 	font:400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
-	color: #61381D;
+	color: $form-primary-text-color;
 	text-align: center;
 }
 
@@ -140,8 +140,10 @@ fieldset {
 	width: 46%;
     display: inline;
     float: left;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin: {
+    	left: 2%;
+    	right: 2%;
+    }
 }
 
 // Using placeholder_set mixin to set the placeholder text color for different browser types
@@ -234,8 +236,10 @@ fieldset {
 		width: 96%;
 	    display: inline;
 	    float: left;
-	    margin-left: 2%;
-	    margin-right: 2%;
+	    margin: {
+	    	left: 2%;
+	    	right: 2%;
+	    }
 	}
 	#contact_id h3, #login_id h3, #register_id h3 {
 		font-size: 2em;

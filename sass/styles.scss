@@ -35,7 +35,7 @@ a {
 }
 .wrapper {
 	width: 97%;
-	max-width: 1200px;
+	max-width: $wrapper-width;
 	margin: 0 auto;
 	float: none;
 	background-color: $primary-background-color;	
@@ -157,7 +157,7 @@ footer {
 	clear: both;
 	padding: 0.5em 0;
 	margin: 0.75em 0;
-	color: #999;
+	color: $footer-text-color;
 	text-align: center;
 }
 
@@ -263,8 +263,10 @@ footer {
 										$main-base-p-line-height, $main-tablet-width-p-line-height-scale-factor,
 										$main-base-p-margin, $main-tablet-width-p-margin-scale-factor);	
 		img {
-			padding-top: 1%;
-			padding-left: 1%;
+			padding: {
+				top: 1%;
+				left: 1%;
+			}
 			margin-right: 1.3em;
 			float: left;
 		}
@@ -315,8 +317,11 @@ footer {
 										$main-base-p-line-height, $main-phone-landscape-width-p-line-height-scale-factor,
 										$main-base-p-margin, $main-phone-landscape-width-p-margin-scale-factor);
 		img {
-			padding-top: 1%;
-			padding-left: 1%;
+			// Nest img padding
+			padding: {
+				top: 1%;
+				left: 1%;
+			}
 			margin-right: 1em;
 			float: left;
 		}
@@ -395,9 +400,12 @@ footer {
 	    }
 	 
 	    li {
-	        padding-left: 2%;
-	        padding-top: 1%;
-	        padding-bottom: 1%;
+	    	// Nest li padding
+	    	padding: {
+	        	left: 2%;
+	        	top: 1%;
+	        	bottom: 1%;
+	        }
 	        float:left;
 	        display:block;
 	    }
@@ -439,9 +447,12 @@ footer {
 		}
 		img {
 			width: 100%;
-			padding-top: 1%;
-			padding-left: 1%;
-			padding-right: 1%;
+			// Nest img padding
+			padding: {
+				top: 1%;
+				left: 1%;
+				right: 1%;
+			}
 			margin: 0 auto;
 			float: none;
 		}
