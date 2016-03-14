@@ -65,6 +65,25 @@
 		height: $header-height;
 }
 
+// This mixin sets the font size and line height.
+// Since it is used for multiple media queries in formstyle.scss, decided to make a mixin and reduce code
+//
+// As the line-height is not always set in these media queries, put some conditional code in to alter css
+// based on whether or not the user wants to set the variables...
+//
+// The user can choose not to set a parameter by setting the input parameter to "none"
+@mixin set-font-size-and-line-height($font-size, $line-height) {
+	@if $font-size == "none" {
+		line-height: $line-height;
+	}
+	@else if $line-height == "none" {
+		font-size: $font-size;
+	}
+	@else {
+		font-size: $font-size;
+		line-height: $line-height;
+	}
+}
 
 // This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {

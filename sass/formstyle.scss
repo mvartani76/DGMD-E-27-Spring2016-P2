@@ -155,15 +155,14 @@ fieldset {
 /* Pixel Range: >= 1000px; */
 @media only screen and (min-width: $min-desktop-width) {
 	#contact_id h3, #login_id h3, #register_id h3 {
-		font-size: 2.5em;
-		line-height: 1.25em;
+		@include set-font-size-and-line-height(2.5em, 1.25em);
 	}
 	#contact_id h4, #login_id h4, #register_id h4 {
-		font-size: 1.5em;
-		line-height: 1.22em;
+		@include set-font-size-and-line-height(1.5em, 1.22em);
 	}
 	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-		font-size: 1.1em;
+		// Since line-height is not set here, set the line-height parameter to "none"
+		@include set-font-size-and-line-height(1.1em, none);
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
@@ -173,7 +172,8 @@ fieldset {
 		padding:10px;
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
-		font-size:1.6em;
+		// Since line-height is not set here, set the line-height parameter to "none"
+		@include set-font-size-and-line-height(1.6em, none);
 	}
 }
 
@@ -181,15 +181,14 @@ fieldset {
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 	#contact_id h3, #login_id h3, #register_id h3 {
-		font-size: 2.3em;
-		line-height: 1.22em;	
+		@include set-font-size-and-line-height(2.3em, 1.22em);
 	}
 	#contact_id h4, #login_id h4, #register_id h4 {
-		font-size: 1.3em;
-		line-height: 1.21em;
+		@include set-font-size-and-line-height(1.3em, 1.21em);
 	}
 	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-		font-size: 1em;
+		// Since line-height is not set here, set the line-height parameter to "none"
+		@include set-font-size-and-line-height(1em, none);
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
@@ -198,8 +197,9 @@ fieldset {
 		margin: 0 0 5px;
 		padding:10px;
 	}
-	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
-		font-size:1.5em;
+	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
+		// Since line-height is not set here, set the line-height parameter to "none"
+		@include set-font-size-and-line-height(1.5em, none);
 	}
 }
 
@@ -207,15 +207,14 @@ fieldset {
 /* pixel range: 480-767px */
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	#contact_id h3, #login_id h3, #register_id h3 {
-		font-size: 2.2em;
-		line-height: 1.15em;		
+		@include set-font-size-and-line-height(2.2em, 1.15em);
 	}
 	#contact_id h4, #login_id h4, #register_id h4 {
-		font-size: 1.1em;
-		line-height: 1.1em;		
+		@include set-font-size-and-line-height(1.1em, 1.1em);
 	}
 	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-		font-size: 0.95em;
+		// Since line-height is not set here, set the line-height parameter to "none"
+		@include set-font-size-and-line-height(0.95em, none);		
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
@@ -225,7 +224,8 @@ fieldset {
 		padding:10px;
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
-		font-size:1.4em;
+		// Since line-height is not set here, set the line-height parameter to "none"
+		@include set-font-size-and-line-height(1.4em, none);		
 	}				
 }		
 
@@ -242,12 +242,10 @@ fieldset {
 	    }
 	}
 	#contact_id h3, #login_id h3, #register_id h3 {
-		font-size: 2em;
-		line-height: 1.1em;		
+		@include set-font-size-and-line-height(2em, 1.1em);		
 	}
 	#contact_id h4, #login_id h4, #register_id h4 {
-		font-size: 1em;
-		line-height: 1.05em;		
+		@include set-font-size-and-line-height(1em, 1.05em);
 	}
 	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
 		font-size: 0.85em;
@@ -263,6 +261,7 @@ fieldset {
 		padding:10px;
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
-		font-size:1.3em;
+		// Since line-height is not set here, set the line-height parameter to "none"
+		@include set-font-size-and-line-height(1.3em, none);
 	}				
 }
