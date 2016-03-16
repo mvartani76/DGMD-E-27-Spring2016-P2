@@ -59,7 +59,55 @@ Nesting is performed several places. A few examples are shown below.<br>
 A few different built-in Sass functions are used primarily in mixins as shown below.<br>
 
 ## if/else
-If/else conditional logic is used in a few mixins as shown below.<br>
+If/else conditional logic is used in a few mixins throughout the project. One instance of using if/else conditional logic is in the set-selector-props() mixin. The mixin sets various properties for the h2 and p tags for different media queries. The properties that are set for h2 and p are similar but not exact so the if/else logic is used to set the properties accordingly depending on which tag input is selected.<br>
+```
+// This mixin sets selected tag properties that are changed for different media queries
+// This mixin was created as there is a lot of repeated code
+@mixin set-selector-props($tag-prop, $base-header-font-size, $header-font-percentage-adjustment,
+								$base-header-line-height, $header-line-percentage-adjustment,
+								$base-value, $value-precentage-adjustment) {
+
+	@if $tag-prop == "h2" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment);		
+				padding-left: scale-unit-value($base-value, $value-precentage-adjustment);
+				padding-right: scale-unit-value($base-value, $value-precentage-adjustment);
+		}
+	}
+	@else if $tag-prop == "p" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment);		
+				margin-left: scale-unit-value($base-value, $value-precentage-adjustment);
+				margin-right: scale-unit-value($base-value, $value-precentage-adjustment);
+		}		
+	}
+
+}
+```
+Another example of using if/else is in the set-font-size-and-line-height() mixin. The font-size and line-height is adjusted for the various media queries in formstyle.scss. This mixin was created since these properties were adjusted a lot and repeated unnecessarily. Both properties, however, were not adjusted all the time so the conditional logic was used to determine what parameters to set depedning on the mixin inputs.<br>
+```
+// This mixin sets the font size and line height.
+// Since it is used for multiple media queries in formstyle.scss, decided to make a mixin and reduce code
+//
+// As the line-height is not always set in these media queries, put some conditional code in to alter css
+// based on whether or not the user wants to set the variables...
+//
+// The user can choose not to set a parameter by setting the input parameter to "none"
+@mixin set-font-size-and-line-height($font-size, $line-height) {
+	@if $font-size == "none" {
+		line-height: $line-height;
+	}
+	@else if $line-height == "none" {
+		font-size: $font-size;
+	}
+	@else {
+		font-size: $font-size;
+		line-height: $line-height;
+	}
+}
+```
 
 ## Loops
 A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, percentage(), to convert the decimal output of the division to a percentage.<br>
