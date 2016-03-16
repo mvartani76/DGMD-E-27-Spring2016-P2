@@ -57,7 +57,7 @@ Nesting is performed several places. A few examples are shown below.<br>
 
 ## Built-in Sass Functions
 A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
-The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the scale-unit-value() function as shown below.<br>
+The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function as shown below.<br>
 ```
 // Scale a unit number by $scale-vale
 // This function first removes the unit, scales it by $scale-value, which is the percentage number without
@@ -66,7 +66,7 @@ The **unquote()** and **unit()** functions were used to remove the quotes and ad
 	@return unquote(strip-unit($value-to-be-scaled) * convert-percentage($scale-value) + unit($value-to-be-scaled))
 }
 ```
-The **percentage()** function is used in the create-grid-system() mixin to convert the decimal output to a percentage as shown below.<br>
+The **percentage()** function is used in the **create-grid-system()** mixin to convert the decimal output to a percentage as shown below.<br>
 ```
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
@@ -79,7 +79,7 @@ The **percentage()** function is used in the create-grid-system() mixin to conve
 	}
 }
 ```
-Another **unquote()** function is used in the set-header-img-height-width() mixin to remove the quotes from the image file and path name as shown below.<br>
+Another **unquote()** function is used in the **set-header-img-height-width()** mixin to remove the quotes from the image file and path name as shown below.<br>
 ```
 // This mixin sets the header background image, height, and width
 // The $header-img-file is input as a string so we need to remove the quotes using the built-in Sass function
