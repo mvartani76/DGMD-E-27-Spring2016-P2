@@ -92,7 +92,7 @@ Another **unquote()** function is used in the **set-header-img-height-width()** 
 ```
 
 ## if/else
-If/else conditional logic is used in a few mixins throughout the project. One instance of using if/else conditional logic is in the **set-selector-props()** mixin. The mixin sets various properties for the h2 and p tags for different media queries. The properties that are set for **h2** and **p** are similar but not exact so the if/else logic is used to set the properties accordingly depending on which tag input is selected.<br>
+If/else conditional logic is used in a few mixins throughout the project. One instance of using if/else conditional logic is in the **set-selector-props()** mixin. The mixin sets various properties for the **h2** and **p** tags for different media queries. The properties that are set for **h2** and **p** are similar but not exact so the if/else logic is used to set the properties accordingly depending on which tag input is selected.<br>
 ```
 // This mixin sets selected tag properties that are changed for different media queries
 // This mixin was created as there is a lot of repeated code
@@ -119,7 +119,7 @@ If/else conditional logic is used in a few mixins throughout the project. One in
 
 }
 ```
-Another example of using if/else is in the **set-font-size-and-line-height()** mixin. The font-size and line-height is adjusted for the various media queries in formstyle.scss. This mixin was created since these properties were adjusted a lot and repeated unnecessarily. Both properties, however, were not adjusted all the time so the conditional logic was used to determine what parameters to set depedning on the mixin inputs.<br>
+Another example of using if/else is in the **set-font-size-and-line-height()** mixin. The font-size and line-height is adjusted for the various media queries in **formstyle.scss**. This mixin was created since these properties were adjusted a lot and repeated unnecessarily. Both properties, however, were not adjusted all the time so the conditional logic was used to determine what parameters to set depedning on the mixin inputs.<br>
 ```
 // This mixin sets the font size and line height.
 // Since it is used for multiple media queries in formstyle.scss, decided to make a mixin and reduce code
@@ -143,7 +143,7 @@ Another example of using if/else is in the **set-font-size-and-line-height()** m
 ```
 
 ## Loops
-A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, percentage(), to convert the decimal output of the division to a percentage.<br>
+A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, **percentage()**, to convert the decimal output of the division to a percentage.<br>
 ```
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
