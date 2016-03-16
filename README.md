@@ -56,7 +56,40 @@ The extends are defined here.<br>
 Nesting is performed several places. A few examples are shown below.<br>
 
 ## Built-in Sass Functions
-A few different built-in Sass functions are used primarily in mixins as shown below.<br>
+A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
+The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the scale-unit-value() function as shown below.<br>
+```
+// Scale a unit number by $scale-vale
+// This function first removes the unit, scales it by $scale-value, which is the percentage number without
+// the % and then adds the unit back.
+@function scale-unit-value($value-to-be-scaled, $scale-value) {
+	@return unquote(strip-unit($value-to-be-scaled) * convert-percentage($scale-value) + unit($value-to-be-scaled))
+}
+```
+The **percentage()** function is used in the create-grid-system() mixin to convert the decimal output to a percentage as shown below.<br>
+```
+// Create Grid System Mixin
+// @param {$num-columns} - The number of equally spaced columns
+// Mixin uses a for loop to set the width (in percentage)
+@mixin create-grid-system($num-columns) {
+	@for $i from 1 through $num-columns {
+		.col-#{$i} {
+			width: percentage(($i / $num-columns));
+		}
+	}
+}
+```
+Another **unquote()** function is used in the set-header-img-height-width() mixin to remove the quotes from the image file and path name as shown below.<br>
+```
+// This mixin sets the header background image, height, and width
+// The $header-img-file is input as a string so we need to remove the quotes using the built-in Sass function
+// unquote() in order for it to work with the url() function.
+@mixin set-header-img-height-width($header-img-file, $header-height, $header-width){
+		background: url(unquote($header-img-file)) no-repeat;
+		width: $header-width;
+		height: $header-height;
+}
+```
 
 ## if/else
 If/else conditional logic is used in a few mixins throughout the project. One instance of using if/else conditional logic is in the **set-selector-props()** mixin. The mixin sets various properties for the h2 and p tags for different media queries. The properties that are set for **h2** and **p** are similar but not exact so the if/else logic is used to set the properties accordingly depending on which tag input is selected.<br>
