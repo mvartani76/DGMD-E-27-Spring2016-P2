@@ -62,7 +62,7 @@ A few different built-in Sass functions are used primarily in mixins as shown be
 If/else conditional logic is used in a few mixins as shown below.<br>
 
 ## Loops
-A Sass @for loop was used to create the grid system and is included in the create-grid-system() mixin as shown below.<br>
+A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below.<br>
 ```
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
