@@ -85,6 +85,17 @@
 	}
 }
 
+// Create Grid System Mixin
+// @param {$num-columns} - The number of equally spaced columns
+// Mixin uses a for loop to set the width (in percentage)
+@mixin create-grid-system($num-columns) {
+	@for $i from 1 through $num-columns {
+		.col-#{$i} {
+			width: percentage(($i / $num-columns));
+		}
+	}
+}
+
 // This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
