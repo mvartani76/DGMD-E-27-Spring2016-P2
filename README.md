@@ -49,4 +49,20 @@ The variables are defined in the partial file _variables.scss.<br>
 ## Mixins
 The mixins are defined in the partial file _mixins.scss.<br>
 
+## Extends
+The extends are defined here.<br>
 
+## Nesting
+Nesting is performed several places. A few examples are shown below.<br>
+
+## Built-in Sass Functions
+A few different built-in Sass functions are used primarily in mixins as shown below.<br>
+
+## if/else
+If/else conditional logic is used in a few mixins as shown below.<br>
+
+## Loops
+Sass loops were used to create the grid system.<br>
+
+## Partial Files
+Several partial files are used throughout the project.<br>
