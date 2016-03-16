@@ -59,6 +59,8 @@
 }
 
 // This mixin sets the header background image, height, and width
+// The $header-img-file is input as a string so we need to remove the quotes using the built-in Sass function
+// unquote() in order for it to work with the url() function.
 @mixin set-header-img-height-width($header-img-file, $header-height, $header-width){
 		background: url(unquote($header-img-file)) no-repeat;
 		width: $header-width;
