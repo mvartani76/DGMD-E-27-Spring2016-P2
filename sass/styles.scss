@@ -174,7 +174,7 @@ footer {
 	min-height: 1px;
 }
 
-// Use the create-grid-system to create a grid of $num-grid-columns columns
+// Use the create-grid-system() mixin to create a grid of $num-grid-columns columns
 @include create-grid-system($num-grid-columns);
 
 .col-1-2-4 {
