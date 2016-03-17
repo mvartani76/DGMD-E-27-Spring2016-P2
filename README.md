@@ -158,3 +158,39 @@ A Sass **@for** loop was used to create the grid system and is included in the *
 ```
 ## Partial Files
 Several partial files are used throughout the project.<br>
+
+## Compass Mixins
+Compass Mixins were used selectively throughout the project and examples are shown below.<br>
+
+**transition-property()**, **transition-duration()**, and **transition-timing-function()** are used in the **toggle-nav** class via a user created sass mixin, **transition-compass()**.<br>
+
+### User mixin delcaration
+```
+// This mixin sets transitions of various parameters for a few different browser types
+// This mixin uses the compass mixins to accomplish this
+@mixin transition-compass($transition-variable, $transition-time, $transition-timing-function) {
+	@include transition-property($transition-variable);
+	@include transition-duration($transition-time);
+	@include transition-timing-function($transition-timing-function);
+}
+```
+## Use in toggle-nav class
+```
+	.toggle-nav {
+        padding:1em;
+        float:left;
+        display:block;
+        background-color: $secondary-background-color;
+        color:#fff;
+        font-size:20px;
+
+        // Replace the css transition: color linear 0.15s; with the 
+        // equivalent compass mixins (included inside user created sass mixin, transition-compass())
+        // This also provides cross browser support which was not included when just setting the
+        // transition property using CSS
+        @include transition-compass(color, 0.15s, linear);
+
+		text-decoration: none;
+		font-weight: bold;
+    }
+```
