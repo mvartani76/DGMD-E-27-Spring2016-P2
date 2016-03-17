@@ -402,6 +402,9 @@ footer {
     top: 0%;
     left: 5%;
     content: '';
+    -moz-transform: translate(0%, -100%);
+    -ms-transform: translate(0%, -100%);
+    -webkit-transform: translate(0%, -100%);
     transform: translate(0%, -100%);
   }
   .menu li {
@@ -427,7 +430,18 @@ footer {
     background-color: #ED8F00;
     color: #fff;
     font-size: 20px;
-    transition: color linear 0.15s;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -moz-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
     text-decoration: none;
     font-weight: bold;
   }

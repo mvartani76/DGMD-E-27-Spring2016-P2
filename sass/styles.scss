@@ -1,5 +1,6 @@
 // Import the compass transform mixins declarations/definitions
 @import "compass/css3/transform";
+@import "compass/css3/transition";
  
 @import "variables";
 @import "mixins";
@@ -386,7 +387,9 @@ footer {
 	        top: 0%;
 	        left: 5%;
 	        content:'';
-	        transform:translate(0%, -100%);
+	        // Use the compass mixin, translate(), to replace transform: translate and
+	        // add cross browser support
+	        @include translate(0%,-100%);
 	    }
 	 
 	    li {
@@ -414,7 +417,13 @@ footer {
         background-color: $secondary-background-color;
         color:#fff;
         font-size:20px;
-        transition:color linear 0.15s;
+
+        // Replace the css transition: color linear 0.15s; with the 
+        // equivalent compass mixins that also provide cross browser support
+        @include transition-property(color);
+        @include transition-duration(0.15s);
+        @include transition-timing-function(linear);
+
 		text-decoration: none;
 		font-weight: bold;
     }
