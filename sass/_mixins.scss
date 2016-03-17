@@ -98,6 +98,28 @@
 	}
 }
 
+// This mixin sets the font size and centers h3
+// This mixin also scales the images within col-1-2-4 when the mouse hovers
+// over the image. Using the compass mixin, scale(), to do the scaling
+@mixin set-col-1-2-4-props($h3-font-size, $img-scale-x, $image-scale-y){
+
+	// Nesting the col-1-2-4 class
+	.col-1-2-4 {
+		h3 {
+			font-size: $h3-font-size;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		img:hover {
+			// Compass mixin that scales the images in the photogallery when hovering over the image
+			@include scale($img-scale-x,$image-scale-y);
+		}
+	}
+}
+
+
+
 // This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;

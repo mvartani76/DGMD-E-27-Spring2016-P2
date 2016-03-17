@@ -213,12 +213,6 @@ footer {
     float: left;
   }
 
-  .col-1-2-4 h3 {
-    font-size: 1.25em;
-    margin: 0 auto;
-    text-align: center;
-  }
-
   div.photogallery h2 {
     font-size: 2.5em;
     line-height: 1.25em;
@@ -230,6 +224,18 @@ footer {
     line-height: 1.1em;
     margin-left: 0.25em;
     margin-right: 0.25em;
+  }
+
+  .col-1-2-4 h3 {
+    font-size: 1.25em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .col-1-2-4 img:hover {
+    -moz-transform: scale(1.02, 1.02);
+    -ms-transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
   }
 }
 /* Tablet Screen Sizes */
@@ -254,8 +260,8 @@ footer {
     padding-right: 0.2em;
   }
   main p {
-    font-size: 1.25em;
-    line-height: 1.15em;
+    font-size: 1.249995em;
+    line-height: 1.149995em;
     margin-left: 0.2em;
     margin-right: 0.2em;
   }
@@ -273,8 +279,8 @@ footer {
     padding-right: 0.2em;
   }
   div.photogallery p {
-    font-size: 1.25em;
-    line-height: 1.15em;
+    font-size: 1.249995em;
+    line-height: 1.149995em;
     margin-left: 0.2em;
     margin-right: 0.2em;
   }
@@ -283,6 +289,12 @@ footer {
     font-size: 1.1em;
     margin: 0 auto;
     text-align: center;
+  }
+  .col-1-2-4 img:hover {
+    -moz-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
   }
 }
 /* Mobile Landscape Screen Sizes */
@@ -307,7 +319,7 @@ footer {
     padding-right: 0.15em;
   }
   main p {
-    font-size: 1.1em;
+    font-size: 1.099995em;
     line-height: 1.1em;
     margin-left: 0.15em;
     margin-right: 0.15em;
@@ -326,7 +338,7 @@ footer {
     padding-right: 0.15em;
   }
   div.photogallery p {
-    font-size: 1.1em;
+    font-size: 1.099995em;
     line-height: 1.1em;
     margin-left: 0.15em;
     margin-right: 0.15em;
@@ -335,10 +347,17 @@ footer {
   .col-1-2-4 {
     width: 50%;
   }
+
   .col-1-2-4 h3 {
     font-size: 1.25em;
     margin: 0 auto;
     text-align: center;
+  }
+  .col-1-2-4 img:hover {
+    -moz-transform: scale(1.02, 1.05);
+    -ms-transform: scale(1.02, 1.05);
+    -webkit-transform: scale(1.02, 1.05);
+    transform: scale(1.02, 1.05);
   }
 }
 /* Mobile portrait Screen Sizes */

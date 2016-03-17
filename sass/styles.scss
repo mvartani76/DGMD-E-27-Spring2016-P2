@@ -1,3 +1,6 @@
+// Import the compass transform mixins declarations/definitions
+@import "compass/css3/transform";
+ 
 @import "variables";
 @import "mixins";
 
@@ -212,12 +215,6 @@ footer {
 		@include set-selector-img-props(0%, 1%, 1%, 1.4em);
 	}
 
-	.col-1-2-4 h3 {
-		font-size: 1.25em;
-		margin: 0 auto;
-		text-align: center;
-	}
-
 	// Nesting the div.photogallery class
 	div.photogallery {
 
@@ -229,6 +226,10 @@ footer {
 										$photo-base-p-line-height, $photo-desktop-width-p-line-height-scale-factor,
 										$photo-base-p-margin, $photo-desktop-width-p-margin-scale-factor);
 	}
+
+	// Set col-1-2-4 properties
+	// This mixin includes the compass mixin, scale()
+	@include set-col-1-2-4-props(1.25em,1.02,1.02);
 }
 
 /* Tablet Screen Sizes */
@@ -275,13 +276,11 @@ footer {
 		@include set-selector-props(p, $photo-base-p-font-size, $photo-tablet-width-p-font-size-scale-factor,
 										$photo-base-p-line-height, $photo-tablet-width-p-line-height-scale-factor,
 										$photo-base-p-margin,$photo-tablet-width-p-margin-scale-factor);
-}
-
-	.col-1-2-4 h3 {
-		font-size: 1.1em;
-		margin: 0 auto;
-		text-align: center;
 	}
+
+	// Set col-1-2-4 properties
+	// This mixin includes the compass mixin, scale()
+	@include set-col-1-2-4-props(1.1em,1.05,1.05);
 }
 
 
@@ -332,16 +331,14 @@ footer {
 										$photo-base-p-margin, $photo-phone-landscape-width-p-margin-scale-factor);
 	}
 
-	// Nesting the .col-1-2-4 class
+	// Set the width for the col-1-2-4 class
 	.col-1-2-4 {
 		width: 50%;
-
-		h3 {
-			font-size: 1.25em;
-			margin: 0 auto;
-			text-align: center;
-		}
 	}
+
+	// Set col-1-2-4 properties
+	// This mixin includes the compass mixin, scale()
+	@include set-col-1-2-4-props(1.25em,1.02,1.05);
 }
 
 /* Mobile portrait Screen Sizes */
