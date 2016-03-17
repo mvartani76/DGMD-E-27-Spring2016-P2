@@ -162,9 +162,11 @@ Several partial files are used throughout the project.<br>
 ## Compass Mixins
 Compass Mixins were used selectively throughout the project and examples are shown below.<br>
 
+### transition-property(), transition-duration(), and transition-timing-function()
+
 **transition-property()**, **transition-duration()**, and **transition-timing-function()** are used in the **toggle-nav** class via a user created sass mixin, **transition-compass()**.<br>
 
-### User mixin delcaration
+#### User mixin delcaration
 ```
 // This mixin sets transitions of various parameters for a few different browser types
 // This mixin uses the compass mixins to accomplish this
@@ -174,7 +176,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 	@include transition-timing-function($transition-timing-function);
 }
 ```
-### Use in toggle-nav class
+#### Use in toggle-nav class
 ```
 .toggle-nav {
 	padding:1em;
