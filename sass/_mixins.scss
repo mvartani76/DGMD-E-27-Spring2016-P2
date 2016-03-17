@@ -122,7 +122,15 @@
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
 	-moz-transition:$transition-variable $transition-time $transition-timing-function;
-	transition:$transition-variable $transition-time $transition-timing-function;          
+	transition:$transition-variable $transition-time $transition-timing-function;     
+}
+
+// This mixin sets transitions of various parameters for a few different browser types
+// This mixin uses the compass mixins to accomplish this
+@mixin transition-compass($transition-variable, $transition-time, $transition-timing-function) {
+	@include transition-property($transition-variable);
+	@include transition-duration($transition-time);
+	@include transition-timing-function($transition-timing-function);
 }
 
 // This simple mixin sets the placeholder input text color for the various browser types

@@ -419,10 +419,10 @@ footer {
         font-size:20px;
 
         // Replace the css transition: color linear 0.15s; with the 
-        // equivalent compass mixins that also provide cross browser support
-        @include transition-property(color);
-        @include transition-duration(0.15s);
-        @include transition-timing-function(linear);
+        // equivalent compass mixins (included inside user created sass mixin, transition-compass())
+        // This also provides cross browser support which was not included when just setting the
+        // transition property using CSS
+        @include transition-compass(color, 0.15s, linear);
 
 		text-decoration: none;
 		font-weight: bold;
