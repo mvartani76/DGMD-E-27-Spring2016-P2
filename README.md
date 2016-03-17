@@ -174,10 +174,10 @@ Compass Mixins were used selectively throughout the project and examples are sho
 	@include transition-timing-function($transition-timing-function);
 }
 ```
-## Use in toggle-nav class
+### Use in toggle-nav class
 ```
-	.toggle-nav {
-        padding:1em;
+.toggle-nav {
+	padding:1em;
         float:left;
         display:block;
         background-color: $secondary-background-color;
@@ -190,7 +190,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
         // transition property using CSS
         @include transition-compass(color, 0.15s, linear);
 
-		text-decoration: none;
-		font-weight: bold;
-    }
+	text-decoration: none;
+	font-weight: bold;
+}
 ```
