@@ -160,7 +160,12 @@ fieldset {
 	#contact_id input[type="time"], #contact_id textarea {
 		font-size: 1.1em;
 		width:95%;
-		margin:0 0 5px;
+		// Nest the margin property
+		margin: {
+			top: 0px;
+			right: 0px;
+			bottom: 5px;
+			}
 		padding:10px;
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
@@ -186,7 +191,11 @@ fieldset {
 	#contact_id input[type="time"], #contact_id textarea {
 		font-size: 1em;
 		width: 95%;
-		margin: 0 0 5px;
+		margin: {
+			top: 0px;
+			right: 0px;
+			bottom: 5px;
+			}
 		padding:10px;
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
@@ -212,7 +221,12 @@ fieldset {
 	#contact_id input[type="time"], #contact_id textarea {
 		font-size: 0.95em;
 		width:95%;
-		margin:0 0 5px;
+		// Nest the margin property
+		margin: {
+			top: 0px;
+			right: 0px;
+			bottom: 5px;
+			}
 		padding:10px;
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
@@ -228,6 +242,7 @@ fieldset {
 		width: 96%;
 	    display: inline;
 	    float: left;
+	    // Nest the margin property
 	    margin: {
 	    	left: 2%;
 	    	right: 2%;
@@ -242,14 +257,23 @@ fieldset {
 	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
 		font-size: 0.85em;
 		width:95%;
-		margin:0 0 5px;
+		margin: {
+			top: 0px;
+			right: 0px;
+			bottom: 5px;
+			}
 		padding:10px;
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
 		font-size: 0.85em;
 		width:95%;
-		margin:0 0 5px;
+		// Nest the margin property
+		margin: {
+			top: 0px;
+			right: 0px;
+			bottom: 5px;
+			}
 		padding:10px;
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
