@@ -3,27 +3,7 @@
 
 @import "variables";
 @import "mixins";
-
-#form-heading-color-extend {
-	color: $form-heading-font-color;
-	background-color: $form-background-color;
-}
-
-#form-input-border-color-extend {
-	border:1px solid $form-border-color;
-	background-color: $form-input-background-color;	
-}
-
-#form-width-margin-padding-extend {
-	width:100%;
-	margin:0 0 5px;
-	padding:10px;
-}
-
-#form-display-margin-left-extend {
-	display: block;
-	margin-left: 2%;
-}
+@import "form_extends";
 
 #contact_id input[type="text"],
 #contact_id input[type="email"],

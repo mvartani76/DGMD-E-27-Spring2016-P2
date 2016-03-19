@@ -1,5 +1,6 @@
 /* This is the stylesheet for the three form pages that are in this
    this website, namely login.php, register.php, and contact.php. */
+/* These are the form specific extends */
 #form-heading-color-extend, #contact_id h3, #login_id h3, #register_id h3, #contact_id h4, #login_id h4, #register_id h4 {
   color: #70482D;
   background-color: #F6F5E3;
