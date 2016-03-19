@@ -374,7 +374,7 @@ footer {
     margin: 0;
   }
   header h1 a {
-    color: #fff;
+    color: #FFF;
     text-decoration: none;
   }
 
@@ -428,7 +428,7 @@ footer {
     float: left;
     display: block;
     background-color: #ED8F00;
-    color: #fff;
+    color: #FFF;
     font-size: 20px;
     -moz-transition-property: color;
     -o-transition-property: color;
