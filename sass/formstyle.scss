@@ -158,15 +158,7 @@ fieldset {
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
-		font-size: 1.1em;
-		width:95%;
-		// Nest the margin property
-		margin: {
-			top: 0px;
-			right: 0px;
-			bottom: 5px;
-			}
-		padding:10px;
+		@include set-form-var-input-parameters(1.1em, 95%, 0px, 0px, 5px, 10px);
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
 		// Since line-height is not set here, set the line-height parameter to "none"
@@ -189,14 +181,7 @@ fieldset {
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
-		font-size: 1em;
-		width: 95%;
-		margin: {
-			top: 0px;
-			right: 0px;
-			bottom: 5px;
-			}
-		padding:10px;
+		@include set-form-var-input-parameters(1em, 95%, 0px, 0px, 5px, 10px);
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
 		// Since line-height is not set here, set the line-height parameter to "none"
@@ -219,15 +204,7 @@ fieldset {
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
-		font-size: 0.95em;
-		width:95%;
-		// Nest the margin property
-		margin: {
-			top: 0px;
-			right: 0px;
-			bottom: 5px;
-			}
-		padding:10px;
+		@include set-form-var-input-parameters(0.95em, 95%, 0px, 0px, 5px, 10px);
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
 		// Since line-height is not set here, set the line-height parameter to "none"
@@ -255,26 +232,11 @@ fieldset {
 		@include set-font-size-and-line-height(1em, 1.05em);
 	}
 	#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-		font-size: 0.85em;
-		width:95%;
-		margin: {
-			top: 0px;
-			right: 0px;
-			bottom: 5px;
-			}
-		padding:10px;
+		@include set-form-var-input-parameters(0.85em, 95%, 0px, 0px, 5px, 10px);
 	}
 	#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 	#contact_id input[type="time"], #contact_id textarea {
-		font-size: 0.85em;
-		width:95%;
-		// Nest the margin property
-		margin: {
-			top: 0px;
-			right: 0px;
-			bottom: 5px;
-			}
-		padding:10px;
+		@include set-form-var-input-parameters(0.85em, 95%, 0px, 0px, 5px, 10px);
 	}
 	#contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {			
 		// Since line-height is not set here, set the line-height parameter to "none"

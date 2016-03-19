@@ -118,6 +118,21 @@
 	}
 }
 
+// This mixin sets form specific input parameters that vary over media queries
+// Using a mixin to observe DRY principles and as they change over different media queries, need to be
+// able to give input parameters
+@mixin set-form-var-input-parameters($font-size, $width, $margin-top, $margin-right, $margin-bottom, $padding) {
+	font-size: $font-size;
+	width:$width;
+	// Nest the margin property
+	margin: {
+		top: $margin-top;
+		right: $margin-right;
+		bottom: $margin-bottom;
+	}
+	padding: $padding;
+}
+
 // This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
