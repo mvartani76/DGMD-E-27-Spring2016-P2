@@ -20,6 +20,11 @@
 	padding:10px;
 }
 
+#form-display-margin-left-extend {
+	display: block;
+	margin-left: 2%;
+}
+
 #contact_id input[type="text"],
 #contact_id input[type="email"],
 #contact_id input[type="tel"],
@@ -50,17 +55,17 @@
 	margin:2% 0;
 }
 
+// Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
 #contact_id h3, #login_id h3, #register_id h3 {
 	@extend #form-heading-color-extend;
-	display: block;
-	margin-left: 2%;
+	@extend #form-display-margin-left-extend;
 	font-weight: 400;
 }
 
+// Using extends to set similar params and observe DRY principles but keep h3 and h4 separate for my own sanity when looking the code over
 #contact_id h4, #login_id h4, #register_id h4 {
 	@extend #form-heading-color-extend;
-	display:block;
-	margin-left: 2%;
+	@extend #form-display-margin-left-extend;
 }
 
 #contact_id .centerh4, #contact_id input[type="time"] {
@@ -78,17 +83,20 @@ fieldset {
 	text-align: center;
 }
 
+// Using extends to set parameters here as I want to group the #contact_id IDs together for my own sanity but still try to observe DRY principles
 #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 #contact_id input[type="time"], #contact_id textarea {
 	@extend #form-input-border-color-extend;
 	@extend #form-width-margin-padding-extend;
 }
 
+// Using extends to set parameters here as I want to group the #login_id IDs together for my own sanity but still try to observe DRY principles
 #login_id input[type="text"], #login_id input[type="password"], #login_id textarea {
 	@extend #form-input-border-color-extend;
 	@extend #form-width-margin-padding-extend;
 }
 
+// Using extends to set parameters here as I want to group the #register_id IDs together for my own sanity but still try to observe DRY principles
 #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
 	@extend #form-input-border-color-extend;
 	@extend #form-width-margin-padding-extend;
@@ -120,14 +128,13 @@ fieldset {
   	resize:none;
 }
 
+// Using extends to set parameters here as I want to group thebutton types together for my own sanity but still try to observe DRY principles
 #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
 	cursor:pointer;
-	width:100%;
 	border:none;
 	background-color: $form-button-background-color;
 	color: $form-button-font-color;
-	margin:0 0 5px;
-	padding:10px;
+	@extend #form-width-margin-padding-extend;
 }
 
 #contact_id button[type="submit"]:hover, #login_id button[type="submit"]:hover, #register_id button[type="submit"]:hover {

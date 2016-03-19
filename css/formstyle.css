@@ -12,10 +12,15 @@
 }
 
 #form-width-margin-padding-extend, #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
-#contact_id input[type="time"], #contact_id textarea, #login_id input[type="text"], #login_id input[type="password"], #login_id textarea, #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+#contact_id input[type="time"], #contact_id textarea, #login_id input[type="text"], #login_id input[type="password"], #login_id textarea, #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"], #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
   width: 100%;
   margin: 0 0 5px;
   padding: 10px;
+}
+
+#form-display-margin-left-extend, #contact_id h3, #login_id h3, #register_id h3, #contact_id h4, #login_id h4, #register_id h4 {
+  display: block;
+  margin-left: 2%;
 }
 
 #contact_id input[type="text"],
@@ -49,14 +54,7 @@
 }
 
 #contact_id h3, #login_id h3, #register_id h3 {
-  display: block;
-  margin-left: 2%;
   font-weight: 400;
-}
-
-#contact_id h4, #login_id h4, #register_id h4 {
-  display: block;
-  margin-left: 2%;
 }
 
 #contact_id .centerh4, #contact_id input[type="time"] {
@@ -105,12 +103,9 @@ fieldset {
 
 #contact_id button[type="submit"], #login_id button[type="submit"], #register_id button[type="submit"] {
   cursor: pointer;
-  width: 100%;
   border: none;
   background-color: #ED8F00;
   color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
 }
 
 #contact_id button[type="submit"]:hover, #login_id button[type="submit"]:hover, #register_id button[type="submit"]:hover {
