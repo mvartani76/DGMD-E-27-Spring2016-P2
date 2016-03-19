@@ -4,6 +4,11 @@
 @import "variables";
 @import "mixins";
 
+#form-color-extend {
+	color: $form-heading-font-color;
+	background-color: $form-background-color;
+}
+
 #contact_id input[type="text"],
 #contact_id input[type="email"],
 #contact_id input[type="tel"],
@@ -35,16 +40,14 @@
 }
 
 #contact_id h3, #login_id h3, #register_id h3 {
-	color: $form-heading-font-color;
-	background-color: $form-background-color;
+	@extend #form-color-extend;
 	display: block;
 	margin-left: 2%;
 	font-weight: 400;
 }
 
 #contact_id h4, #login_id h4, #register_id h4 {
-	color: $form-heading-font-color;
-	background-color: $form-background-color;
+	@extend #form-color-extend;
 	display:block;
 	margin-left: 2%;
 }

@@ -1,5 +1,10 @@
 /* This is the stylesheet for the three form pages that are in this
    this website, namely login.php, register.php, and contact.php. */
+#form-color-extend, #contact_id h3, #login_id h3, #register_id h3, #contact_id h4, #login_id h4, #register_id h4 {
+  color: #70482D;
+  background-color: #F6F5E3;
+}
+
 #contact_id input[type="text"],
 #contact_id input[type="email"],
 #contact_id input[type="tel"],
@@ -31,16 +36,12 @@
 }
 
 #contact_id h3, #login_id h3, #register_id h3 {
-  color: #70482D;
-  background-color: #F6F5E3;
   display: block;
   margin-left: 2%;
   font-weight: 400;
 }
 
 #contact_id h4, #login_id h4, #register_id h4 {
-  color: #70482D;
-  background-color: #F6F5E3;
   display: block;
   margin-left: 2%;
 }
