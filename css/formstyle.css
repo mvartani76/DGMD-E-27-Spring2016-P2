@@ -1,8 +1,21 @@
 /* This is the stylesheet for the three form pages that are in this
    this website, namely login.php, register.php, and contact.php. */
-#form-color-extend, #contact_id h3, #login_id h3, #register_id h3, #contact_id h4, #login_id h4, #register_id h4 {
+#form-heading-color-extend, #contact_id h3, #login_id h3, #register_id h3, #contact_id h4, #login_id h4, #register_id h4 {
   color: #70482D;
   background-color: #F6F5E3;
+}
+
+#form-input-border-color-extend, #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
+#contact_id input[type="time"], #contact_id textarea, #login_id input[type="text"], #login_id input[type="password"], #login_id textarea, #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+  border: 1px solid #CCC;
+  background-color: #FFF;
+}
+
+#form-width-margin-padding-extend, #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
+#contact_id input[type="time"], #contact_id textarea, #login_id input[type="text"], #login_id input[type="password"], #login_id textarea, #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+  width: 100%;
+  margin: 0 0 5px;
+  padding: 10px;
 }
 
 #contact_id input[type="text"],
@@ -59,31 +72,6 @@ fieldset {
   font: 400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
   color: #61381D;
   text-align: center;
-}
-
-#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
-#contact_id input[type="time"], #contact_id textarea {
-  width: 100%;
-  border: 1px solid #CCC;
-  background-color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-}
-
-#login_id input[type="text"], #login_id input[type="password"], #login_id textarea {
-  width: 100%;
-  border: 1px solid #CCC;
-  background-color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-}
-
-#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-  width: 100%;
-  border: 1px solid #CCC;
-  background-color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
 }
 
 #contact_id input[type="text"]:hover, #contact_id input[type="email"]:hover, #contact_id input[type="tel"]:hover, #contact_id input[type="url"]:hover,

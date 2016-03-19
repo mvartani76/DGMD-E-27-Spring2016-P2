@@ -4,9 +4,20 @@
 @import "variables";
 @import "mixins";
 
-#form-color-extend {
+#form-heading-color-extend {
 	color: $form-heading-font-color;
 	background-color: $form-background-color;
+}
+
+#form-input-border-color-extend {
+	border:1px solid $form-border-color;
+	background-color: $form-input-background-color;	
+}
+
+#form-width-margin-padding-extend {
+	width:100%;
+	margin:0 0 5px;
+	padding:10px;
 }
 
 #contact_id input[type="text"],
@@ -40,14 +51,14 @@
 }
 
 #contact_id h3, #login_id h3, #register_id h3 {
-	@extend #form-color-extend;
+	@extend #form-heading-color-extend;
 	display: block;
 	margin-left: 2%;
 	font-weight: 400;
 }
 
 #contact_id h4, #login_id h4, #register_id h4 {
-	@extend #form-color-extend;
+	@extend #form-heading-color-extend;
 	display:block;
 	margin-left: 2%;
 }
@@ -69,27 +80,18 @@ fieldset {
 
 #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 #contact_id input[type="time"], #contact_id textarea {
-	width:100%;
-	border:1px solid $form-border-color;
-	background-color: $form-input-background-color;
-	margin:0 0 5px;
-	padding:10px;
+	@extend #form-input-border-color-extend;
+	@extend #form-width-margin-padding-extend;
 }
 
 #login_id input[type="text"], #login_id input[type="password"], #login_id textarea {
-	width:100%;
-	border:1px solid $form-border-color;
-	background-color: $form-input-background-color;
-	margin:0 0 5px;
-	padding:10px;
+	@extend #form-input-border-color-extend;
+	@extend #form-width-margin-padding-extend;
 }
 
 #register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
-	width:100%;
-	border:1px solid $form-border-color;
-	background-color: $form-input-background-color;
-	margin:0 0 5px;
-	padding:10px;
+	@extend #form-input-border-color-extend;
+	@extend #form-width-margin-padding-extend;
 }
 
 #contact_id input[type="text"]:hover, #contact_id input[type="email"]:hover, #contact_id input[type="tel"]:hover, #contact_id input[type="url"]:hover,
