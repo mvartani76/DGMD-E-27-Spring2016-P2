@@ -85,26 +85,26 @@ fieldset {
 #contact_id input[type="text"]:hover, #contact_id input[type="email"]:hover, #contact_id input[type="tel"]:hover, #contact_id input[type="url"]:hover,
 #contact_id input[type="time"]:hover, #contact_id textarea:hover {
 	// Using transition mixin to set the border-color transition for different browser types
-	@include transition(border-color, 0.3s, ease-in-out);
+	@include transition(border-color, $form-border-color-transition-time, ease-in-out);
 	border-color: $form-border-color-hover;
 }
 
 #login_id input[type="text"]:hover, #login_id input[type="password"]:hover {
 	// Using transition mixin to set the border-color transition for different browser types
-	@include transition(border-color, 0.3s, ease-in-out);
+	@include transition(border-color, $form-border-color-transition-time, ease-in-out);
 	border-color: $form-border-color-hover;
 }
 
 #register_id input[type="text"]:hover, #register_id input[type="email"]:hover, #register_id input[type="tel"]:hover, #register_id input[type="url"]:hover,
 #register_id input[type="password"]:hover {
 	// Using transition mixin to set the border-color transition for different browser types
-	@include transition(border-color, 0.3s, ease-in-out);
+	@include transition(border-color, $form-border-color-transition-time, ease-in-out);
 	border-color: $form-border-color-hover;
 }
 
 #contact_id textarea, #login_id textarea {
-	height:100px;
-	max-width:100%;
+	height:$form-textarea-height;
+	max-width:$form-textarea-max-width;
   	resize:none;
 }
 
@@ -120,7 +120,7 @@ fieldset {
 #contact_id button[type="submit"]:hover, #login_id button[type="submit"]:hover, #register_id button[type="submit"]:hover {
 	background-color: $form-button-background-color-hover;
 	// Using transition mixin to set the background color transition for different browser types
-	@include transition(background-color, 0.3s, ease-in-out);
+	@include transition(background-color, $form-border-color-transition-time, ease-in-out);
 }
 
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
@@ -129,7 +129,7 @@ fieldset {
 }
 
 #register_id .form50, #contact_id .form50 {
-	width: 46%;
+	width: $form-form50-width;
     display: inline;
     float: left;
     margin: {
@@ -144,7 +144,7 @@ fieldset {
 /* media queries */
 
 /* Desktop Screen Sizes */
-/* Pixel Range: >= 1000px; */
+/* Pixel Range: >= $min-desktop-width; */
 @media only screen and (min-width: $min-desktop-width) {
 	#contact_id h3, #login_id h3, #register_id h3 {
 		@include set-font-size-and-line-height(2.5em, 1.25em);
@@ -167,7 +167,7 @@ fieldset {
 }
 
 /* Tablet Screen Sizes */
-/* Pixel Range: >= 768px; */
+/* Pixel Range: >= $min-tablet-width; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 	#contact_id h3, #login_id h3, #register_id h3 {
 		@include set-font-size-and-line-height(2.3em, 1.22em);
@@ -190,7 +190,7 @@ fieldset {
 }
 
 /* Mobile Landscape Screen Sizes */
-/* pixel range: 480-767px */
+/* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	#contact_id h3, #login_id h3, #register_id h3 {
 		@include set-font-size-and-line-height(2.2em, 1.15em);
@@ -213,7 +213,7 @@ fieldset {
 }		
 
 /* Mobile portrait Screen Sizes */
-/* pixel range: <=479px */
+/* pixel range: <=($min-phone-landscape-width - 1) */
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
 	#register_id .form50, #contact_id .form50 {
 		width: 96%;
