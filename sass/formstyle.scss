@@ -1,6 +1,8 @@
 /* This is the stylesheet for the three form pages that are in this
    this website, namely login.php, register.php, and contact.php. */
 
+@import "compass/css3/box-shadow";
+
 @import "variables";
 @import "mixins";
 @import "form_extends";
@@ -125,7 +127,8 @@ fieldset {
 
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
 #register_id button[type="submit"]:active {
-	box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+	// Replaced box-shadow CSS property with Compass mixin, single-box-shadow() to give cross browswer support
+	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5) inset);
 }
 
 #register_id .form50, #contact_id .form50 {

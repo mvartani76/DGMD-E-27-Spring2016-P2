@@ -118,7 +118,9 @@ fieldset {
 
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
 #register_id button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px NULL rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: 0 1px 3px NULL rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 1px 3px NULL rgba(0, 0, 0, 0.5) inset;
 }
 
 #register_id .form50, #contact_id .form50 {
@@ -147,7 +149,7 @@ fieldset {
 
 /* media queries */
 /* Desktop Screen Sizes */
-/* Pixel Range: >= 1000px; */
+/* Pixel Range: >= $min-desktop-width; */
 @media only screen and (min-width: 1050px) {
   #contact_id h3, #login_id h3, #register_id h3 {
     font-size: 2.5em;
@@ -178,7 +180,7 @@ fieldset {
   }
 }
 /* Tablet Screen Sizes */
-/* Pixel Range: >= 768px; */
+/* Pixel Range: >= $min-tablet-width; */
 @media only screen and (min-width: 768px) and (max-width: 1049px) {
   #contact_id h3, #login_id h3, #register_id h3 {
     font-size: 2.3em;
@@ -209,7 +211,7 @@ fieldset {
   }
 }
 /* Mobile Landscape Screen Sizes */
-/* pixel range: 480-767px */
+/* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   #contact_id h3, #login_id h3, #register_id h3 {
     font-size: 2.2em;
@@ -240,7 +242,7 @@ fieldset {
   }
 }
 /* Mobile portrait Screen Sizes */
-/* pixel range: <=479px */
+/* pixel range: <=($min-phone-landscape-width - 1) */
 @media only screen and (max-width: 479px) {
   #register_id .form50, #contact_id .form50 {
     width: 96%;
