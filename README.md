@@ -196,3 +196,12 @@ Compass Mixins were used selectively throughout the project and examples are sho
 	font-weight: bold;
 }
 ```
+### single-box-shadow()
+**single-box-shadow()** is used in **formstyle.scss** to replace the CSS property, box-shadow: ... and give it cross browser support. This code is used for the active state of the buttons in the various form IDs (contact_id, login_id, and register_id) as shown below.<br>
+```
+#contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
+#register_id button[type="submit"]:active {
+	// Replaced box-shadow CSS property with Compass mixin, single-box-shadow() to give cross browswer support
+	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5) inset);
+}
+```
