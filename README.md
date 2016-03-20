@@ -205,10 +205,16 @@ Compass Mixins were used selectively throughout the project and examples are sho
 	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5) inset);
 }
 ```
-## Compass Helper Function
+## Compass Helper Functions
 In addition to the Compass mixins, helper functions are used within the code as appropriate.<br>
 ### headers()
-The **headers()** compass helper function was used to set the font family for all headers as shown in the code below.<br>
+The **headers()** compass helper function is used to set the font-size-adjust property for all headers as shown in the code below.<br>
+```
+body, caption, th, td, input, textarea, select, option, legend, fieldset, #{headers()} {
+  font-size-adjust: $primary-font-size-adjust;
+}
+```
+The **headers()** compass helper function is also used to set the font family for all headers as shown in the code below.<br>
 ```
 #{headers()} {
 	font-family: 'Francois One', sans-serif;
