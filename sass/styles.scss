@@ -23,7 +23,7 @@ body {
 }
 
 body, caption, th, td, input, textarea, select, option, legend, fieldset, #{headers()} {
-  font-size-adjust: 0.5;
+  font-size-adjust: $primary-font-size-adjust;
 }
 
 #{headers()} {
