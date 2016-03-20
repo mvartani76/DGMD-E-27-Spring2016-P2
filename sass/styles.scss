@@ -137,14 +137,20 @@ div.col-1-2-4 {
 		max-width: 350px;
 		width: 95%;
 		display: block;
-	    margin-left: auto;
-	    margin-right: auto
+	    // Nest the margin property
+	    margin: {
+	    	left: auto;
+	    	right: auto;
+	    }
 	}
 
 	p {
 		width: 95%;
-		padding-left: 5%;
-		padding-right: 2%;
+		// Nest the padding property
+		padding: {
+			left: 5%;
+			right: 2%;
+		}
 		font-family: 'Lato', sans-serif;
 		color: $primary-light-text-color;
 	}
@@ -255,9 +261,10 @@ footer {
 										$main-base-p-line-height, $main-tablet-width-p-line-height-scale-factor,
 										$main-base-p-margin, $main-tablet-width-p-margin-scale-factor);	
 		img {
+			// Nest Padding Property
 			padding: {
-				top: 1%;
-				left: 1%;
+				top: $main-tablet-width-img-padding-top;
+				left: $main-tablet-width-img-padding-left;
 			}
 			margin-right: 1.3em;
 			float: left;
@@ -309,8 +316,8 @@ footer {
 		img {
 			// Nest img padding
 			padding: {
-				top: 1%;
-				left: 1%;
+				top: $main-phone-landscape-width-img-padding-top;
+				left: $main-phone-landscape-width-img-padding-left;
 			}
 			margin-right: 1em;
 			float: left;
@@ -445,9 +452,9 @@ footer {
 			width: 100%;
 			// Nest img padding
 			padding: {
-				top: 1%;
-				left: 1%;
-				right: 1%;
+				top: $main-phone-portrait-width-img-padding-top;
+				left: $main-phone-portrait-width-img-padding-top;
+				right: $main-phone-portrait-width-img-padding-right;
 			}
 			margin: 0 auto;
 			float: none;
