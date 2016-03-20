@@ -121,8 +121,10 @@ div.photogallery {
 		font-family: 'Lato', sans-serif;
 		background-color: $primary-background-color;
 		color: $primary-light-text-color;
-		padding-left: 1%;
-		padding-right: 1%;
+		padding: {
+			left: 1%;
+			right: 1%;
+		}
 	}
 }
 
