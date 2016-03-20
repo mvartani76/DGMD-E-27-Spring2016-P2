@@ -6,10 +6,19 @@ $primary-header-text-color: #FFF;
 
 $menu-toggle-primary-text-color: #FFF;
 $menu-toggle-hover-active-color: #a16100;
+$menu-link-color: #FFF;
+$menu-toggle-nav-width: 100%;
 
 $footer-text-color: #999;
 
 $num-grid-columns: 4;
+
+$primary-link-color: #2772B0;
+
+// Wrapper main variables
+$wrapper-width: 97%;
+$wrapper-max-width: 1200px;
+
 
 $main-base-h2-font-size: 2.5em;
 $main-base-h2-line-height: 1.25em;
@@ -94,7 +103,6 @@ $photo-phone-portrait-width-p-margin-scale-factor: 40;
 $menu-active-color: #a16100;
 
 // Media Query Width Variables
-$wrapper-width: 1200px;
 $min-desktop-width-breakpoint1: 1200px;
 $min-desktop-width: 1050px;
 $min-tablet-width-breakpoint1: 805px;

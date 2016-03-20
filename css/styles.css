@@ -20,12 +20,7 @@ body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2
   font-size-adjust: 0.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Francois One', sans-serif;
 }
 
@@ -59,7 +54,7 @@ header {
   font-family: 'Lato', sans-serif;
 }
 .menu ul a {
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
   font-weight: bold;
   float: left;
