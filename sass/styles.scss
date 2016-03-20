@@ -163,16 +163,16 @@ div.col-1-2-4 {
 footer {
 	clear: both;
 	padding: {
-		top: 0.5em;
-		bottom: 0.5em;
-		left: 0;
-		right: 0;
+		top: $footer-padding-top;
+		bottom: $footer-padding-bottom;
+		left: $footer-padding-left;
+		right: $footer-padding-right;
 	}
 	margin: {
-		top: 0.75em;
-		bottom: 0.75em;
-		left: 0;
-		right: 0;
+		top: $footer-margin-top;
+		bottom: $footer-margin-bottom;
+		left: $footer-margin-left;
+		right: $footer-margin-right;
 	}
 	color: $footer-text-color;
 	text-align: center;
