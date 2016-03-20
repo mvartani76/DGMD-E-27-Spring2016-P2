@@ -4,6 +4,7 @@
 @import "compass/css3/box-shadow";
 
 @import "variables";
+@import "form_variables";
 @import "mixins";
 @import "form_mixins";
 @import "form_extends";
@@ -55,16 +56,8 @@
 	text-align: center;
 }
 
-fieldset {
-	border: medium none !important;
-	margin: 0 0 10px;
-	min-width: 100%;
-	padding: 0;
-	width: 100%;
-	font:400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
-	color: $form-primary-text-color;
-	text-align: center;
-}
+// Set the fieldset parameters using a mixin
+@include set-form-fieldset;
 
 // Using extends to set parameters here as I want to group the #contact_id IDs together for my own sanity but still try to observe DRY principles
 #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
@@ -220,7 +213,7 @@ fieldset {
 /* pixel range: <=($min-phone-landscape-width - 1) */
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
 	#register_id .form50, #contact_id .form50 {
-		width: 96%;
+		width: $form-phone-portrait-width-form50-width;
 	    display: inline;
 	    float: left;
 	    // Nest the margin property

@@ -33,6 +33,20 @@
 	padding: $padding;
 }
 
+// This mixin sets the fieldset parameters
+@mixin set-form-fieldset {
+	fieldset {
+		border: medium none !important;
+		margin: 0 0 10px;
+		min-width: 100%;
+		padding: 0;
+		width: 100%;
+		font:400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
+		color: $form-primary-text-color;
+		text-align: center;
+	}
+}
+
 // This simple mixin sets the placeholder input text color for the various browser types
 @mixin placeholder_set($text-color) {
 	::-webkit-input-placeholder {
