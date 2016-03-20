@@ -67,26 +67,6 @@
 		height: $header-height;
 }
 
-// This mixin sets the font size and line height.
-// Since it is used for multiple media queries in formstyle.scss, decided to make a mixin and reduce code
-//
-// As the line-height is not always set in these media queries, put some conditional code in to alter css
-// based on whether or not the user wants to set the variables...
-//
-// The user can choose not to set a parameter by setting the input parameter to "none"
-@mixin set-font-size-and-line-height($font-size, $line-height) {
-	@if $font-size == "none" {
-		line-height: $line-height;
-	}
-	@else if $line-height == "none" {
-		font-size: $font-size;
-	}
-	@else {
-		font-size: $font-size;
-		line-height: $line-height;
-	}
-}
-
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
 // Mixin uses a for loop to set the width (in percentage)
@@ -118,21 +98,6 @@
 	}
 }
 
-// This mixin sets form specific input parameters that vary over media queries
-// Using a mixin to observe DRY principles and as they change over different media queries, need to be
-// able to give input parameters
-@mixin set-form-var-input-parameters($font-size, $width, $margin-top, $margin-right, $margin-bottom, $padding) {
-	font-size: $font-size;
-	width:$width;
-	// Nest the margin property
-	margin: {
-		top: $margin-top;
-		right: $margin-right;
-		bottom: $margin-bottom;
-	}
-	padding: $padding;
-}
-
 // This mixin sets transitions of various parameters for a few different browser types
 @mixin transition($transition-variable, $transition-time, $transition-timing-function) {
 	-webkit-transition:$transition-variable $transition-time $transition-timing-function;
@@ -146,22 +111,6 @@
 	@include transition-property($transition-variable);
 	@include transition-duration($transition-time);
 	@include transition-timing-function($transition-timing-function);
-}
-
-// This simple mixin sets the placeholder input text color for the various browser types
-@mixin placeholder_set($text-color) {
-	::-webkit-input-placeholder {
-		color: $text-color;
-	}
-	:-moz-placeholder {
-		color: $text-color;
-	}
-	::-moz-placeholder {
-		color: $text-color;
-	}
-	:-ms-input-placeholder {
-		color: $text-color;
-	}
 }
 
 // This mixin sets a few parameters for the aside tag
