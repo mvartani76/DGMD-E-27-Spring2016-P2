@@ -134,8 +134,14 @@ div.col-1-2-4 p {
 
 footer {
   clear: both;
-  padding: 0.5em 0;
-  margin: 0.75em 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  margin-left: 0;
+  margin-right: 0;
   color: #999;
   text-align: center;
 }

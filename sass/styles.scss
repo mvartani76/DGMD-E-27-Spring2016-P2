@@ -122,8 +122,8 @@ div.photogallery {
 		background-color: $primary-background-color;
 		color: $primary-light-text-color;
 		padding: {
-			left: 1%;
-			right: 1%;
+			left: $photo-photogallery-p-padding-left;
+			right: $photo-photogallery-p-padding-right;
 		}
 	}
 }
@@ -162,8 +162,18 @@ div.col-1-2-4 {
 
 footer {
 	clear: both;
-	padding: 0.5em 0;
-	margin: 0.75em 0;
+	padding: {
+		top: 0.5em;
+		bottom: 0.5em;
+		left: 0;
+		right: 0;
+	}
+	margin: {
+		top: 0.75em;
+		bottom: 0.75em;
+		left: 0;
+		right: 0;
+	}
 	color: $footer-text-color;
 	text-align: center;
 }
