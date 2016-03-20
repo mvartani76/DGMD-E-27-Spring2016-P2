@@ -50,7 +50,54 @@ The variables are defined in the partial file _variables.scss.<br>
 The mixins are defined in the partial file _mixins.scss.<br>
 
 ## Extends
-The extends are defined here.<br>
+The extends used for this assignment are defined in **_form_extends.scss** and are used in **formstyle.scss**. The extend definitions are shown below.<br>
+```
+#form-heading-color-extend {
+	color: $form-heading-font-color;
+	background-color: $form-background-color;
+}
+
+#form-input-border-color-extend {
+	border:1px solid $form-border-color;
+	background-color: $form-input-background-color;	
+}
+
+#form-width-margin-padding-extend {
+	width:100%;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#form-display-margin-left-extend {
+	display: block;
+	margin-left: 2%;
+}
+```
+
+The four extends, **#form-heading-color-extend**, **form-input-border-color-extend**, and **form-width-margin-padding-extend**, and **#form-display-margin-left-extend** are extend-only ids that help observe DRY principles for the other ids/tags in formstyle.scss while organizing the stylesheet visually so it makes sense.<br>
+
+For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet below.<br>
+
+```
+// Using extends to set parameters here as I want to group the #contact_id IDs together for my own sanity but still try to observe DRY principles
+#contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
+#contact_id input[type="time"], #contact_id textarea {
+	@extend #form-input-border-color-extend;
+	@extend #form-width-margin-padding-extend;
+}
+
+// Using extends to set parameters here as I want to group the #login_id IDs together for my own sanity but still try to observe DRY principles
+#login_id input[type="text"], #login_id input[type="password"], #login_id textarea {
+	@extend #form-input-border-color-extend;
+	@extend #form-width-margin-padding-extend;
+}
+
+// Using extends to set parameters here as I want to group the #register_id IDs together for my own sanity but still try to observe DRY principles
+#register_id input[type="text"], #register_id input[type="email"], #register_id input[type="tel"], #register_id input[type="url"], #register_id input[type="password"] {
+	@extend #form-input-border-color-extend;
+	@extend #form-width-margin-padding-extend;
+}
+```
 
 ## Nesting
 Nesting is performed several places. A few examples are shown below.<br>
