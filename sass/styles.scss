@@ -160,23 +160,8 @@ div.col-1-2-4 {
 	color: $primary-heading-text-color;
 }
 
-footer {
-	clear: both;
-	padding: {
-		top: $footer-padding-top;
-		bottom: $footer-padding-bottom;
-		left: $footer-padding-left;
-		right: $footer-padding-right;
-	}
-	margin: {
-		top: $footer-margin-top;
-		bottom: $footer-margin-bottom;
-		left: $footer-margin-left;
-		right: $footer-margin-right;
-	}
-	color: $footer-text-color;
-	text-align: center;
-}
+@include set-footer($footer-padding-top, $footer-padding-bottom, $footer-padding-left, $footer-padding-right,
+					$footer-margin-top, $footer-margin-bottom, $footer-margin-left, $footer-margin-right);
 
 /* grid system */
 
