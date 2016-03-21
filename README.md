@@ -44,11 +44,18 @@ The URL for Assignment 1 is: http://dgmd-e27-p1.mikevartanian.me/index.php<br>
 The comments and code for Assignment 1 are located in GitHub here: https://github.com/mvartani76/DGMD-E-27-Spring2016-P1<br>
 
 ## Variables
-The variables are defined in the partial file _variables.scss.<br>
-
+The variables are defined in the following partial files:<br>
+**_variables.scss** - This variable file contains the generic variables used throughout many different source files.<br>
+**_form_variables.scss** - This variable file contains the form specific variables used in **formstyle.scss**.<br>
+**_weather_variables.scss** - This variable file contains the weather widget specific variables used in **weather-style.scss**.<br>
+<br>
+Variables are used throughout the source sass files as well as mixins, functions, and extends.<br>
 ## Mixins
-The mixins are defined in the partial file _mixins.scss.<br>
-
+The mixins are defined in the following partial files:<br>
+**_mixins.scss** - This mixin file contains the generic mixins used through many difference source files.<br>
+**_form_mixins.scss** - This mixin file contains the form specific mixins used in **formstyle.scss**.<br>
+**_weather_mixins.scss** - This mixin file contains the weather widget specific mixins used in **weather-style.scss**.<br>
+<br>
 ## Extends
 The extends used for this assignment are defined in **_form_extends.scss** and are used in **formstyle.scss**. The extend definitions are shown below.<br>
 ```
