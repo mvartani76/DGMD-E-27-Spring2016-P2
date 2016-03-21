@@ -1,3 +1,10 @@
+
+/// I grabbed this useful utility from the following site(s) as it did
+/// just what I needed to help me scale the unit values in the scale-unit-value() mixin
+///
+/// https://css-tricks.com/snippets/sass/strip-unit-function/
+/// https://github.com/sass/sass/issues/533
+///
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
@@ -76,6 +83,16 @@
 			width: percentage(($i / $num-columns));
 		}
 	}
+}
+
+// This mixin sets the font-size and padding properties
+// For the ul and a tags within the menu class
+@mixin set-menu-ul-a-props($font-size, $padding){
+	.menu ul a {
+		font-size: $font-size;
+		padding: $padding;
+	}
+
 }
 
 // This mixin sets the font size and centers h3
