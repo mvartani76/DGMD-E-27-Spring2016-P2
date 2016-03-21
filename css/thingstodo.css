@@ -105,32 +105,32 @@ aside p {
    width. */
 @media only screen and (min-width: 1200px) {
   .thingstodo_main_left_pic > img {
-    margin-left: 20%;
-    margin-right: 2%;
     width: 90%;
     max-width: 250px;
+    margin-left: 20%;
+    margin-right: 2%;
   }
 
   .thingstodo_main_right_pic > img {
-    margin-left: 20%;
-    margin-right: 2%;
     width: 90%;
     max-width: 250px;
+    margin-left: 20%;
+    margin-right: 2%;
   }
 }
 @media only screen and (min-width: 1050px) and (max-width: 1199px) {
   .thingstodo_main_left_pic > img {
-    margin-left: 20%;
-    margin-right: 2%;
     width: 90%;
     max-width: 215px;
+    margin-left: 20%;
+    margin-right: 2%;
   }
 
   .thingstodo_main_right_pic > img {
-    margin-left: 20%;
-    margin-right: 2%;
     width: 90%;
     max-width: 215px;
+    margin-left: 20%;
+    margin-right: 2%;
   }
 }
 @media only screen and (min-width: 805px) and (max-width: 1049px) {
