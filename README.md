@@ -313,13 +313,13 @@ Compass Mixins were used selectively throughout the project and examples are sho
 ## Compass Helper Functions
 In addition to the Compass mixins, helper functions are used within the code as appropriate.<br>
 ### headers()
-The **headers()** compass helper function is used to set the font-size-adjust property for all headers as shown in the code below.<br>
+The **headers()** compass helper function is used in **styles.scss** (line 26) to set the font-size-adjust property for all headers as shown in the code below.<br>
 ```SCSS
 body, caption, th, td, input, textarea, select, option, legend, fieldset, #{headers()} {
   font-size-adjust: $primary-font-size-adjust;
 }
 ```
-The **headers()** compass helper function is also used to set the font family for all headers as shown in the code below.<br>
+The **headers()** compass helper function is also used in **styles.scss** (line 30) to set the font family for all headers as shown in the code below.<br>
 ```SCSS
 #{headers()} {
 	font-family: 'Francois One', sans-serif;
