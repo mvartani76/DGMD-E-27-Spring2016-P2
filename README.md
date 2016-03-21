@@ -249,22 +249,22 @@ Compass Mixins were used selectively throughout the project and examples are sho
 #### Use in toggle-nav class
 ```SCSS
 .toggle-nav {
-	padding:1em;
+	padding: $menu-phone-portrait-width-toggle-nav-padding;
         float:left;
         display:block;
         background-color: $secondary-background-color;
-        color:#fff;
-        font-size:20px;
+        color: $menu-toggle-primary-text-color;
+        font-size: $menu-phone-portrait-width-toggle-nav-font-size;
 
         // Replace the css transition: color linear 0.15s; with the 
         // equivalent compass mixins (included inside user created sass mixin, transition-compass())
         // This also provides cross browser support which was not included when just setting the
         // transition property using CSS
-        @include transition-compass(color, 0.15s, linear);
+        @include transition-compass(color, $menu-phone-portrait-width-color-transition-time, linear);
 
-	text-decoration: none;
-	font-weight: bold;
-}
+		text-decoration: none;
+		font-weight: bold;
+    }
 ```
 ### single-box-shadow()
 **single-box-shadow()** is used in **formstyle.scss** to replace the CSS property, box-shadow: ... and give it cross browser support. This code is used for the active state of the buttons in the various form IDs (contact_id, login_id, and register_id) as shown below.<br>
