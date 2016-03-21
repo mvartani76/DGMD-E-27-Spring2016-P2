@@ -52,25 +52,25 @@ strong {
 /* media queries */
 
 /* Desktop Screen Sizes */
-/* Pixel Range: >= 1000px; */
+/* Pixel Range: >= $min-desktop-width; */
 @media only screen and (min-width: $min-desktop-width) {
 	@include set-outside-w-wrapper-props($weather-desktop-width-h3-font-size, $weather-desktop-width-p-font-size)
 }
 
 /* Tablet Screen Sizes */
-/* Pixel Range: >= 768px; */
+/* Pixel Range: >= $min-tablet-width; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 	@include set-outside-w-wrapper-props($weather-tablet-width-h3-font-size, $weather-tablet-width-p-font-size)
 }
 
 /* Mobile Landscape Screen Sizes */
-/* pixel range: 480-767px */
+/* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
 	@include set-outside-w-wrapper-props($weather-phone-landscape-width-h3-font-size, $weather-phone-landscape-width-p-font-size)
 }
 
 /* Mobile Portrait Screen Sizes */
-/* pixel range: <480px */	
+/* pixel range: <=($min-phone-landscape-width - 1) */	
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
 	.outside-w-wrapper {
 		display: none;
