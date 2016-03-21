@@ -52,7 +52,19 @@ The variables are defined in the following partial files:<br>
 <br>
 Variables are used throughout the source sass files as well as mixins, functions, and extends.<br>
 
-A very simple example of variables being used is shown from line 9 in **weather-style.scss**.
+A simple example of variables being used is shown starting on line 36 of **styles.scss*.
+```SCSS
+.wrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;	
+}
+```
+Here we can see that there are four (4) variables used in the above styling.<br>
+
+Another slightly more complicated but still very simple example of variables being used is shown from line 9 in **weather-style.scss**.
 ```SCSS
 .weather-wrapper {
 	width: $weather-wrapper-width;
@@ -72,7 +84,7 @@ A very simple example of variables being used is shown from line 9 in **weather-
 	}
 }
 ```
-There are six (6) variables used in this simple class styling.<br>
+There are six (6) variables used in this simple class styling above.<br>
 ## Mixins
 The mixins are defined in the following partial files:<br>
 **_mixins.scss** - This mixin file contains the generic mixins used through many difference source files.<br>
