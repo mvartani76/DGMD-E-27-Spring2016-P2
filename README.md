@@ -48,13 +48,37 @@ The variables are defined in the following partial files:<br>
 **_variables.scss** - This variable file contains the generic variables used throughout many different source files.<br>
 **_form_variables.scss** - This variable file contains the form specific variables used in **formstyle.scss**.<br>
 **_weather_variables.scss** - This variable file contains the weather widget specific variables used in **weather-style.scss**.<br>
+**_thingstodo_variables.scss** This mixin file contains the specific variables used in **thingstodo.scss**.<br>
 <br>
 Variables are used throughout the source sass files as well as mixins, functions, and extends.<br>
+
+A very simple example of variables being used is shown from line 9 in **weather-style.scss**.
+```SCSS
+.weather-wrapper {
+	width: $weather-wrapper-width;
+	padding: {
+		left: $weather-wrapper-padding-left;
+		right: $weather-wrapper-padding-right;
+		top: $weather-wrapper-padding-top;
+	}
+	margin: 0 auto;
+	color: white;
+	background-color: $weather-wrapper-background-color;
+	text-align: center;
+
+	& + p {
+		font-family: 'Lato', sans-serif;
+		color: $weather-wrapper-paragraph-text;
+	}
+}
+```
+There are six (6) variables used in this simple class styling.<br>
 ## Mixins
-__The mixins are defined in the following partial files:__<br>
+The mixins are defined in the following partial files:<br>
 **_mixins.scss** - This mixin file contains the generic mixins used through many difference source files.<br>
 **_form_mixins.scss** - This mixin file contains the form specific mixins used in **formstyle.scss**.<br>
 **_weather_mixins.scss** - This mixin file contains the weather widget specific mixins used in **weather-style.scss**.<br>
+**_thingstodo_mixins.scss** This mixin file contains the specific mixins used in **thingstodo.scss**.<br>
 <br>
 ## Extends
 The extends used for this assignment are defined in **_form_extends.scss** and are used in **formstyle.scss**. The extend definitions are shown below.<br>
@@ -80,7 +104,6 @@ The extends used for this assignment are defined in **_form_extends.scss** and a
 	margin-left: 2%;
 }
 ```
-
 The four extends, **#form-heading-color-extend**, **form-input-border-color-extend**, and **form-width-margin-padding-extend**, and **#form-display-margin-left-extend** are extend-only ids that help observe DRY principles for the other ids/tags in formstyle.scss while organizing the stylesheet visually so it makes sense.<br>
 
 For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet from **formstyle.scss** below.<br>
