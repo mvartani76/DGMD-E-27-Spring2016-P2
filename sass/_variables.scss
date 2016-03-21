@@ -135,7 +135,10 @@ $menu-tablet-width-ul-a-padding: 0.8em;
 $menu-phone-landscape-width-ul-a-font-size: 0.75em;
 $menu-phone-landscape-width-ul-a-padding: 0.5em;
 
-$menu-phone-portrait-width-font-size: 20px;
+$menu-phone-portrait-width-toggle-nav-font-size: 20px;
+$menu-phone-portrait-width-toggle-nav-padding: 1em;
+
+$menu-phone-portrait-width-color-transition-time: 0.15s;
 
 // Media Query Width Variables
 $min-desktop-width-breakpoint1: 1200px;

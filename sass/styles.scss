@@ -409,7 +409,7 @@ div.col-1-2-4 {
         display:block;
         background-color: $secondary-background-color;
         color: $menu-toggle-primary-text-color;
-        font-size: $menu-phone-portrait-width-font-size;
+        font-size: $menu-phone-portrait-width-toggle-nav-font-size;
 
         // Replace the css transition: color linear 0.15s; with the 
         // equivalent compass mixins (included inside user created sass mixin, transition-compass())
