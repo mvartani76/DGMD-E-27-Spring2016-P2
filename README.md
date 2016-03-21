@@ -106,7 +106,7 @@ Nesting is performed several places. A few examples are shown below.<br>
 A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
 The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function as shown below.<br>
 ```
-// Scale a unit number by $scale-vale
+// Scale a unit number by $scale-value
 // This function first removes the unit, scales it by $scale-value, which is the percentage number without
 // the % and then adds the unit back.
 @function scale-unit-value($value-to-be-scaled, $scale-value) {
