@@ -79,7 +79,7 @@ The mixins are defined in the following partial files:<br>
 **_form_mixins.scss** - This mixin file contains the form specific mixins used in **formstyle.scss**.<br>
 **_weather_mixins.scss** - This mixin file contains the weather widget specific mixins used in **weather-style.scss**.<br>
 **_thingstodo_mixins.scss** This mixin file contains the specific mixins used in **thingstodo.scss**.<br>
-<br>
+
 ## Extends
 The extends used for this assignment are defined in **_form_extends.scss** and are used in **formstyle.scss**. The extend definitions are shown below.<br>
 ```SCSS
