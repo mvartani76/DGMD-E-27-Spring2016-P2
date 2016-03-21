@@ -40,7 +40,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<main class="col-3">
+			<main class="col-3" data-key="sameHeights">
 		  
 			  		<form id="login_id" method="post">
 						<h3>Login</h3>
@@ -52,7 +52,7 @@
 			    		</fieldset>
 			  		</form>
 			</main>
-			<div class="col-1 outside-w-wrapper">
+			<div class="col-1 outside-w-wrapper" data-key="sameHeights">
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php
@@ -145,5 +145,16 @@
 		});
 	
 	</script>
+	<script src="js/eqheight.js"></script>
+	<script type="text/javascript">
+	if ('addEventListener' in window) {
+	    window.addEventListener('resize', function(){
+	        sameHeights();
+	    });
+	    window.addEventListener('load', function(){
+	        sameHeights();
+	    });
+	}
+	</script>	
 </body>
 </html>

@@ -40,7 +40,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<main class="col-3">
+			<main class="col-3" data-key="sameHeights">
 				<form id="register_id" method="post">
 					<h3>Registration</h3>
 				    <h4>Please fill out the information below to register with the Shores of Glenwood site...</h4>
@@ -67,7 +67,7 @@
 				    </fieldset>
 			  	</form>
 			</main>
-			<div class="col-1 outside-w-wrapper">
+			<div class="col-1 outside-w-wrapper" data-key="sameHeights">
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php
@@ -160,5 +160,16 @@
 		});
 	
 	</script>
+	<script src="js/eqheight.js"></script>
+	<script type="text/javascript">
+	if ('addEventListener' in window) {
+	    window.addEventListener('resize', function(){
+	        sameHeights();
+	    });
+	    window.addEventListener('load', function(){
+	        sameHeights();
+	    });
+	}
+	</script>		
 </body>
 </html>
