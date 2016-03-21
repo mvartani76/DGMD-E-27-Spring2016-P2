@@ -2,6 +2,7 @@
 
 @import "variables";
 @import "weather_variables";
+@import "thingstodo_variables";
 @import "thingstodo_mixins";
 
 // Nesting the aside tag
@@ -15,7 +16,7 @@ aside {
 	}
 
 	ul {
-		padding-left: 15%;
+		padding-left: $thingstodo-aside-padding-left;
 	}
 
 	li {
@@ -57,7 +58,7 @@ aside {
 @media only screen and (min-width: $min-desktop-width) {
 
 	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside(1.5em, 0.9em, 1.5em);
+	@include thingstodo_aside($thingstodo-desktop-width-h3-font-size, $thingstodo-desktop-width-li-font-size, $thingstodo-desktop-width-li-line-height);
 }
 
 /* Tablet Screen Sizes */
@@ -65,7 +66,7 @@ aside {
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 
 	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside(1.25em, 0.75em, 1.4em);
+	@include thingstodo_aside($thingstodo-tablet-width-h3-font-size, $thingstodo-tablet-width-li-font-size, $thingstodo-tablet-width-li-line-height);
 }
 
 /* Mobile Landscape Screen Sizes */
@@ -73,7 +74,7 @@ aside {
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {	
 
 	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside(1em, 0.6em, 1.3em);
+	@include thingstodo_aside($thingstodo-phone-landscape-width-h3-font-size, $thingstodo-phone-landscape-width-li-font-size, $thingstodo-phone-landscape-width-li-line-height);
 }
 
 /* Mobile Portrait Screen Sizes */
@@ -81,7 +82,7 @@ aside {
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
 
 	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside(1.5em, 0.9em, 1.5em);	
+	@include thingstodo_aside($thingstodo-phone-portrait-width-h3-font-size, $thingstodo-phone-portrait-width-li-font-size, $thingstodo-phone-portrait-width-li-line-height);	
 
 	/* Keep the columns in the original order in the
 	   mobile portrait mode screen size */	
