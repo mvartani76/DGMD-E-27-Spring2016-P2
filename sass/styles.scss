@@ -195,10 +195,8 @@ div.col-1-2-4 {
 		@include set-header-img-height-width("../images/sog-entrance-1200.jpg", 300px, 1200px);		
 	}
 
-	.menu ul a {
-		font-size:1.25em;
-		padding: 1%;
-	}
+	// Use set-menu-ul-a-props() mixin to set the font-size and madding properties
+	@include set-menu-ul-a-props($menu-desktop-width-ul-a-font-size, $menu-desktop-width-ul-a-padding);
 
 	// Nesting the main tag
 	main {
@@ -239,11 +237,9 @@ div.col-1-2-4 {
 		// Set the background header image, height, and width using a mixin
 		@include set-header-img-height-width("../images/sog-entrance-1000.jpg", 300px, 1000px);		
 	}
-	
-	.menu ul a {
-		font-size:1em;
-		padding: 0.8em;
-	}
+
+	// Use set-menu-ul-a-props() mixin to set the font-size and madding properties
+	@include set-menu-ul-a-props($menu-tablet-width-ul-a-font-size, $menu-tablet-width-ul-a-padding);
 
 	// Nesting the main tag
 	main {
@@ -293,10 +289,8 @@ div.col-1-2-4 {
 		@include set-header-img-height-width("../images/sog-entrance-800.jpg", 300px, 800px);		
 	}
 
-	.menu ul a {
-		font-size:0.75em;
-		padding: 0.5em;
-	}
+	// Use set-menu-ul-a-props() mixin to set the font-size and madding properties
+	@include set-menu-ul-a-props($menu-phone-landscape-width-ul-a-font-size, $menu-phone-landscape-width-ul-a-padding);
 
 	// Nesting the main tag
 	main {
@@ -415,7 +409,7 @@ div.col-1-2-4 {
         display:block;
         background-color: $secondary-background-color;
         color: $menu-toggle-primary-text-color;
-        font-size:20px;
+        font-size: $menu-phone-portrait-width-font-size;
 
         // Replace the css transition: color linear 0.15s; with the 
         // equivalent compass mixins (included inside user created sass mixin, transition-compass())

@@ -127,6 +127,16 @@ $photo-phone-portrait-width-p-margin-scale-factor: 40;
 // Navigation Bar Variables
 $menu-active-color: #a16100;
 
+// Scale factors for Navigation Bar
+$menu-desktop-width-ul-a-font-size: 1.25em;
+$menu-desktop-width-ul-a-padding: 1%;
+$menu-tablet-width-ul-a-font-size: 1em;
+$menu-tablet-width-ul-a-padding: 0.8em;
+$menu-phone-landscape-width-ul-a-font-size: 0.75em;
+$menu-phone-landscape-width-ul-a-padding: 0.5em;
+
+$menu-phone-portrait-width-font-size: 
+
 // Media Query Width Variables
 $min-desktop-width-breakpoint1: 1200px;
 $min-desktop-width: 1050px;
