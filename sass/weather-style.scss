@@ -4,6 +4,7 @@
 
 @import "variables";
 @import "weather_variables";
+@import "weather_mixins"
 
 .weather-wrapper {
 	width: $weather-wrapper-width;
@@ -53,44 +54,19 @@ strong {
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1000px; */
 @media only screen and (min-width: $min-desktop-width) {
-	// Nesting outside-w-wrapper
-	.outside-w-wrapper {
-		h3 {
-			font-size: 1.5em;
-		}
-		p {
-			font-size: 1em;
-		}
-	}
+	@include set-outside-w-wrapper-props($weather-desktop-width-h3-font-size, $weather-desktop-width-p-font-size)
 }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
-	// Nesting outside-w-wrapper
-	.outside-w-wrapper {
-		h3 {
-			font-size: 1.25em;
-		}
-		p {
-			font-size: 0.85em;
-		}
-	}
+	@include set-outside-w-wrapper-props($weather-tablet-width-h3-font-size, $weather-tablet-width-p-font-size)
 }
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
-@media only screen and 
-	(min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
-	// Nesting outside-w-wrapper
-	.outside-w-wrapper {
-		h3 {
-			font-size: 1em;
-		}
-		p {
-			font-size: 0.667em;
-		}
-	}	
+@media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {
+	@include set-outside-w-wrapper-props($weather-phone-landscape-width-h3-font-size, $weather-phone-landscape-width-p-font-size)
 }
 
 /* Mobile Portrait Screen Sizes */

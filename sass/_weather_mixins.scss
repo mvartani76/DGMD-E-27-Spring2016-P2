@@ -1,0 +1,11 @@
+@mixin set-outside-w-wrapper-props($h3-font-size, $p-font-size)	{
+	// Nesting outside-w-wrapper
+	.outside-w-wrapper {
+		h3 {
+			font-size: $h3-font-size;
+		}
+		p {
+			font-size: $p-font-size;
+		}
+	}
+}
