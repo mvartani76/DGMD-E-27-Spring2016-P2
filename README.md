@@ -52,7 +52,7 @@ The variables are defined in the following partial files:<br>
 <br>
 Variables are used throughout the source sass files as well as mixins, functions, and extends.<br>
 
-A simple example of variables being used is shown starting on line 36 of **styles.scss*.
+A simple example of variables being used is shown starting on line 36 of **styles.scss**.
 ```SCSS
 .wrapper {
 	width: $wrapper-width;
