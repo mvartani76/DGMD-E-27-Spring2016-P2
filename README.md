@@ -52,7 +52,19 @@ The variables are defined in the following partial files:<br>
 <br>
 Variables are used throughout the source sass files as well as mixins, functions, and extends.<br>
 
-A very simple example of variables being used is shown from line 9 in **weather-style.scss**.
+A simple example of variables being used is shown starting on line 36 of **styles.scss**.
+```SCSS
+.wrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;	
+}
+```
+Here we can see that there are four (4) variables used in the above styling.<br>
+
+Another slightly more complicated but still very simple example of variables being used is shown from line 9 in **weather-style.scss**.
 ```SCSS
 .weather-wrapper {
 	width: $weather-wrapper-width;
@@ -72,7 +84,7 @@ A very simple example of variables being used is shown from line 9 in **weather-
 	}
 }
 ```
-There are six (6) variables used in this simple class styling.<br>
+There are six (6) variables used in this simple class styling above.<br>
 ## Mixins
 The mixins are defined in the following partial files:<br>
 **_mixins.scss** - This mixin file contains the generic mixins used through many difference source files.<br>
@@ -301,13 +313,13 @@ Compass Mixins were used selectively throughout the project and examples are sho
 ## Compass Helper Functions
 In addition to the Compass mixins, helper functions are used within the code as appropriate.<br>
 ### headers()
-The **headers()** compass helper function is used to set the font-size-adjust property for all headers as shown in the code below.<br>
+The **headers()** compass helper function is used in **styles.scss** (line 26) to set the font-size-adjust property for all headers as shown in the code below.<br>
 ```SCSS
 body, caption, th, td, input, textarea, select, option, legend, fieldset, #{headers()} {
   font-size-adjust: $primary-font-size-adjust;
 }
 ```
-The **headers()** compass helper function is also used to set the font family for all headers as shown in the code below.<br>
+The **headers()** compass helper function is also used in **styles.scss** (line 30) to set the font family for all headers as shown in the code below.<br>
 ```SCSS
 #{headers()} {
 	font-family: 'Francois One', sans-serif;
