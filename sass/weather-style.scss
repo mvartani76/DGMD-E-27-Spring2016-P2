@@ -6,11 +6,11 @@
 @import "weather_variables";
 
 .weather-wrapper {
-	width: 90%;
+	width: $weather-wrapper-width;
 	padding: {
-		left: 2%;
-		right: 1%;
-		top: 1%;
+		left: $weather-wrapper-padding-left;
+		right: $weather-wrapper-padding-right;
+		top: $weather-wrapper-padding-top;
 	}
 	margin: 0 auto;
 	color: white;
