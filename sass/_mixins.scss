@@ -6,18 +6,18 @@
 
 	@if $tag-prop == "h2" {
 		#{$tag-prop} {
-				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment);
-				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment);		
-				padding-left: scale-unit-value($base-value, $value-precentage-adjustment);
-				padding-right: scale-unit-value($base-value, $value-precentage-adjustment);
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment, 2);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment, 2);		
+				padding-left: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+				padding-right: scale-unit-value($base-value, $value-precentage-adjustment, 2);
 		}
 	}
 	@else if $tag-prop == "p" {
 		#{$tag-prop} {
-				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment);
-				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment);		
-				margin-left: scale-unit-value($base-value, $value-precentage-adjustment);
-				margin-right: scale-unit-value($base-value, $value-precentage-adjustment);
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment, 2);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment, 2);		
+				margin-left: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+				margin-right: scale-unit-value($base-value, $value-precentage-adjustment, 2);
 		}		
 	}
 
