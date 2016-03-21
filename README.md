@@ -142,8 +142,60 @@ For example, I wanted to keep the different form specific IDs together but as th
 ```
 
 ## Nesting
-Nesting is performed several places. A few examples are shown below.<br>
+Nesting is performed several places including source sass files as well as mixins. A couple examples are shown below.<br>
+The first example shows nesting of the .menu class starting on line 51 of **styles.scss**.
+```SCSS
+// Nesting the .menu class as well as nesting the ul tag
+// inside the .menu class
+.menu {
+	background-color: $secondary-background-color;
 
+	// Nesting the ul tag
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		overflow: auto;
+	
+		li {
+			font-family: 'Lato', sans-serif;
+		}
+		a {
+			color: $menu-link-color;
+			text-decoration: none;
+			font-weight: bold;
+			float: left;
+		}
+		a:hover, li.active a {
+			color: $menu-active-color;
+		}
+	}
+}
+```
+The next example shows nesting of div.photography starting on line 113 of **styles.scss**.
+```SCSS
+// Nested the div.photography class
+// Needed to separate this from the main nesting
+div.photogallery {
+	h2 {
+		padding-top: 0em;
+		background-color: $primary-background-color;
+		color: $primary-heading-text-color;
+		text-align: center;
+		font-family: 'Francois One', sans-serif;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		background-color: $primary-background-color;
+		color: $primary-light-text-color;
+		padding: {
+			left: $photo-photogallery-p-padding-left;
+			right: $photo-photogallery-p-padding-right;
+		}
+	}
+}
+```
 ## Built-in Sass Functions
 A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
 The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function as shown below. The **round()** built in function is used inside round-decimal as well.<br>
