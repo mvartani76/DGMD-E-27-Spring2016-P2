@@ -10,3 +10,17 @@
 		}
 	}
 }
+
+// This mixin sets parameters for the pictures within the thingstodo page
+// Since the code is repeated for both the left and right pic classes, I pass in the selector
+// information into the mixin
+@mixin thingstodo-set-pic-props($tag-prop, $width, $max-width, $margin-left, $margin-right) {
+	#{$tag-prop} {
+		width: $width;
+		max-width: $max-width;
+		margin: {
+			left: $margin-left;
+			right: $margin-right;
+		}
+	}
+}

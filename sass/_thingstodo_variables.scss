@@ -21,11 +21,75 @@ $thingstodo-tablet-width-li-line-height: 1.4em;
 $thingstodo-phone-landscape-width-li-line-height: 1.3em;
 $thingstodo-phone-portrait-width-li-line-height: 1.5em;
 
+// Main-left pic width properties for the thingstodo-set-pic-props mixin @ different media queries
+$thingstodo-desktop-width-breakpoint1-main-left-pic-width: 90%;
+$thingstodo-desktop-width-main-left-pic-width: 90%;
+$thingstodo-tablet-width-breakpoint1-main-left-pic-width: 90%;
+$thingstodo-tablet-width-main-left-pic-width: 90%;
+$thingstodo-phone-width-breakpoint1-main-left-pic-width: 90%;
+$thingstodo-phone-width-breakpoint2-main-left-pic-width: 90%;
+$thingstodo-phone-landscape-width-main-left-pic-width: 90%;
+
+// Main-right pic width properties for the thingstodo-set-pic-props mixin @ different media queries
+$thingstodo-desktop-width-breakpoint1-main-right-pic-width: 90%;
+$thingstodo-desktop-width-main-right-pic-width: 90%;
+$thingstodo-tablet-width-breakpoint1-main-right-pic-width: 90%;
+$thingstodo-tablet-width-main-right-pic-width: 90%;
+$thingstodo-phone-width-breakpoint1-main-right-pic-width: 90%;
+$thingstodo-phone-width-breakpoint2-main-right-pic-width: 90%;
+$thingstodo-phone-landscape-width-main-right-pic-width: 90%;
+
+// Main-left pic max-width properties for the thingstodo-set-pic-props mixin @ different media queries
+$thingstodo-desktop-width-breakpoint1-main-left-pic-max-width: 250px;
+$thingstodo-desktop-width-main-left-pic-max-width: 215px;
+$thingstodo-tablet-width-breakpoint1-main-left-pic-max-width: 180px;
+$thingstodo-tablet-width-main-left-pic-max-width: 170px;
+$thingstodo-phone-width-breakpoint1-main-left-pic-max-width: 130px;
+$thingstodo-phone-width-breakpoint2-main-left-pic-max-width: 120px;
+$thingstodo-phone-landscape-width-main-left-pic-max-width: 110px;
+
+// Main-right pic max-width properties for the thingstodo-set-pic-props mixin @ different media queries
+$thingstodo-desktop-width-breakpoint1-main-right-pic-max-width: 250px;
+$thingstodo-desktop-width-main-right-pic-max-width: 215px;
+$thingstodo-tablet-width-breakpoint1-main-right-pic-max-width: 180px;
+$thingstodo-tablet-width-main-right-pic-max-width: 170px;
+$thingstodo-phone-width-breakpoint1-main-right-pic-max-width: 130px;
+$thingstodo-phone-width-breakpoint2-main-right-pic-max-width: 120px;
+$thingstodo-phone-landscape-width-main-right-pic-max-width: 110px;
+
+
+// Main-left pic margin-left properties for the thingstodo-set-pic-props mixin @ different media queries
 $thingstodo-desktop-width-breakpoint1-main-left-pic-margin-left: 20%;
 $thingstodo-desktop-width-main-left-pic-margin-left: 20%;
 $thingstodo-tablet-width-breakpoint1-main-left-pic-margin-left: 20%;
-$thingstodo-desktop-width-main-left-pic-margin-left: 20%;
-$thingstodo-tablet-width-main-left-pic-margin-left: 104.545;
-$thingstodo-phone-width-breakpoint1-main-left-pic-margin-left: 100;
-$thingstodo-phone-width-breakpoint2-main-left-pic-margin-left: 100;
-$thingstodo-phone-landscape-width-main-left-pic-margin-left: 96;
+$thingstodo-tablet-width-main-left-pic-margin-left: 15%;
+$thingstodo-phone-width-breakpoint1-main-left-pic-margin-left: 15%;
+$thingstodo-phone-width-breakpoint2-main-left-pic-margin-left: 10%;
+$thingstodo-phone-landscape-width-main-left-pic-margin-left: 5%;
+
+// Main-left pic margin-right properties for the thingstodo-set-pic-props mixin @ different media queries
+$thingstodo-desktop-width-breakpoint1-main-left-pic-margin-right: 2%;
+$thingstodo-desktop-width-main-left-pic-margin-right: 2%;
+$thingstodo-tablet-width-breakpoint1-main-left-pic-margin-right: 5%;
+$thingstodo-tablet-width-main-left-pic-margin-right: 5%;
+$thingstodo-phone-width-breakpoint1-main-left-pic-margin-right: 5%;
+$thingstodo-phone-width-breakpoint2-main-left-pic-margin-right: 5%;
+$thingstodo-phone-landscape-width-main-left-pic-margin-right: 5%;
+
+// Main-right pic margin-left properties for the thingstodo-set-pic-props mixin @ different media queries
+$thingstodo-desktop-width-breakpoint1-main-right-pic-margin-left: 20%;
+$thingstodo-desktop-width-main-right-pic-margin-left: 20%;
+$thingstodo-tablet-width-breakpoint1-main-right-pic-margin-left: 20%;
+$thingstodo-tablet-width-main-right-pic-margin-left: 15%;
+$thingstodo-phone-width-breakpoint1-main-right-pic-margin-left: 15%;
+$thingstodo-phone-width-breakpoint2-main-right-pic-margin-left: 10%;
+$thingstodo-phone-landscape-width-main-right-pic-margin-left: 5%;
+
+// Main-right pic margin-right properties for the thingstodo-set-pic-props mixin @ different media queries
+$thingstodo-desktop-width-breakpoint1-main-right-pic-margin-right: 2%;
+$thingstodo-desktop-width-main-right-pic-margin-right: 2%;
+$thingstodo-tablet-width-breakpoint1-main-right-pic-margin-right: 5%;
+$thingstodo-tablet-width-main-right-pic-margin-right: 5%;
+$thingstodo-phone-width-breakpoint1-main-right-pic-margin-right: 5%;
+$thingstodo-phone-width-breakpoint2-main-right-pic-margin-right: 5%;
+$thingstodo-phone-landscape-width-main-right-pic-margin-right: 5%;
