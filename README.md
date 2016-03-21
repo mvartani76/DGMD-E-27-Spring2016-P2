@@ -76,7 +76,7 @@ The extends used for this assignment are defined in **_form_extends.scss** and a
 
 The four extends, **#form-heading-color-extend**, **form-input-border-color-extend**, and **form-width-margin-padding-extend**, and **#form-display-margin-left-extend** are extend-only ids that help observe DRY principles for the other ids/tags in formstyle.scss while organizing the stylesheet visually so it makes sense.<br>
 
-For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet below.<br>
+For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet from **formstyle.scss** below.<br>
 
 ```
 // Using extends to set parameters here as I want to group the #contact_id IDs together for my own sanity but still try to observe DRY principles
