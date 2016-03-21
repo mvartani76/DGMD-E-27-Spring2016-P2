@@ -85,7 +85,7 @@ The four extends, **#form-heading-color-extend**, **form-input-border-color-exte
 
 For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet from **formstyle.scss** below.<br>
 
-```
+```SCSS
 // Using extends to set parameters here as I want to group the #contact_id IDs together for my own sanity but still try to observe DRY principles
 #contact_id input[type="text"], #contact_id input[type="email"], #contact_id input[type="tel"], #contact_id input[type="url"],
 #contact_id input[type="time"], #contact_id textarea {
@@ -112,7 +112,7 @@ Nesting is performed several places. A few examples are shown below.<br>
 ## Built-in Sass Functions
 A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
 The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function as shown below.<br>
-```
+```SCSS
 // Scale a unit number by $scale-value
 // This function first removes the unit, scales it by $scale-value, which is the percentage number without
 // the % and then adds the unit back.
@@ -121,7 +121,7 @@ The **unquote()** and **unit()** functions were used to remove the quotes and ad
 }
 ```
 The **percentage()** function is used in the **create-grid-system()** mixin to convert the decimal output to a percentage as shown below.<br>
-```
+```SCSS
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
 // Mixin uses a for loop to set the width (in percentage)
@@ -134,7 +134,7 @@ The **percentage()** function is used in the **create-grid-system()** mixin to c
 }
 ```
 Another **unquote()** function is used in the **set-header-img-height-width()** mixin to remove the quotes from the image file and path name as shown below.<br>
-```
+```SCSS
 // This mixin sets the header background image, height, and width
 // The $header-img-file is input as a string so we need to remove the quotes using the built-in Sass function
 // unquote() in order for it to work with the url() function.
@@ -147,7 +147,7 @@ Another **unquote()** function is used in the **set-header-img-height-width()** 
 
 ## if/else
 If/else conditional logic is used in a few mixins throughout the project. One instance of using if/else conditional logic is in the **set-selector-props()** mixin. The mixin sets various properties for the **h2** and **p** tags for different media queries. The properties that are set for **h2** and **p** are similar but not exact so the if/else logic is used to set the properties accordingly depending on which tag input is selected.<br>
-```
+```SCSS
 // This mixin sets selected tag properties that are changed for different media queries
 // This mixin was created as there is a lot of repeated code
 @mixin set-selector-props($tag-prop, $base-header-font-size, $header-font-percentage-adjustment,
@@ -174,7 +174,7 @@ If/else conditional logic is used in a few mixins throughout the project. One in
 }
 ```
 Another example of using if/else is in the **set-font-size-and-line-height()** mixin. The font-size and line-height is adjusted for the various media queries in **formstyle.scss**. This mixin was created since these properties were adjusted a lot and repeated unnecessarily. Both properties, however, were not adjusted all the time so the conditional logic was used to determine what parameters to set depedning on the mixin inputs.<br>
-```
+```SCSS
 // This mixin sets the font size and line height.
 // Since it is used for multiple media queries in formstyle.scss, decided to make a mixin and reduce code
 //
@@ -198,7 +198,7 @@ Another example of using if/else is in the **set-font-size-and-line-height()** m
 
 ## Loops
 A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, **percentage()**, to convert the decimal output of the division to a percentage.<br>
-```
+```SCSS
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
 // Mixin uses a for loop to set the width (in percentage)
@@ -221,7 +221,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 **transition-property()**, **transition-duration()**, and **transition-timing-function()** are used in the **toggle-nav** class via a user created sass mixin, **transition-compass()**.<br>
 
 #### User mixin delcaration
-```
+```SCSS
 // This mixin sets transitions of various parameters for a few different browser types
 // This mixin uses the compass mixins to accomplish this
 @mixin transition-compass($transition-variable, $transition-time, $transition-timing-function) {
@@ -231,7 +231,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 }
 ```
 #### Use in toggle-nav class
-```
+```SCSS
 .toggle-nav {
 	padding:1em;
         float:left;
@@ -252,7 +252,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 ```
 ### single-box-shadow()
 **single-box-shadow()** is used in **formstyle.scss** to replace the CSS property, box-shadow: ... and give it cross browser support. This code is used for the active state of the buttons in the various form IDs (contact_id, login_id, and register_id) as shown below.<br>
-```
+```SCSS
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
 #register_id button[type="submit"]:active {
 	// Replaced box-shadow CSS property with Compass mixin, single-box-shadow() to give cross browswer support
@@ -263,13 +263,13 @@ Compass Mixins were used selectively throughout the project and examples are sho
 In addition to the Compass mixins, helper functions are used within the code as appropriate.<br>
 ### headers()
 The **headers()** compass helper function is used to set the font-size-adjust property for all headers as shown in the code below.<br>
-```
+```SCSS
 body, caption, th, td, input, textarea, select, option, legend, fieldset, #{headers()} {
   font-size-adjust: $primary-font-size-adjust;
 }
 ```
 The **headers()** compass helper function is also used to set the font family for all headers as shown in the code below.<br>
-```
+```SCSS
 #{headers()} {
 	font-family: 'Francois One', sans-serif;
 }
