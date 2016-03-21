@@ -121,16 +121,3 @@
 	@include transition-duration($transition-time);
 	@include transition-timing-function($transition-timing-function);
 }
-
-// This mixin sets a few parameters for the aside tag
-@mixin thingstodo_aside($h3-font-size, $li-font-size, $li-line-height) {
-	aside {
-		h3 {
-			font-size: $h3-font-size;
-		}
-		li {
-			font-size: $li-font-size;
-			line-height: $li-line-height;
-		}
-	}
-}
