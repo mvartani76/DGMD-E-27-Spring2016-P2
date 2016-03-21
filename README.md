@@ -111,13 +111,29 @@ Nesting is performed several places. A few examples are shown below.<br>
 
 ## Built-in Sass Functions
 A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
-The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function as shown below.<br>
+The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function as shown below. The **round()** built in function is used inside round-decimal as well.<br>
 ```SCSS
-// Scale a unit number by $scale-value
+// Scale a unit number by $scale-value, rounding to $num-decimal-places
 // This function first removes the unit, scales it by $scale-value, which is the percentage number without
-// the % and then adds the unit back.
-@function scale-unit-value($value-to-be-scaled, $scale-value) {
-	@return unquote(strip-unit($value-to-be-scaled) * convert-percentage($scale-value) + unit($value-to-be-scaled))
+// the %, rounds to the desired number of decimal places, and then adds the unit back.
+@function scale-unit-value($value-to-be-scaled, $scale-value, $num-decimal-places) {
+	@return unquote(round-decimal(strip-unit($value-to-be-scaled) * convert-percentage($scale-value), $num-decimal-places) + unit($value-to-be-scaled))
+}
+```
+As mentioned above, the **round()** built-in function is used in **round-decimal()** as shown below.<br>
+```SCSS
+// Since the sass built-in function, round(), only rounds to the nearest
+// whole number, I created the following function to round to a selected
+// number of decimal point
+// Function accepts the following inpus
+// {$number} - Number to be rounded
+// {$num-decimal-points} - Number of decimal points to round to
+@function round-decimal($number, $num-decimal-places) {
+	$output: 1;
+	@for $i from 1 through $num-decimal-places {
+		$output: $output * 10;
+	}
+	@return round($number*$output) / $output;
 }
 ```
 The **percentage()** function is used in the **create-grid-system()** mixin to convert the decimal output to a percentage as shown below.<br>
