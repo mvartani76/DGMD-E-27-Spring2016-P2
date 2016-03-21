@@ -44,7 +44,7 @@ The URL for Assignment 1 is: http://dgmd-e27-p1.mikevartanian.me/index.php<br>
 The comments and code for Assignment 1 are located in GitHub here: https://github.com/mvartani76/DGMD-E-27-Spring2016-P1<br>
 
 ## Variables
---The variables are defined in the following partial files:--<br>
+The variables are defined in the following partial files:<br>
 **_variables.scss** - This variable file contains the generic variables used throughout many different source files.<br>
 **_form_variables.scss** - This variable file contains the form specific variables used in **formstyle.scss**.<br>
 **_weather_variables.scss** - This variable file contains the weather widget specific variables used in **weather-style.scss**.<br>
@@ -58,7 +58,7 @@ __The mixins are defined in the following partial files:__<br>
 <br>
 ## Extends
 The extends used for this assignment are defined in **_form_extends.scss** and are used in **formstyle.scss**. The extend definitions are shown below.<br>
-```
+```SCSS
 #form-heading-color-extend {
 	color: $form-heading-font-color;
 	background-color: $form-background-color;
