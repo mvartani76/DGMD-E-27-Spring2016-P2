@@ -51,6 +51,7 @@ header {
 .menu {
 	background-color: $secondary-background-color;
 
+	// Nesting the ul tag
 	ul {
 		margin: 0;
 		padding: 0;
