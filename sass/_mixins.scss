@@ -21,11 +21,28 @@
 	@return ($number / 100)
 }
 
+
+// Since the sass built-in function, round(), only rounds to the nearest
+// whole number, I created the following function to round to a selected
+// number of decimal point
+// Function accepts the following inpus
+// {$number} - Number to be rounded
+// {$num-decimal-points} - Number of decimal points to round to
+@function round-decimal($number, $num-decimal-places) {
+	$output: 1;
+	@for $i from 1 through $num-decimal-places {
+		$output: $output * 10;
+	}
+	@return round($number*$output) / $output;
+}
+
+
+
 // Scale a unit number by $scale-value
 // This function first removes the unit, scales it by $scale-value, which is the percentage number without
 // the % and then adds the unit back.
 @function scale-unit-value($value-to-be-scaled, $scale-value) {
-	@return unquote(strip-unit($value-to-be-scaled) * convert-percentage($scale-value) + unit($value-to-be-scaled))
+	@return unquote(round-decimal(strip-unit($value-to-be-scaled) * convert-percentage($scale-value),2) + unit($value-to-be-scaled))
 }
 
 // This mixin sets selected tag properties that are changed for different media queries
