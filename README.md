@@ -20,8 +20,7 @@ The code consists of the following files:
 **styles.scss** - The main overall stylesheet for the site. This has media queries in it.<br>
 **weather-style.scss** - Weather widget sidebar specific stylings.<br>
 **formstyle.scss** - Form specific stylesheet.<br>
-**_variables.scss** - Partial file for storing sass variables.<br>
-**_mixins.scss** - Partial file for storing sass mixins.<br>
+**thingstodo.scss** Stylesheet for the things to do page.<br>
 
 ## Generated CSS Files:
 These files are generated from the SASS source files above.<br><br>
@@ -29,6 +28,7 @@ These files are generated from the SASS source files above.<br><br>
 **styles.css** - The main overall stylesheet for the site. This has media queries in it.<br>
 **weather-style.css** - Weather widget sidebar specific stylings.<br>
 **formstyle.css** - Form specific stylesheet.<br>
+**thingstodo.css** - Stylesheet for the things to do page.<br>
 
 ##JS Source Files:
 **eqheight.js** - Javascript code from Ben Howdle that makes columns the same heights.<br>
@@ -52,7 +52,7 @@ The variables are defined in the following partial files:<br>
 <br>
 Variables are used throughout the source sass files as well as mixins, functions, and extends.<br>
 
-A simple example of variables being used is shown starting on line 36 of **styles.scss**.
+A simple example of variables being used is shown starting on **line 36** of **styles.scss**.
 ```SCSS
 .wrapper {
 	width: $wrapper-width;
@@ -62,9 +62,9 @@ A simple example of variables being used is shown starting on line 36 of **style
 	background-color: $primary-background-color;	
 }
 ```
-Here we can see that there are four (4) variables used in the above styling.<br>
+Here we can see that there are three (3) variables used in the above styling.<br>
 
-Another slightly more complicated but still very simple example of variables being used is shown from line 9 in **weather-style.scss**.
+Another slightly more complicated but still very simple example of variables being used is shown from **line 9** in **weather-style.scss**.
 ```SCSS
 .weather-wrapper {
 	width: $weather-wrapper-width;
@@ -92,6 +92,70 @@ The mixins are defined in the following partial files:<br>
 **_weather_mixins.scss** - This mixin file contains the weather widget specific mixins used in **weather-style.scss**.<br>
 **_thingstodo_mixins.scss** This mixin file contains the specific mixins used in **thingstodo.scss**.<br>
 
+A very simple example of a mixin is **set-form-fieldset**. It is defined on **line 37** of **_form_mixins.scss** and is shown below.
+```SCSS
+// This mixin sets the fieldset parameters
+@mixin set-form-fieldset {
+	fieldset {
+		border: medium none !important;
+		margin: 0 0 10px;
+		min-width: 100%;
+		padding: 0;
+		width: 100%;
+		font:400 1em/1.5em "Lato", Helvetica, Arial, sans-serif;
+		color: $form-primary-text-color;
+		text-align: center;
+	}
+}
+```
+It doe not use any input parameters. It is included on line 60 of **formstyle.scss** as shown below.
+```SCSS
+// Set the fieldset parameters using a mixin
+@include set-form-fieldset;
+```
+Another mixin that is a little bit more complicated is **set-selector-props()**. This mixin is defined on **line 3** of **_mixins.scss** as shown below.
+```SCSS
+// This mixin sets selected tag properties that are changed for different media queries
+// This mixin was created as there is a lot of repeated code
+@mixin set-selector-props($tag-prop, $base-header-font-size, $header-font-percentage-adjustment,
+								$base-header-line-height, $header-line-percentage-adjustment,
+								$base-value, $value-precentage-adjustment) {
+
+	@if $tag-prop == "h2" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment, 2);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment, 2);		
+				padding-left: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+				padding-right: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+		}
+	}
+	@else if $tag-prop == "p" {
+		#{$tag-prop} {
+				font-size: scale-unit-value($base-header-font-size, $header-font-percentage-adjustment, 2);
+				line-height: scale-unit-value($base-header-line-height, $header-line-percentage-adjustment, 2);		
+				margin-left: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+				margin-right: scale-unit-value($base-value, $value-precentage-adjustment, 2);
+		}		
+	}
+
+}
+```
+As we can see, this mixin is more complicated. It uses input parameters, helper functions, and conditional statements. This mixin is used in several places to set properties for the various media queries. One instance is shown on **line 206** of **styles.scss** inside the main tag as shown below.
+```SCSS
+// Nesting the main tag
+main {
+
+	@include set-selector-props(h2, $main-base-h2-font-size, $main-desktop-width-h2-font-size-scale-factor,
+				$main-base-h2-line-height, $main-desktop-width-h2-line-height-scale-factor,
+				$main-base-h2-padding, $main-desktop-width-h2-padding-scale-factor);
+
+	@include set-selector-props(p, $main-base-p-font-size, $main-desktop-width-p-font-size-scale-factor,
+				$main-base-p-line-height, $main-desktop-width-p-line-height-scale-factor,
+				$main-base-p-margin, $main-desktop-width-p-margin-scale-factor);	
+
+	@include set-selector-img-props(0%, 1%, 1%, 1.4em);
+}
+```
 ## Extends
 The extends used for this assignment are defined in **_form_extends.scss** and are used in **formstyle.scss**. The extend definitions are shown below.<br>
 ```SCSS
@@ -116,9 +180,9 @@ The extends used for this assignment are defined in **_form_extends.scss** and a
 	margin-left: 2%;
 }
 ```
-The four extends, **#form-heading-color-extend**, **form-input-border-color-extend**, and **form-width-margin-padding-extend**, and **#form-display-margin-left-extend** are extend-only ids that help observe DRY principles for the other ids/tags in formstyle.scss while organizing the stylesheet visually so it makes sense.<br>
+The four extends, **#form-heading-color-extend**, **form-input-border-color-extend**, and **form-width-margin-padding-extend**, and **#form-display-margin-left-extend** are extend-only ids that help observe DRY principles for the other ids/tags in **formstyle.scss** while organizing the stylesheet visually so it makes sense.<br>
 
-For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet from **formstyle.scss** below.<br>
+For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet starting on **line 63** from **formstyle.scss** below.<br>
 
 ```SCSS
 // Using extends to set parameters here as I want to group the #contact_id IDs together for my own sanity but still try to observe DRY principles
@@ -143,7 +207,7 @@ For example, I wanted to keep the different form specific IDs together but as th
 
 ## Nesting
 Nesting is performed several places including source sass files as well as mixins. A couple examples are shown below.<br>
-The first example shows nesting of the .menu class starting on line 51 of **styles.scss**.
+The first example shows nesting of the .menu class starting on **line 51** of **styles.scss**.
 ```SCSS
 // Nesting the .menu class as well as nesting the ul tag
 // inside the .menu class
@@ -172,7 +236,7 @@ The first example shows nesting of the .menu class starting on line 51 of **styl
 	}
 }
 ```
-The next example shows nesting of div.photography starting on line 113 of **styles.scss**.
+The next example shows nesting of **div.photography** starting on **line 113** of **styles.scss**.
 ```SCSS
 // Nested the div.photography class
 // Needed to separate this from the main nesting
@@ -198,7 +262,7 @@ div.photogallery {
 ```
 ## Built-in Sass Functions
 A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
-The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function as shown below. The **round()** built in function is used inside round-decimal as well.<br>
+The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function on **line 43** of **_helper_functions.scss** as shown below. The **round()** built in function is used inside round-decimal as well.<br>
 ```SCSS
 // Scale a unit number by $scale-value, rounding to $num-decimal-places
 // This function first removes the unit, scales it by $scale-value, which is the percentage number without
@@ -207,7 +271,7 @@ The **unquote()** and **unit()** functions were used to remove the quotes and ad
 	@return unquote(round-decimal(strip-unit($value-to-be-scaled) * convert-percentage($scale-value), $num-decimal-places) + unit($value-to-be-scaled))
 }
 ```
-As mentioned above, the **round()** built-in function is used in **round-decimal()** as shown below.<br>
+As mentioned above, the **round()** built-in function is used in **round-decimal()** starting on **line 31** of **_helper_functions.scss** as shown below.<br>
 ```SCSS
 // Since the sass built-in function, round(), only rounds to the nearest
 // whole number, I created the following function to round to a selected
@@ -223,7 +287,7 @@ As mentioned above, the **round()** built-in function is used in **round-decimal
 	@return round($number*$output) / $output;
 }
 ```
-The **percentage()** function is used in the **create-grid-system()** mixin to convert the decimal output to a percentage as shown below.<br>
+The **percentage()** function is used in the **create-grid-system()** mixin on **line 53** of **_mixins.scss** to convert the decimal output to a percentage as shown below.<br>
 ```SCSS
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
