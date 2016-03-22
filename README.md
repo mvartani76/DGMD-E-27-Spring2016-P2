@@ -300,7 +300,7 @@ The **percentage()** function is used in the **create-grid-system()** mixin on *
 	}
 }
 ```
-Another **unquote()** function is used in the **set-header-img-height-width()** mixin to remove the quotes from the image file and path name as shown below.<br>
+Another **unquote()** function is used on **line 42** of **_mixins.scss** in the **set-header-img-height-width()** mixin to remove the quotes from the image file and path name as shown below.<br>
 ```SCSS
 // This mixin sets the header background image, height, and width
 // The $header-img-file is input as a string so we need to remove the quotes using the built-in Sass function
@@ -313,7 +313,7 @@ Another **unquote()** function is used in the **set-header-img-height-width()** 
 ```
 
 ## if/else
-If/else conditional logic is used in a few mixins throughout the project. One instance of using if/else conditional logic is in the **set-selector-props()** mixin. The mixin sets various properties for the **h2** and **p** tags for different media queries. The properties that are set for **h2** and **p** are similar but not exact so the if/else logic is used to set the properties accordingly depending on which tag input is selected.<br>
+If/else conditional logic is used in a few mixins throughout the project. One instance of using if/else conditional logic is in the **set-selector-props()** mixin, which starts on **line 3** of **_mixins.scss**. The mixin sets various properties for the **h2** and **p** tags for different media queries. The properties that are set for **h2** and **p** are similar but not exact so the if/else logic is used to set the properties accordingly depending on which tag input is selected.<br>
 ```SCSS
 // This mixin sets selected tag properties that are changed for different media queries
 // This mixin was created as there is a lot of repeated code
