@@ -108,7 +108,7 @@ A very simple example of a mixin is **set-form-fieldset**. It is defined on **li
 	}
 }
 ```
-It doe not use any input parameters. It is included on line 60 of **formstyle.scss** as shown below.
+It doe not use any input parameters. It is included on **line 60** of **formstyle.scss** as shown below.
 ```SCSS
 // Set the fieldset parameters using a mixin
 @include set-form-fieldset;
@@ -180,7 +180,7 @@ The extends used for this assignment are defined in **_form_extends.scss** and a
 	margin-left: 2%;
 }
 ```
-The four extends, **#form-heading-color-extend**, **form-input-border-color-extend**, and **form-width-margin-padding-extend**, and **#form-display-margin-left-extend** are extend-only ids that help observe DRY principles for the other ids/tags in **formstyle.scss** while organizing the stylesheet visually so it makes sense.<br>
+The four extends, **#form-heading-color-extend**, **#form-input-border-color-extend**, and **#form-width-margin-padding-extend**, and **#form-display-margin-left-extend** are extend-only ids that help observe DRY principles for the other ids/tags in **formstyle.scss** while organizing the stylesheet visually so it makes sense.<br>
 
 For example, I wanted to keep the different form specific IDs together but as there was a lot repeated code, I used an extend to have them grouped together in the compiled css stylesheet. This is shown in the code snippet starting on **line 63** from **formstyle.scss** below.<br>
 
@@ -262,7 +262,7 @@ div.photogallery {
 ```
 ## Built-in Sass Functions
 A few different built-in Sass functions are used primarily in functions/mixins as shown below.<br>
-The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function on **line 43** of **_helper_functions.scss** as shown below. The **round()** built in function is used inside round-decimal as well.<br>
+The **unquote()** and **unit()** functions were used to remove the quotes and add a unit to the **scale-unit-value()** function on **line 43** of **_helper_functions.scss** as shown below. The **round()** built in function is used inside **round-decimal()** as well.<br>
 ```SCSS
 // Scale a unit number by $scale-value, rounding to $num-decimal-places
 // This function first removes the unit, scales it by $scale-value, which is the percentage number without
