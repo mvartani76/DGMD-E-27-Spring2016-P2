@@ -122,7 +122,7 @@
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
 #register_id button[type="submit"]:active {
 	// Replaced box-shadow CSS property with Compass mixin, single-box-shadow() to give cross browswer support
-	@include single-box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.5) inset);
+	@include single-box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.5), inset);
 }
 
 #register_id .form50, #contact_id .form50 {
