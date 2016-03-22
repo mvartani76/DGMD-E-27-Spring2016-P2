@@ -11,7 +11,7 @@
   background-color: #AD7623;
   text-align: center;
 }
-.weather-wrapper + p {
+.weather-wrapper > p {
   font-family: 'Lato', sans-serif;
   color: #FFF;
 }
@@ -24,7 +24,7 @@
   font-family: 'Francois One', sans-serif;
   color: #61381D;
 }
-.outside-w-wrapper + p {
+.outside-w-wrapper > p {
   font-family: 'Lato', sans-serif;
   color: #BB6F39;
 }

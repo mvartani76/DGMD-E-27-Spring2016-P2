@@ -18,7 +18,7 @@
 	background-color: $weather-wrapper-background-color;
 	text-align: center;
 
-	& + p {
+	& > p {
 		font-family: 'Lato', sans-serif;
 		color: $weather-wrapper-paragraph-text;
 	}
@@ -35,7 +35,7 @@
 		color: $weather-outside-wrapper-heading-text;
 	}
 	// Nesting with the sibling
-	& + p {
+	& > p {
 		font-family: 'Lato', sans-serif;
 		color: $primary-light-text-color;
 	}
