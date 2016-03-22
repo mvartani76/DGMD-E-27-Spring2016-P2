@@ -401,6 +401,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 **transition-property()**, **transition-duration()**, and **transition-timing-function()** are used in the **toggle-nav** class via a user created sass mixin, **transition-compass()**.<br>
 
 #### User mixin delcaration
+**transition-compass()** is defined starting on **line 119** of** _mixins.scss** and is shown below.
 ```SCSS
 // This mixin sets transitions of various parameters for a few different browser types
 // This mixin uses the compass mixins to accomplish this
@@ -410,7 +411,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 	@include transition-timing-function($transition-timing-function);
 }
 ```
-#### Use in toggle-nav class
+#### Use in toggle-nav class (line 420 of styles.scss)
 ```SCSS
 .toggle-nav {
 	padding: $menu-phone-portrait-width-toggle-nav-padding;
@@ -431,7 +432,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 }
 ```
 ### single-box-shadow()
-**single-box-shadow()** is used in **formstyle.scss** to replace the CSS property, box-shadow: ... and give it cross browser support. This code is used for the active state of the buttons in the various form IDs (contact_id, login_id, and register_id) as shown below.<br>
+**single-box-shadow()** is used on **line 125** of **formstyle.scss** to replace the CSS property, box-shadow: ... and give it cross browser support. This code is used for the active state of the buttons in the various form IDs (contact_id, login_id, and register_id) as shown below.<br>
 ```SCSS
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
 #register_id button[type="submit"]:active {
