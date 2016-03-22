@@ -444,7 +444,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 ```
 I did have a NULL as an input parameter after 3px as shown below but it flagged a CSS error so I removed it.
 ```SCSS
-	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5) inset);
+	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5), inset);
 ```
 ## Compass Helper Functions
 In addition to the Compass mixins, helper functions are used within the code as appropriate.<br>
