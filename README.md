@@ -340,7 +340,7 @@ If/else conditional logic is used in a few mixins throughout the project. One in
 
 }
 ```
-Another example of using if/else is in the **set-font-size-and-line-height()** mixin. The font-size and line-height is adjusted for the various media queries in **formstyle.scss**. This mixin was created since these properties were adjusted a lot and repeated unnecessarily. Both properties, however, were not adjusted all the time so the conditional logic was used to determine what parameters to set depedning on the mixin inputs.<br>
+Another example of using if/else is in the **set-font-size-and-line-height()** mixin which is defined starting on **line 8** of **_form_mixins.scss**. The font-size and line-height is adjusted for the various media queries in **formstyle.scss**. This mixin was created since these properties were adjusted a lot and repeated unnecessarily. Both properties, however, were not adjusted all the time so the conditional logic was used to determine what parameters to set depedning on the mixin inputs.<br>
 ```SCSS
 // This mixin sets the font size and line height.
 // Since it is used for multiple media queries in formstyle.scss, decided to make a mixin and reduce code
@@ -364,7 +364,7 @@ Another example of using if/else is in the **set-font-size-and-line-height()** m
 ```
 
 ## Loops
-A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, **percentage()**, to convert the decimal output of the division to a percentage.<br>
+A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, **percentage()**, to convert the decimal output of the division to a percentage. Create-grid-system() is defined starting on **line 50** of **_mixins.scss**.<br>
 ```SCSS
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
@@ -391,7 +391,8 @@ Several partial files are used throughout the project and are listed below.<br>
 **_thingstodo_mixins.scss** This mixin file contains the specific mixins used in **thingstodo.scss**.<br>
 ### Extends
 **_form_extends.scss** - This extend file contains extends used in **formstyle.scs**.<br>
-
+### Other
+**_helper_functions.scss** - This file contains helper functions used in the various mixin files. I separated from the mixin files to make it look a little cleaner.<br>
 ## Compass Mixins
 Compass Mixins were used selectively throughout the project and examples are shown below.<br>
 
