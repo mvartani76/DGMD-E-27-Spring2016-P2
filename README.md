@@ -366,7 +366,7 @@ Another example of using if/else is in the **set-font-size-and-line-height()** m
 ```
 
 ## Loops
-A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, **percentage()**, to convert the decimal output of the division to a percentage. Create-grid-system() is defined starting on **line 50** of **_mixins.scss**.<br>
+A Sass **@for** loop was used to create the grid system and is included in the **create-grid-system()** mixin as shown below. The mixin also utilizes the Sass built-in function, **percentage()**, to convert the decimal output of the division to a percentage. **Create-grid-system()** is defined starting on **line 50** of **_mixins.scss**.<br>
 ```SCSS
 // Create Grid System Mixin
 // @param {$num-columns} - The number of equally spaced columns
@@ -403,7 +403,7 @@ Compass Mixins were used selectively throughout the project and examples are sho
 **transition-property()**, **transition-duration()**, and **transition-timing-function()** are used in the **toggle-nav** class via a user created sass mixin, **transition-compass()**.<br>
 
 #### User mixin delcaration
-**transition-compass()** is defined starting on **line 119** of** _mixins.scss** and is shown below.
+**transition-compass()** is defined starting on **line 119** of **_mixins.scss** and is shown below.
 ```SCSS
 // This mixin sets transitions of various parameters for a few different browser types
 // This mixin uses the compass mixins to accomplish this
