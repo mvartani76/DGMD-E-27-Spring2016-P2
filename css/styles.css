@@ -392,8 +392,8 @@ footer {
     width: 100%;
     position: absolute;
     top: 120%;
-    left-margin: 0px;
-    left-padding: 1%;
+    margin-left: 0px;
+    padding-left: 1%;
     background: #ED8F00;
   }
   .menu ul:after {
