@@ -446,6 +446,50 @@ I did have a NULL as an input parameter after 3px as shown below but it flagged 
 ```SCSS
 	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5), inset);
 ```
+### translate()
+**translate()** is used on **line 387** of **styles.scss** to help with the hamburger bar menu in the phone portrait media query as shown in the code below.
+```SCSS
+	    ul:after {
+	        width: 0px;
+	        height: 0px;
+	        position:absolute;
+	        top: 0%;
+	        left: 5%;
+	        content:'';
+	        // Use the compass mixin, translate(), to replace transform: translate and
+	        // add cross browser support
+	        @include translate(0%,-100%);
+	    }
+```
+### scale()
+The compass mixin, **scale()**, is used to slightly change the images in the photogallery page when the mouse hovers over the image as a neat effect. The **scale()** mixin is declared on **line 83** of **_mixins.scss** in my own custom mixin, **set-col-1-2-4()** as shown in the code below.
+```SCSS
+// This mixin sets the font size and centers h3
+// This mixin also scales the images within col-1-2-4 when the mouse hovers
+// over the image. Using the compass mixin, scale(), to do the scaling
+@mixin set-col-1-2-4-props($h3-font-size, $img-scale-x, $image-scale-y){
+
+	// Nesting the col-1-2-4 class
+	.col-1-2-4 {
+		h3 {
+			font-size: $h3-font-size;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		img:hover {
+			// Compass mixin that scales the images in the photogallery when hovering over the image
+			@include scale($img-scale-x,$image-scale-y);
+		}
+	}
+}
+```
+One instance of the mixin that uses the compass scale is on **line 231** of **styles.scss** as shown below.
+```SCSS
+	// Set col-1-2-4 properties
+	// This mixin includes the compass mixin, scale()
+	@include set-col-1-2-4-props(1.25em,1.02,1.02);
+```
 ## Compass Helper Functions
 In addition to the Compass mixins, helper functions are used within the code as appropriate.<br>
 ### headers()
