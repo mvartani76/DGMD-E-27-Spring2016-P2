@@ -314,7 +314,19 @@ A Sass **@for** loop was used to create the grid system and is included in the *
 }
 ```
 ## Partial Files
-Several partial files are used throughout the project.<br>
+Several partial files are used throughout the project and are listed below.<br>
+### Variables
+**_variables.scss** - This variable file contains the generic variables used throughout many different source files.<br>
+**_form_variables.scss** - This variable file contains the form specific variables used in **formstyle.scss**.<br>
+**_weather_variables.scss** - This variable file contains the weather widget specific variables used in **weather-style.scss**.<br>
+**_thingstodo_variables.scss** This mixin file contains the specific variables used in **thingstodo.scss**.<br>
+### Mixins
+**_mixins.scss** - This mixin file contains the generic mixins used through many difference source files.<br>
+**_form_mixins.scss** - This mixin file contains the form specific mixins used in **formstyle.scss**.<br>
+**_weather_mixins.scss** - This mixin file contains the weather widget specific mixins used in **weather-style.scss**.<br>
+**_thingstodo_mixins.scss** This mixin file contains the specific mixins used in **thingstodo.scss**.<br>
+### Extends
+**_form_extends.scss** - This extend file contains extends used in **formstyle.scs**.<br>
 
 ## Compass Mixins
 Compass Mixins were used selectively throughout the project and examples are shown below.<br>
