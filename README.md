@@ -439,8 +439,12 @@ Compass Mixins were used selectively throughout the project and examples are sho
 #contact_id button[type="submit"]:active, #login_id button[type="submit"]:active,
 #register_id button[type="submit"]:active {
 	// Replaced box-shadow CSS property with Compass mixin, single-box-shadow() to give cross browswer support
-	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5) inset);
+	@include single-box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.5) inset);
 }
+```
+I did have a NULL as an input parameter after 3px as shown below but it flagged a CSS error so I removed it.
+```SCSS
+	@include single-box-shadow(0, 1px, 3px, NULL, rgba(0, 0, 0, 0.5) inset);
 ```
 ## Compass Helper Functions
 In addition to the Compass mixins, helper functions are used within the code as appropriate.<br>
